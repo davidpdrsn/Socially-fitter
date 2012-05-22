@@ -1,0 +1,59 @@
+* {
+  margin: 0;
+  padding: 0; }
+
+body {
+  background: #dcdcdc;
+  height: 1000px; }
+
+.bar {
+  background: -webkit-linear-gradient(#2480bf, #18557f);
+  padding: 10px;
+  text-align: center;
+  display: table;
+  width: 100%;
+  position: fixed;
+  top: 0; }
+  .bar .glyph.general {
+    line-height: 0px;
+    font-family: "FoundationIconsGeneral";
+    font-size: 20px;
+    font-weight: normal; }
+  .bar .main-menu {
+    padding: 0;
+    width: 50px;
+    padding: 10px 0 8px;
+    display: table-cell;
+    width: 24%;
+    margin-right: 1.333%; }
+    .bar .main-menu:last-of-type {
+      margin-right: 0; }
+
+.login, .timeline, .log, .profil, .search {
+  background: -webkit-linear-gradient(#3c9ada, #1c6394);
+  border: 1px solid #18557f;
+  text-shadow: 1px 1px 1px #2072aa; }
+
+.logout {
+  float: right;
+  background: -webkit-linear-gradient(#8e9699, #5c6365);
+  border: 1px solid #4f5658;
+  text-shadow: 1px 1px 1px #4f5658; }
+
+.follow {
+  background: -webkit-linear-gradient(#20c138, #126a1f);
+  border: 1px solid #0e5419;
+  text-shadow: 1px 1px 1px #0e5419; }
+
+.unfollow {
+  background: -webkit-linear-gradient(#ff3c31, #ca0b00);
+  border: 1px solid #b10900;
+  text-shadow: 1px 1px 1px #b10900; }
+
+button {
+  border-radius: 7px;
+  padding: 5px 12px;
+  color: white;
+  font-family: "Lucida Grande", "Lucida Sans Unicode", Arial, Helvetica, sans-serif;
+  font-size: 13px;
+  font-weight: bold; }

@@ -1,0 +1,65 @@
+*
+  margin: 0
+  padding: 0
+
+$blue: saturate(lighten(rgb(92,163,212), 5%), 10%)
+$red: saturate(rgb(247,67,57), 20%)
+$green: saturate(darken(rgb(55,196,76), 5%), 15%)
+$lightgray: rgb(220,220,220)
+$darkgray: rgb(142,150,153)
+
+body
+  background: $lightgray
+  height: 1000px
+
+.bar
+  background: -webkit-linear-gradient(darken($blue, 20%), darken($blue, 35%))
+  padding: 10px
+  text-align: center
+  display: table
+  width: 100%
+  position: fixed
+  top: 0
+  .glyph.general
+    line-height: 0px
+    font-family: 'FoundationIconsGeneral'
+    font-size: 20px
+    font-weight: normal
+  .main-menu
+    padding: 0
+    width: 50px
+    padding: 10px 0 8px
+    display: table-cell
+    width: 24%
+    margin-right: 1.333333333%
+    &:last-of-type
+      margin-right: 0
+
+.login, .timeline, .log, .profil, .search
+  background: -webkit-linear-gradient(darken($blue, 10%), darken($blue, 30%))
+  border: 1px solid darken($blue, 35%)
+  text-shadow: 1px 1px 1px darken($blue, 25%)
+
+.logout
+  float: right
+  background: -webkit-linear-gradient($darkgray, darken($darkgray, 20%))
+  border: 1px solid darken($darkgray, 25%)
+  text-shadow: 1px 1px 1px darken($darkgray, 25%)
+
+.follow
+  background: -webkit-linear-gradient($green, darken($green, 20%))
+  border: 1px solid darken($green, 25%)
+  text-shadow: 1px 1px 1px darken($green, 25%)
+
+.unfollow
+  background: -webkit-linear-gradient($red, darken($red, 20%))
+  border: 1px solid darken($red, 25%)
+  text-shadow: 1px 1px 1px darken($red, 25%)
+
+button
+  border-radius: 7px
+  padding: 5px 12px
+  color: #fff
+  font-family: 'Lucida Grande','Lucida Sans Unicode',Arial,Helvetica,sans-serif
+  font-size: 13px
+  font-weight: bold
