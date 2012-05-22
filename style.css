@@ -6,6 +6,17 @@ body {
   background: #dcdcdc;
   height: 1000px; }
 
+.glyph {
+  line-height: 0px;
+  font-size: 20px;
+  font-weight: normal; }
+
+.general {
+  font-family: "FoundationIconsGeneral"; }
+
+.social {
+  font-family: "FoundationIconsSocial"; }
+
 .bar {
   background: -webkit-linear-gradient(#2480bf, #18557f);
   padding: 10px;
@@ -14,11 +25,6 @@ body {
   width: 100%;
   position: fixed;
   top: 0; }
-  .bar .glyph.general {
-    line-height: 0px;
-    font-family: "FoundationIconsGeneral";
-    font-size: 20px;
-    font-weight: normal; }
   .bar .main-menu {
     padding: 0;
     width: 50px;
