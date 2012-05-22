@@ -18,7 +18,7 @@ body {
   font-family: "FoundationIconsSocial"; }
 
 .bar {
-  background: -webkit-linear-gradient(#2480bf, #18557f);
+  background: -webkit-linear-gradient(#2480bf, #18557e);
   padding: 10px;
   text-align: center;
   display: table;
@@ -37,8 +37,8 @@ body {
 
 .login, .timeline, .log, .profil, .search {
   background: -webkit-linear-gradient(#3c9ada, #1c6394);
-  border: 1px solid #18557f;
-  text-shadow: 1px 1px 1px #2072aa; }
+  border: 1px solid #18557e;
+  text-shadow: 1px 1px 1px #2072a9; }
 
 .logout {
   float: right;
@@ -47,9 +47,9 @@ body {
   text-shadow: 1px 1px 1px #4f5658; }
 
 .follow {
-  background: -webkit-linear-gradient(#20c138, #126a1f);
-  border: 1px solid #0e5419;
-  text-shadow: 1px 1px 1px #0e5419; }
+  background: -webkit-linear-gradient(#20c138, #116a1f);
+  border: 1px solid #0e5418;
+  text-shadow: 1px 1px 1px #0e5418; }
 
 .unfollow {
   background: -webkit-linear-gradient(#ff3c31, #ca0b00);
