@@ -1,4 +1,3 @@
-<!-- HIDE MENU BAR WHEN PAGE LOADS -->
 addEventListener('load', function() {
   setTimeout(hideAddressBar, 0);
 }, false);
