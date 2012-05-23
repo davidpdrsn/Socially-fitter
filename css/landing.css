@@ -67,6 +67,13 @@ body {
 .social {
   font-family: "FoundationIconsSocial"; }
 
+.clearfix:before, .clearfix:after {
+  content: "";
+  display: table; }
+
+.clearfix:after {
+  clear: both; }
+
 .login {
   background: -webkit-linear-gradient(#3c9ada, #1c6394);
   background: linear-gradient(#3c9ada, #1c6394);
