@@ -1,0 +1,26 @@
+#main-menu
+  background: -webkit-linear-gradient($bluedarken20, $bluedarken35)
+  padding: 10px $generalpadding
+  text-align: center
+  // +0.1 fixes a 1px spacing on the right side, very weird indeed
+  width: 100% - $generalpadding * 2 + 0.1
+  position: fixed
+  top: 0
+  a
+    border-radius: 7px
+    //padding: 5px 12px
+    font-family: 'Lucida Grande','Lucida Sans Unicode',Arial,Helvetica,sans-serif
+    font-size: 13px
+    font-weight: bold
+    color: #fff
+    padding: 10px 0 8px
+    margin-right: $generalpadding + (2 / 3)
+    display: inline-block
+    width: 25% - $generalpadding
+    box-sizing: border-box
+    &:last-of-type
+      margin-right: 0
+  .timeline, .log, .profil, .search
+    background: -webkit-linear-gradient($bluedarken10, $bluedarken30)
+    border: 1px solid $bluedarken35
+    text-shadow: 1px 1px 1px $bluedarken25

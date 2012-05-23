@@ -1,3 +1,37 @@
+#main-menu {
+  background: -webkit-linear-gradient(#2480bf, #18557e);
+  padding: 10px 2%;
+  text-align: center;
+  width: 96.1%;
+  position: fixed;
+  top: 0; }
+  #main-menu a {
+    border-radius: 7px;
+    font-family: "Lucida Grande", "Lucida Sans Unicode", Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    font-weight: bold;
+    color: white;
+    padding: 10px 0 8px;
+    margin-right: 2.667%;
+    display: inline-block;
+    width: 23%;
+    box-sizing: border-box; }
+    #main-menu a:last-of-type {
+      margin-right: 0; }
+  #main-menu .timeline, #main-menu .log, #main-menu .profil, #main-menu .search {
+    background: -webkit-linear-gradient(#3c9ada, #1c6394);
+    border: 1px solid #18557e;
+    text-shadow: 1px 1px 1px #2072a9; }
+
+* {
+  margin: 0;
+  padding: 0; }
+
+a {
+  color: inherit;
+  text-decoration: none;
+  border: none; }
+
 @font-face {
   font-family: "FoundationIconsGeneral";
   src: url("../fonts/foundation-icons-general.eot");
@@ -11,3 +45,18 @@
   src: url("../fonts/foundation-icons-social.eot?#iefix") format("embedded-opentype"), url("../fonts/foundation-icons-social.woff") format("woff"), url("../fonts/foundation-icons-social.ttf") format("truetype"), url("../fonts/foundation-icons-social.svg#FoundationIconsSocial") format("svg");
   font-weight: normal;
   font-style: normal; }
+
+body {
+  background: #dcdcdc;
+  height: 1000px; }
+
+.glyph {
+  line-height: 0px;
+  font-size: 20px;
+  font-weight: normal; }
+
+.general {
+  font-family: "FoundationIconsGeneral"; }
+
+.social {
+  font-family: "FoundationIconsSocial"; }
