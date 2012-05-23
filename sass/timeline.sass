@@ -10,12 +10,12 @@
 
 #timeline
   .log
-    padding: $generalpadding
+    padding: $generalpadding 0px 0px 0px
     border-bottom: 1px solid $darkgray
-    float: left
-    width: 100% - ($generalpadding * 2) + 0.1
     &:nth-child(even)
       background: darken($lightgray, 10%)
+  .log-header
+    padding: 0px $generalpadding
     .profile-picture
       width: 48px
       height: 48px
@@ -25,9 +25,20 @@
       float: left
       margin-right: $generalpadding
     div.log-title
-      float: left
       p
         margin-bottom: 5px
       p.profile-name
         font-weight: bold
-          
+  .log-footer
+    text-align: center
+    font-size: 12px
+    .log-expand
+      cursor: pointer
+      user-select: none
+      color: $darkgray
+      display: block
+      margin-bottom: $generalpadding
+    .expanded-log
+      background: darken($lightgray, 20%)
+      padding: $generalpadding
+      box-shadow: inset 0px 2px 1px $darkgray, inset 0px -2px 1px $darkgray

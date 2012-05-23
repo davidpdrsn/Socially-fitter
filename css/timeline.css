@@ -3,13 +3,13 @@
   font-family: "Lucida Grande", "Lucida Sans Unicode", Arial, Helvetica, sans-serif; }
 
 #timeline .log {
-  padding: 2%;
-  border-bottom: 1px solid #8e9699;
-  float: left;
-  width: 96.1%; }
+  padding: 2% 0px 0px 0px;
+  border-bottom: 1px solid #8e9699; }
   #timeline .log:nth-child(even) {
     background: #c3c3c3; }
-  #timeline .log .profile-picture {
+#timeline .log-header {
+  padding: 0px 2%; }
+  #timeline .log-header .profile-picture {
     width: 48px;
     height: 48px;
     border-radius: 4px;
@@ -17,9 +17,20 @@
     overflow: hidden;
     float: left;
     margin-right: 2%; }
-  #timeline .log div.log-title {
-    float: left; }
-    #timeline .log div.log-title p {
-      margin-bottom: 5px; }
-    #timeline .log div.log-title p.profile-name {
-      font-weight: bold; }
+  #timeline .log-header div.log-title p {
+    margin-bottom: 5px; }
+  #timeline .log-header div.log-title p.profile-name {
+    font-weight: bold; }
+#timeline .log-footer {
+  text-align: center;
+  font-size: 12px; }
+  #timeline .log-footer .log-expand {
+    cursor: pointer;
+    user-select: none;
+    color: #8e9699;
+    display: block;
+    margin-bottom: 2%; }
+  #timeline .log-footer .expanded-log {
+    background: #a9a9a9;
+    padding: 2%;
+    box-shadow: inset 0px 2px 1px #8e9699, inset 0px -2px 1px #8e9699; }
