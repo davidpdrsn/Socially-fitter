@@ -37,7 +37,6 @@ $(document).ready(function() {
 
   $('.log').click(function() {
     $(this).children().children('.expanded-log').slideToggle('fast');
-    return false;
   });
 
   $('span.addmore').click(function(){
