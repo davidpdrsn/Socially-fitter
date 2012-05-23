@@ -7,27 +7,29 @@
 #search
   padding: $generalpadding
   form
-    input[type=text]
+    .search-input-container
+      position: relative
+      background: white
       border-radius: 4px
       border: 2px solid $darkgray
       display: block
-      width: 100%
-      box-sizing: border-box
-      padding: $generalpadding $generalpadding $generalpadding 24px
       margin-bottom: $generalpadding
-      font-size: 15px
       position: relative
-      box-shadow: inset 2px 2px 7px rgba(0,0,0,.3)
       &:before
         content: "="
-        position: absolute
-        top: 50%
-        margin-top: -15px
-        left: 6px
-        color: #ccc
         font-family: 'FoundationIconsGeneral'
-      &:focus:before
-        color: #000
+        color: #ccc
+        position: absolute
+        margin-top: -17px
+        left: 6px
+        top: 50%
+      input
+        box-shadow: inset 2px 2px 7px rgba(0,0,0,.3)
+        font-size: 15px
+        width: 100%
+        padding: $generalpadding $generalpadding $generalpadding 24px
+        box-sizing: border-box
+        border: none
     p
       margin-bottom: $generalpadding
       color: $darkgray
