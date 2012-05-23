@@ -2,17 +2,20 @@
 
 #main-menu
   background: -webkit-linear-gradient($bluedarken20, $bluedarken35)
+  background: -moz-linear-gradient($bluedarken20, $bluedarken35)
   background: linear-gradient($bluedarken20, $bluedarken35)
   padding: 10px $generalpadding
   text-align: center
-  // +0.1 fixes a 1px spacing on the right side, very weird indeed
   width: 100%
   position: fixed
   z-index: 9999
   top: 0
+  -moz-box-sizing: border-box
   box-sizing: border-box
+  -moz-box-shadow: 0 0 10px 5px rgba(0,0,0,.5)
   box-shadow: 0 0 10px 5px rgba(0,0,0,.5)
   a
+    -moz-border-radius: 7px
     border-radius: 7px
     //padding: 5px 12px
     font-family: 'Lucida Grande','Lucida Sans Unicode',Arial,Helvetica,sans-serif
@@ -24,17 +27,23 @@
     display: block
     float: left
     width: 25% - $generalpadding
+    -moz-box-sizing: border-box
     box-sizing: border-box
     &:last-of-type
       margin-right: 0
   .timeline, .logging, .profil, .search
     background: -webkit-linear-gradient($bluedarken10, $bluedarken30)
+    background: -moz-linear-gradient($bluedarken10, $bluedarken30)
     background: linear-gradient($bluedarken10, $bluedarken30)
     border: 1px solid $bluedarken35
+    -moz-text-shadow: 1px 1px 1px $bluedarken25
     text-shadow: 1px 1px 1px $bluedarken25
     &:hover, &:active
+      -moz-box-shadow: inset 2px 2px 5px rgba(0,0,0,.5)
       box-shadow: inset 2px 2px 5px rgba(0,0,0,.5)
       background: -webkit-linear-gradient(bottom, $bluedarken15, $bluedarken35)
+      background: -moz-linear-gradient(bottom, $bluedarken15, $bluedarken35)
+      background: linear-gradient(bottom, $bluedarken15, $bluedarken35)
 
 //////////////////////////////////////
 // BUTTONS ///////////////////////////
@@ -43,18 +52,24 @@
 .logout
   float: right
   background: -webkit-linear-gradient($darkgray, $darkgraydarken20)
+  background: -moz-linear-gradient($darkgray, $darkgraydarken20)
   background: linear-gradient($darkgray, $darkgraydarken20)
   border: 1px solid $darkgraydarken25
+  -moz-text-shadow: 1px 1px 1px $darkgraydarken25
   text-shadow: 1px 1px 1px $darkgraydarken25
 
 .follow
   background: -webkit-linear-gradient($green, $greendarken20)
+  background: -moz-linear-gradient($green, $greendarken20)
   background: linear-gradient($green, $greendarken20)
   border: 1px solid $greendarken25
+  -moz-text-shadow: 1px 1px 1px $greendarken25
   text-shadow: 1px 1px 1px $greendarken25
 
 .unfollow
   background: -webkit-linear-gradient($red, $reddarken20)
+  background: -moz-linear-gradient($red, $reddarken20)
   background: linear-gradient($red, $reddarken20)
   border: 1px solid $reddarken25
+  -moz-text-shadow: 1px 1px 1px $reddarken25
   text-shadow: 1px 1px 1px $reddarken25

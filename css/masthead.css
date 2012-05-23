@@ -1,5 +1,6 @@
 #main-menu {
   background: -webkit-linear-gradient(#2480bf, #18557e);
+  background: -moz-linear-gradient(#2480bf, #18557e);
   background: linear-gradient(#2480bf, #18557e);
   padding: 10px 2%;
   text-align: center;
@@ -7,9 +8,12 @@
   position: fixed;
   z-index: 9999;
   top: 0;
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
+  -moz-box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.5);
   box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.5); }
   #main-menu a {
+    -moz-border-radius: 7px;
     border-radius: 7px;
     font-family: "Lucida Grande", "Lucida Sans Unicode", Arial, Helvetica, sans-serif;
     font-size: 13px;
@@ -20,33 +24,45 @@
     display: block;
     float: left;
     width: 23%;
+    -moz-box-sizing: border-box;
     box-sizing: border-box; }
     #main-menu a:last-of-type {
       margin-right: 0; }
   #main-menu .timeline, #main-menu .logging, #main-menu .profil, #main-menu .search {
     background: -webkit-linear-gradient(#3c9ada, #1c6394);
+    background: -moz-linear-gradient(#3c9ada, #1c6394);
     background: linear-gradient(#3c9ada, #1c6394);
     border: 1px solid #18557e;
+    -moz-text-shadow: 1px 1px 1px #2072a9;
     text-shadow: 1px 1px 1px #2072a9; }
     #main-menu .timeline:hover, #main-menu .timeline:active, #main-menu .logging:hover, #main-menu .logging:active, #main-menu .profil:hover, #main-menu .profil:active, #main-menu .search:hover, #main-menu .search:active {
+      -moz-box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.5);
       box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.5);
-      background: -webkit-linear-gradient(bottom, #288ed4, #18557e); }
+      background: -webkit-linear-gradient(bottom, #288ed4, #18557e);
+      background: -moz-linear-gradient(bottom, #288ed4, #18557e);
+      background: linear-gradient(bottom, #288ed4, #18557e); }
 
 .logout {
   float: right;
   background: -webkit-linear-gradient(#8e9699, #5c6365);
+  background: -moz-linear-gradient(#8e9699, #5c6365);
   background: linear-gradient(#8e9699, #5c6365);
   border: 1px solid #4f5658;
+  -moz-text-shadow: 1px 1px 1px #4f5658;
   text-shadow: 1px 1px 1px #4f5658; }
 
 .follow {
   background: -webkit-linear-gradient(#20c138, #116a1f);
+  background: -moz-linear-gradient(#20c138, #116a1f);
   background: linear-gradient(#20c138, #116a1f);
   border: 1px solid #0e5418;
+  -moz-text-shadow: 1px 1px 1px #0e5418;
   text-shadow: 1px 1px 1px #0e5418; }
 
 .unfollow {
   background: -webkit-linear-gradient(#ff3c31, #ca0b00);
+  background: -moz-linear-gradient(#ff3c31, #ca0b00);
   background: linear-gradient(#ff3c31, #ca0b00);
   border: 1px solid #b10900;
+  -moz-text-shadow: 1px 1px 1px #b10900;
   text-shadow: 1px 1px 1px #b10900; }

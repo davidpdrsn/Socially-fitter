@@ -8,6 +8,7 @@
   #logging .exercise {
     background: #c3c3c3;
     padding: 2%;
+    -moz-box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
     box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
     border-radius: 4px;
     margin-bottom: 2%;
@@ -20,27 +21,37 @@
     font-size: 10px;
     width: 15px;
     height: 15px;
+    -moz-border-radius: 50%;
     border-radius: 50%;
     text-align: center;
     line-height: 8px;
     color: white;
     border: 2px solid black;
     background: -webkit-linear-gradient(-45deg, #ff3c31, #ca0b00);
+    background: -moz-linear-gradient(-45deg, #ff3c31, #ca0b00);
+    background: linear-gradient(-45deg, #ff3c31, #ca0b00);
+    -moz-text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
     text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
     box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3); }
     #logging .remove:hover {
       cursor: pointer; }
     #logging .remove:active {
-      box-shadow: none;
       -webkit-transform: translate(2px, 2px);
+      -moz-transform: translate(2px, 2px);
+      transform: translate(2px, 2px);
+      -moz-box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
       box-shadow: 0 0 5px rgba(0, 0, 0, 0.3); }
   #logging input[type=text] {
     display: block;
+    -moz-box-shadow: inset 2px 2px 7px rgba(0, 0, 0, 0.3), inset 0 0 0 1px #c3c3c3;
     box-shadow: inset 2px 2px 7px rgba(0, 0, 0, 0.3), inset 0 0 0 1px #c3c3c3;
+    -moz-border-radius: 4px;
     border-radius: 4px;
     font-size: 15px;
     width: 100%;
     padding: 2%;
+    -moz-box-sizing: border-box;
     box-sizing: border-box;
     border: none;
     margin-bottom: 2%; }
@@ -63,42 +74,56 @@
     padding: 10px 0 8px;
     margin-bottom: 2%;
     background: -webkit-linear-gradient(#20c138, #116a1f);
+    background: -moz-linear-gradient(#20c138, #116a1f);
     background: linear-gradient(#20c138, #116a1f);
     border: 1px solid #0e5418;
+    -moz-text-shadow: 1px 1px 1px #0e5418;
     text-shadow: 1px 1px 1px #0e5418; }
     #logging input[type=submit]:hover, #logging input[type=submit]:active {
+      -moz-box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.5);
       box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.5);
       background: -webkit-linear-gradient(bottom, #20c138, #116a1f);
+      background: -moz-linear-gradient(bottom, #20c138, #116a1f);
       background: linear-gradient(bottom, #20c138, #116a1f); }
   #logging .addmore {
     font-family: "FoundationIconsGeneral";
     display: block;
     margin-bottom: 2%;
     background: -webkit-linear-gradient(-45deg, #20c138, #116a1f);
+    background: -moz-linear-gradient(-45deg, #20c138, #116a1f);
+    background: linear-gradient(-45deg, #20c138, #116a1f);
     width: 30px;
     height: 30px;
     text-align: center;
+    -moz-border-radius: 50%;
     border-radius: 50%;
     border: 3px solid white;
     color: white;
+    -moz-text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
     text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); }
     #logging .addmore:hover {
       cursor: pointer; }
     #logging .addmore:active {
-      box-shadow: none;
       -webkit-transform: translate(2px, 2px);
+      -moz-transform: translate(2px, 2px);
+      transform: translate(2px, 2px);
+      -moz-box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
       box-shadow: 0 0 5px rgba(0, 0, 0, 0.3); }
   #logging textarea {
     display: block;
     margin-bottom: 2%;
     width: 100%;
     height: 150px;
+    -moz-box-shadow: inset 2px 2px 7px rgba(0, 0, 0, 0.3), inset 0 0 0 1px #c3c3c3;
     box-shadow: inset 2px 2px 7px rgba(0, 0, 0, 0.3), inset 0 0 0 1px #c3c3c3;
+    -moz-border-radius: 4px;
     border-radius: 4px;
     font-size: 15px;
     width: 100%;
     padding: 2%;
+    -moz-box-sizing: border-box;
     box-sizing: border-box;
     border: none;
     margin-bottom: 2%; }
