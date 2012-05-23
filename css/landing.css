@@ -1,3 +1,40 @@
+#main-menu {
+  background: -webkit-linear-gradient(#2480bf, #18557e);
+  background: linear-gradient(#2480bf, #18557e);
+  padding: 10px 2%;
+  text-align: center;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  box-sizing: border-box; }
+  #main-menu a {
+    border-radius: 7px;
+    font-family: "Lucida Grande", "Lucida Sans Unicode", Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    font-weight: bold;
+    color: white;
+    padding: 10px 0 8px;
+    margin-right: 2.667%;
+    display: inline-block;
+    width: 23%;
+    box-sizing: border-box; }
+    #main-menu a:last-of-type {
+      margin-right: 0; }
+  #main-menu .timeline, #main-menu .log, #main-menu .profil, #main-menu .search {
+    background: -webkit-linear-gradient(#3c9ada, #1c6394);
+    background: linear-gradient(#3c9ada, #1c6394);
+    border: 1px solid #18557e;
+    text-shadow: 1px 1px 1px #2072a9; }
+
+* {
+  margin: 0;
+  padding: 0; }
+
+a {
+  color: inherit;
+  text-decoration: none;
+  border: none; }
+
 @font-face {
   font-family: "FoundationIconsGeneral";
   src: url("../fonts/foundation-icons-general.eot");
@@ -11,10 +48,6 @@
   src: url("../fonts/foundation-icons-social.eot?#iefix") format("embedded-opentype"), url("../fonts/foundation-icons-social.woff") format("woff"), url("../fonts/foundation-icons-social.ttf") format("truetype"), url("../fonts/foundation-icons-social.svg#FoundationIconsSocial") format("svg");
   font-weight: normal;
   font-style: normal; }
-
-* {
-  margin: 0;
-  padding: 0; }
 
 body {
   background: #dcdcdc;
@@ -31,49 +64,27 @@ body {
 .social {
   font-family: "FoundationIconsSocial"; }
 
-.bar {
-  background: -webkit-linear-gradient(#2480bf, #18557e);
-  padding: 10px;
-  text-align: center;
-  display: table;
-  width: 100%;
-  position: fixed;
-  top: 0; }
-  .bar .main-menu {
-    padding: 0;
-    width: 50px;
-    padding: 10px 0 8px;
-    display: table-cell;
-    width: 24%;
-    margin-right: 1.333%; }
-    .bar .main-menu:last-of-type {
-      margin-right: 0; }
-
-.login, .timeline, .log, .profil, .search {
+.login {
   background: -webkit-linear-gradient(#3c9ada, #1c6394);
+  background: linear-gradient(#3c9ada, #1c6394);
   border: 1px solid #18557e;
   text-shadow: 1px 1px 1px #2072a9; }
 
 .logout {
   float: right;
   background: -webkit-linear-gradient(#8e9699, #5c6365);
+  background: linear-gradient(#8e9699, #5c6365);
   border: 1px solid #4f5658;
   text-shadow: 1px 1px 1px #4f5658; }
 
 .follow {
   background: -webkit-linear-gradient(#20c138, #116a1f);
+  background: linear-gradient(#20c138, #116a1f);
   border: 1px solid #0e5418;
   text-shadow: 1px 1px 1px #0e5418; }
 
 .unfollow {
   background: -webkit-linear-gradient(#ff3c31, #ca0b00);
+  background: linear-gradient(#ff3c31, #ca0b00);
   border: 1px solid #b10900;
   text-shadow: 1px 1px 1px #b10900; }
-
-button {
-  border-radius: 7px;
-  padding: 5px 12px;
-  color: white;
-  font-family: "Lucida Grande", "Lucida Sans Unicode", Arial, Helvetica, sans-serif;
-  font-size: 13px;
-  font-weight: bold; }
