@@ -2,9 +2,10 @@
   background: -webkit-linear-gradient(#2480bf, #18557e);
   padding: 10px 2%;
   text-align: center;
-  width: 96.1%;
+  width: 100%;
   position: fixed;
-  top: 0; }
+  top: 0;
+  box-sizing: border-box; }
   #main-menu a {
     border-radius: 7px;
     font-family: "Lucida Grande", "Lucida Sans Unicode", Arial, Helvetica, sans-serif;
