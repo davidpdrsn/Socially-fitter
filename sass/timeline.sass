@@ -1,0 +1,26 @@
+@import "global.sass"
+
+//////////////////////////////////////
+// TIMELINE //////////////////////////
+//////////////////////////////////////
+
+#wrap
+  margin-top: 56px
+  font-family: "Lucida Grande", "Lucida Sans Unicode", Arial, Helvetica, sans-serif
+
+#timeline
+  .log
+    padding: $generalpadding
+    border-bottom: 1px solid $darkgray
+    float: left
+    width: 100% - ($generalpadding * 2) + 0.1
+    &:nth-child(even)
+      background: darken($lightgray, 10%)
+    img
+      float: left
+      margin-right: $generalpadding
+    div.log-title
+      float: left
+      p.profile-name
+        font-weight: bold
+          
