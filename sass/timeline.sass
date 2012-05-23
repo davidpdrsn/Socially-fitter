@@ -7,9 +7,9 @@
 #timeline
   .log
     padding: $generalpadding 0px 0px 0px
-    border-bottom: 1px solid $darkgray
+    border-bottom: 2px solid $darkgray
     &:nth-child(even)
-      background: darken($lightgray, 10%)
+      background: darken($lightgray, 5%)
   .log-header
     padding: 0px $generalpadding
     position: relative
@@ -43,5 +43,22 @@
       display: none
       background: darken($lightgray, 20%)
       padding: $generalpadding
-      box-shadow: inset 0px 2px 1px $darkgray, inset 0px -2px 1px $darkgray
+      //box-shadow: inset 0px 2px 1px $darkgray, inset 0px -2px 1px $darkgray
       text-align: left
+      .expanded-log-text
+        padding-left: $generalpadding*2
+        margin-bottom: $generalpadding
+        float: left
+      .glyph
+        font-size: 13px
+      p
+        float: left
+        margin-right: 15px
+        font-size: medium
+        a
+          color: $darkgraydarken25
+          font-size: 12px
+      .log-favorite a:hover 
+        color: rgb(240,210,0)
+      .log-comment a:hover
+        color: $bluedarken25

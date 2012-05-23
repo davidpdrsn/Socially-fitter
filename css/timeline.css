@@ -1,8 +1,8 @@
 #timeline .log {
   padding: 2% 0px 0px 0px;
-  border-bottom: 1px solid #8e9699; }
+  border-bottom: 2px solid #8e9699; }
   #timeline .log:nth-child(even) {
-    background: #c3c3c3; }
+    background: #cfcfcf; }
 #timeline .log-header {
   padding: 0px 2%;
   position: relative; }
@@ -35,5 +35,21 @@
     display: none;
     background: #a9a9a9;
     padding: 2%;
-    box-shadow: inset 0px 2px 1px #8e9699, inset 0px -2px 1px #8e9699;
     text-align: left; }
+    #timeline .log-footer .expanded-log .expanded-log-text {
+      padding-left: 4%;
+      margin-bottom: 2%;
+      float: left; }
+    #timeline .log-footer .expanded-log .glyph {
+      font-size: 13px; }
+    #timeline .log-footer .expanded-log p {
+      float: left;
+      margin-right: 15px;
+      font-size: medium; }
+      #timeline .log-footer .expanded-log p a {
+        color: #4f5658;
+        font-size: 12px; }
+    #timeline .log-footer .expanded-log .log-favorite a:hover {
+      color: #f0d200; }
+    #timeline .log-footer .expanded-log .log-comment a:hover {
+      color: #2072a9; }
