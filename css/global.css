@@ -1,5 +1,6 @@
 #main-menu {
   background: -webkit-linear-gradient(#2480bf, #18557e);
+  background: linear-gradient(#2480bf, #18557e);
   padding: 10px 2%;
   text-align: center;
   width: 100%;
@@ -21,6 +22,7 @@
       margin-right: 0; }
   #main-menu .timeline, #main-menu .log, #main-menu .profil, #main-menu .search {
     background: -webkit-linear-gradient(#3c9ada, #1c6394);
+    background: linear-gradient(#3c9ada, #1c6394);
     border: 1px solid #18557e;
     text-shadow: 1px 1px 1px #2072a9; }
 

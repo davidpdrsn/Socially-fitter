@@ -4,11 +4,11 @@ Syntax error: Undefined variable: "$bluedarken20".
 
 1: #main-menu
 2:   background: -webkit-linear-gradient($bluedarken20, $bluedarken35)
-3:   padding: 10px $generalpadding
-4:   text-align: center
-5:   // +0.1 fixes a 1px spacing on the right side, very weird indeed
-6:   width: 100%
-7:   position: fixed
+3:   background: linear-gradient($bluedarken20, $bluedarken35)
+4:   padding: 10px $generalpadding
+5:   text-align: center
+6:   // +0.1 fixes a 1px spacing on the right side, very weird indeed
+7:   width: 100%
 
 Backtrace:
 sass/masthead.sass:2
@@ -78,4 +78,4 @@ sass/masthead.sass:2
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Syntax error: Undefined variable: \"$bluedarken20\".\A         on line 2 of sass/masthead.sass\A \A 1: #main-menu\A 2:   background: -webkit-linear-gradient($bluedarken20, $bluedarken35)\A 3:   padding: 10px $generalpadding\A 4:   text-align: center\A 5:   // +0.1 fixes a 1px spacing on the right side, very weird indeed\A 6:   width: 100%\A 7:   position: fixed"; }
+  content: "Syntax error: Undefined variable: \"$bluedarken20\".\A         on line 2 of sass/masthead.sass\A \A 1: #main-menu\A 2:   background: -webkit-linear-gradient($bluedarken20, $bluedarken35)\A 3:   background: linear-gradient($bluedarken20, $bluedarken35)\A 4:   padding: 10px $generalpadding\A 5:   text-align: center\A 6:   // +0.1 fixes a 1px spacing on the right side, very weird indeed\A 7:   width: 100%"; }
