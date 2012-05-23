@@ -1,0 +1,93 @@
+@import "vars.sass"
+
+//////////////////////////////////////
+// SEARCH ////////////////////////////
+//////////////////////////////////////
+
+#search
+  padding: $generalpadding
+  form
+    .search-input-container
+      position: relative
+      background: white
+      border-radius: 4px
+      border: 2px solid $darkgray
+      display: block
+      margin-bottom: $generalpadding
+      position: relative
+      &:before
+        content: "="
+        font-family: 'FoundationIconsGeneral'
+        color: #ccc
+        position: absolute
+        margin-top: -17px
+        left: 6px
+        top: 50%
+      input
+        box-shadow: inset 2px 2px 7px rgba(0,0,0,.3)
+        font-size: 15px
+        width: 100%
+        padding: $generalpadding $generalpadding $generalpadding 24px
+        box-sizing: border-box
+        border: none
+    p
+      margin-bottom: $generalpadding
+      color: $darkgray
+      font-size: 12px
+      text-align: center
+    input[type=submit]
+      display: block
+      width: 100px
+      margin: 0 auto
+      border-radius: 7px
+      color: #fff
+      font-size: 15px
+      font-weight: bold
+      padding: 10px 0 8px
+      margin-bottom: $generalpadding
+      background: -webkit-linear-gradient($green, $greendarken20)
+      background: linear-gradient($green, $greendarken20)
+      border: 1px solid $greendarken25
+      text-shadow: 1px 1px 1px $greendarken25
+      &:hover, &:active
+        box-shadow: inset 2px 2px 5px rgba(0,0,0,.5)
+        background: -webkit-linear-gradient(bottom, $green, $greendarken20)
+        background: linear-gradient(bottom, $green, $greendarken20)
+
+#results
+  .log
+    padding: $generalpadding 0px 0px 0px
+    border-bottom: 1px solid $darkgray
+    &:nth-child(odd)
+      background: darken($lightgray, 10%)
+    &:first-of-type
+      border-top: 1px solid $darkgray
+  .log-header
+    padding: 0px $generalpadding
+    .profile-picture
+      width: 48px
+      height: 48px
+      border-radius: 4px
+      border: 1px solid $darkgray
+      overflow: hidden
+      float: left
+      margin-right: $generalpadding
+    div.log-title
+      p
+        margin-bottom: 5px
+      p.profile-name
+        font-weight: bold
+  .log-footer
+    text-align: center
+    font-size: 12px
+    .log-expand
+      cursor: pointer
+      user-select: none
+      color: $darkgray
+      display: inline-block
+      margin-bottom: $generalpadding
+    .expanded-log
+      background: darken($lightgray, 20%)
+      padding: $generalpadding
+      box-shadow: inset 0px 2px 1px $darkgray, inset 0px -2px 1px $darkgray
+      text-align: left

@@ -5,12 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title></title>
   <link rel="stylesheet" type="text/css" href="css/global.css">
-  <link rel="stylesheet" type="text/css" href="css/timeline.css">
+  <link rel="stylesheet" type="text/css" href="css/search.css">
   <script type="text/javascript" src="js/prefixfree.min.js"></script>
-  
-  <script type="text/javascript">
-   
-  </script>
 </head>
 <body>
 
@@ -20,30 +16,20 @@
         <a href="index.html" class="timeline"><span class="glyph general">m</span></a>
         <a href="#" class="log"><span class="glyph general">[</span></a>
         <a href="#" class="profil"><span class="glyph social">x</span></a>
-        <a href="search.html" class="search"><span class="glyph general">=</span></a>
+        <a href="#" class="search"><span class="glyph general">=</span></a>
       </div> <!-- #main-menu -->
 
-	    <div id="timeline">
-        
-        <div class="log">
-          <div class="log-header">
-            <div class="profile-picture">
-              <img src="http://lorempixel.com/48/48/" alt="profile picture" class="picture" />
-            </div>
-            <div class="log-title">
-              <p class="profile-name">Navn</p>
-              <p>Workout navn</p>
-            </div> 
-          </div> <!-- .log-header -->
-          <div class="clearfix"></div>
-          <div class="log-footer">
-            <span class="log-expand">Show more!</span>
-            <div class="expanded-log">
-              <p>Det virker jo!</p>
-            </div>
-          </div> <!-- .log-footer -->
-        </div> <!-- .log -->
+	    <div id="search">
+        <form action="#">
+          <div class="search-input-container">
+            <input type="text" placeholder="Search...">
+          </div>
+          <p>Search and find other friends on Socially Fitter</p>
+          <input type="submit" value="GO!">
+        </form>
+	    </div> <!-- #search -->
 
+      <div id="results">
         <div class="log">
           <div class="log-header">
             <div class="profile-picture">
@@ -52,7 +38,7 @@
             <div class="log-title">
               <p class="profile-name">Navn</p>
               <p>Workout navn</p>
-            </div> 
+            </div>
           </div> <!-- .log-header -->
           <div class="clearfix"></div>
           <div class="log-footer">
@@ -62,7 +48,6 @@
             </div>
           </div> <!-- .log-footer -->
         </div> <!-- .log -->
-
         <div class="log">
           <div class="log-header">
             <div class="profile-picture">
@@ -71,7 +56,7 @@
             <div class="log-title">
               <p class="profile-name">Navn</p>
               <p>Workout navn</p>
-            </div> 
+            </div>
           </div> <!-- .log-header -->
           <div class="clearfix"></div>
           <div class="log-footer">
@@ -81,7 +66,6 @@
             </div>
           </div> <!-- .log-footer -->
         </div> <!-- .log -->
-
         <div class="log">
           <div class="log-header">
             <div class="profile-picture">
@@ -90,7 +74,7 @@
             <div class="log-title">
               <p class="profile-name">Navn</p>
               <p>Workout navn</p>
-            </div> 
+            </div>
           </div> <!-- .log-header -->
           <div class="clearfix"></div>
           <div class="log-footer">
@@ -100,8 +84,25 @@
             </div>
           </div> <!-- .log-footer -->
         </div> <!-- .log -->
-        
-	    </div> <!-- #timleine -->
+        <div class="log">
+          <div class="log-header">
+            <div class="profile-picture">
+              <img src="http://lorempixel.com/48/48/" alt="profile picture" class="picture" />
+            </div>
+            <div class="log-title">
+              <p class="profile-name">Navn</p>
+              <p>Workout navn</p>
+            </div>
+          </div> <!-- .log-header -->
+          <div class="clearfix"></div>
+          <div class="log-footer">
+            <span class="log-expand">Show more!</span>
+            <div class="expanded-log">
+              <p>Det virker jo!</p>
+            </div>
+          </div> <!-- .log-footer -->
+        </div> <!-- .log -->
+      </div> <!-- #results -->
   </div> <!-- #wrap -->
 
   <script type="text/javascript" src="js/jquery.js"></script>

@@ -1,0 +1,84 @@
+#search {
+  padding: 2%; }
+  #search form .search-input-container {
+    position: relative;
+    background: white;
+    border-radius: 4px;
+    border: 2px solid #8e9699;
+    display: block;
+    margin-bottom: 2%;
+    position: relative; }
+    #search form .search-input-container:before {
+      content: "=";
+      font-family: "FoundationIconsGeneral";
+      color: #cccccc;
+      position: absolute;
+      margin-top: -17px;
+      left: 6px;
+      top: 50%; }
+    #search form .search-input-container input {
+      box-shadow: inset 2px 2px 7px rgba(0, 0, 0, 0.3);
+      font-size: 15px;
+      width: 100%;
+      padding: 2% 2% 2% 24px;
+      box-sizing: border-box;
+      border: none; }
+  #search form p {
+    margin-bottom: 2%;
+    color: #8e9699;
+    font-size: 12px;
+    text-align: center; }
+  #search form input[type=submit] {
+    display: block;
+    width: 100px;
+    margin: 0 auto;
+    border-radius: 7px;
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    padding: 10px 0 8px;
+    margin-bottom: 2%;
+    background: -webkit-linear-gradient(#20c138, #116a1f);
+    background: linear-gradient(#20c138, #116a1f);
+    border: 1px solid #0e5418;
+    text-shadow: 1px 1px 1px #0e5418; }
+    #search form input[type=submit]:hover, #search form input[type=submit]:active {
+      box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.5);
+      background: -webkit-linear-gradient(bottom, #20c138, #116a1f);
+      background: linear-gradient(bottom, #20c138, #116a1f); }
+
+#results .log {
+  padding: 2% 0px 0px 0px;
+  border-bottom: 1px solid #8e9699; }
+  #results .log:nth-child(odd) {
+    background: #c3c3c3; }
+  #results .log:first-of-type {
+    border-top: 1px solid #8e9699; }
+#results .log-header {
+  padding: 0px 2%; }
+  #results .log-header .profile-picture {
+    width: 48px;
+    height: 48px;
+    border-radius: 4px;
+    border: 1px solid #8e9699;
+    overflow: hidden;
+    float: left;
+    margin-right: 2%; }
+  #results .log-header div.log-title p {
+    margin-bottom: 5px; }
+  #results .log-header div.log-title p.profile-name {
+    font-weight: bold; }
+#results .log-footer {
+  text-align: center;
+  font-size: 12px; }
+  #results .log-footer .log-expand {
+    cursor: pointer;
+    user-select: none;
+    color: #8e9699;
+    display: inline-block;
+    margin-bottom: 2%; }
+  #results .log-footer .expanded-log {
+    background: #a9a9a9;
+    padding: 2%;
+    box-shadow: inset 0px 2px 1px #8e9699, inset 0px -2px 1px #8e9699;
+    text-align: left; }
