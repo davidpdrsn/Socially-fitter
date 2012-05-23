@@ -51,3 +51,29 @@
         box-shadow: inset 2px 2px 5px rgba(0,0,0,.5)
         background: -webkit-linear-gradient(bottom, $green, $greendarken20)
         background: linear-gradient(bottom, $green, $greendarken20)
+
+#results
+  .log
+    padding: $generalpadding
+    border-bottom: 1px solid $darkgray
+    float: left
+    width: 100% - ($generalpadding * 2) + 0.1
+    &:nth-child(odd)
+      background: darken($lightgray, 10%)
+    &:first-of-type
+      border-top: 1px solid $darkgray
+    .profile-picture
+      width: 48px
+      height: 48px
+      border-radius: 4px
+      border: 1px solid $darkgray
+      overflow: hidden
+      float: left
+      margin-right: $generalpadding
+    div.log-title
+      float: left
+      p
+        margin-bottom: 5px
+      p.profile-name
+        font-weight: bold
+
