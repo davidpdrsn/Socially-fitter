@@ -76,6 +76,10 @@ a {
 body {
   background: #dcdcdc; }
 
+#wrap {
+  margin-top: 56px;
+  font-family: "Lucida Grande", "Lucida Sans Unicode", Arial, Helvetica, sans-serif; }
+
 .glyph {
   line-height: 0px;
   font-size: 20px;

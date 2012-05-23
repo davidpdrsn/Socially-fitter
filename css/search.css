@@ -1,0 +1,5 @@
+#search {
+  padding: 2%; }
+  #search form input[type=search] {
+    border-radius: 0;
+    border: 0; }
