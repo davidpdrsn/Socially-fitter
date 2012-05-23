@@ -1,5 +1,27 @@
 #search {
   padding: 2%; }
-  #search form input[type=search] {
-    border-radius: 0;
-    border: 0; }
+  #search form input[type=text] {
+    border-radius: 4px;
+    border: 2px solid #8e9699;
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 2% 2% 2% 24px;
+    margin-bottom: 2%;
+    font-size: 15px;
+    position: relative;
+    box-shadow: inset 2px 2px 7px rgba(0, 0, 0, 0.3); }
+    #search form input[type=text]:before {
+      content: "=";
+      position: absolute;
+      top: 50%;
+      margin-top: -15px;
+      left: 6px;
+      color: #cccccc;
+      font-family: "FoundationIconsGeneral"; }
+    #search form input[type=text]:focus:before {
+      color: black; }
+  #search form input[type=submit] {
+    display: block;
+    width: 100px;
+    margin: 0 auto; }
