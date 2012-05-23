@@ -27,7 +27,7 @@
     border: 2px solid black;
     background: -webkit-linear-gradient(-45deg, #ff3c31, #ca0b00);
     text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); }
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3); }
     #logging .remove:hover {
       cursor: pointer; }
     #logging .remove:active {
