@@ -1,0 +1,30 @@
+#logging {
+  padding: 2%; }
+  #logging label {
+    display: block; }
+  #logging input[type=text] {
+    display: block; }
+  #logging textarea {
+    display: block;
+    margin-bottom: 2%; }
+  #logging input[type=submit] {
+    display: block;
+    width: 100px;
+    margin: 0 auto;
+    border-radius: 7px;
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    padding: 10px 0 8px;
+    margin-bottom: 2%;
+    background: -webkit-linear-gradient(#20c138, #116a1f);
+    background: linear-gradient(#20c138, #116a1f);
+    border: 1px solid #0e5418;
+    text-shadow: 1px 1px 1px #0e5418; }
+    #logging input[type=submit]:hover, #logging input[type=submit]:active {
+      box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.5);
+      background: -webkit-linear-gradient(bottom, #20c138, #116a1f);
+      background: linear-gradient(bottom, #20c138, #116a1f); }
+  #logging .addmore {
+    font-family: "FoundationIconsGeneral";
+    display: block; }
