@@ -12,6 +12,13 @@
       background: darken($lightgray, 10%)
   .log-header
     padding: 0px $generalpadding
+    position: relative
+    .log-time
+      position: absolute
+      right: $generalpadding
+      top: 0
+      font-size: 12px
+      color: $darkgray
     .profile-picture
       width: 48px
       height: 48px
@@ -21,8 +28,6 @@
       float: left
       margin-right: $generalpadding
     div.log-title
-      p
-        margin-bottom: 5px
       p.profile-name
         font-weight: bold
   .log-footer

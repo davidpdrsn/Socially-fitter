@@ -78,8 +78,9 @@ body {
   background: #dcdcdc; }
 
 #wrap {
-  margin-top: 56px;
-  font-family: "Lucida Grande", "Lucida Sans Unicode", Arial, Helvetica, sans-serif; }
+  margin-top: 65px;
+  font-family: "Lucida Grande", "Lucida Sans Unicode", Arial, Helvetica, sans-serif;
+  line-height: 20px; }
 
 .glyph {
   line-height: 0px;
