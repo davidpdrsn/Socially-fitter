@@ -48,28 +48,44 @@
       //box-shadow: inset 0px 2px 1px $darkgray, inset 0px -2px 1px $darkgray
       text-align: left
       box-shadow: inset 0px 1px 1px $darkgraydarken25
+      box-sizing: border-box
       .expanded-log-text
         margin-bottom: $generalpadding
         text-indent: $generalpadding
         float: left
         width: 100%
       .glyph
-        font-size: 13px
+        font-size: 12px
       strong 
-        font-size: medium
+        font-size: 13px
         margin-top: $generalpadding
         display: block
       p
-        font-size: medium
-        margin-left: 10px
+        font-size: 13px
+        text-indent: $generalpadding + $generalpadding/2
       a
         color: $darkgraydarken25
-        font-size: 12px
+        font-size: 13px
       .log-favorite, .log-comment
+        font-size: 12px
         float: left
         margin-left: 0
         margin-right: 15px
+        text-indent: 0
       .log-favorite a:hover
         color: rgb(240,210,0)
       .log-comment a:hover
         color: $bluedarken25
+      .commenting-log
+        float: left
+        width: 100% + $generalpadding*2
+        // background: $lightgray
+        margin-left: - $generalpadding
+        padding: $generalpadding 0px
+        input
+          border: 1px solid $darkgraydarken20
+          border-radius: 20px
+          padding: $generalpadding $generalpadding*2
+          width: 85%
+          margin: 0 auto
+          display: block
