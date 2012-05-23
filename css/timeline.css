@@ -11,8 +11,12 @@
     background: #c3c3c3; }
   #timeline .log img {
     float: left;
-    margin-right: 2%; }
+    margin-right: 2%;
+    border-radius: 4px;
+    border: 1px solid #8e9699; }
   #timeline .log div.log-title {
     float: left; }
+    #timeline .log div.log-title p {
+      margin-bottom: 5px; }
     #timeline .log div.log-title p.profile-name {
       font-weight: bold; }
