@@ -27,6 +27,7 @@
     display: inline-block;
     margin-bottom: 2%; }
   #timeline .log-footer .expanded-log {
+    display: none;
     background: #a9a9a9;
     padding: 2%;
     box-shadow: inset 0px 2px 1px #8e9699, inset 0px -2px 1px #8e9699;

@@ -34,7 +34,6 @@
 })( this );
 
 $(document).ready(function() {  
-  $('.expanded-log').hide();
   
   $('.log').click(function() {
     $(this).children().children('.expanded-log').slideToggle('fast');
