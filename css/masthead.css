@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /*
 Syntax error: Undefined variable: "$bluedarken20".
         on line 2 of sass/masthead.sass
@@ -79,3 +80,35 @@ body:before {
   white-space: pre;
   font-family: monospace;
   content: "Syntax error: Undefined variable: \"$bluedarken20\".\A         on line 2 of sass/masthead.sass\A \A 1: #main-menu\A 2:   background: -webkit-linear-gradient($bluedarken20, $bluedarken35)\A 3:   background: linear-gradient($bluedarken20, $bluedarken35)\A 4:   padding: 10px $generalpadding\A 5:   text-align: center\A 6:   // +0.1 fixes a 1px spacing on the right side, very weird indeed\A 7:   width: 100%"; }
+=======
+#main-menu {
+  background: -webkit-linear-gradient(#2480bf, #18557e);
+  background: linear-gradient(#2480bf, #18557e);
+  padding: 10px 2%;
+  text-align: center;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  box-sizing: border-box; }
+  #main-menu a {
+    border-radius: 7px;
+    font-family: "Lucida Grande", "Lucida Sans Unicode", Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    font-weight: bold;
+    color: white;
+    padding: 10px 0 8px;
+    margin-right: 2.667%;
+    display: inline-block;
+    width: 23%;
+    box-sizing: border-box; }
+    #main-menu a:last-of-type {
+      margin-right: 0; }
+  #main-menu .timeline, #main-menu .log, #main-menu .profil, #main-menu .search {
+    background: -webkit-linear-gradient(#3c9ada, #1c6394);
+    background: linear-gradient(#3c9ada, #1c6394);
+    border: 1px solid #18557e;
+    text-shadow: 1px 1px 1px #2072a9; }
+    #main-menu .timeline:hover, #main-menu .timeline:active, #main-menu .log:hover, #main-menu .log:active, #main-menu .profil:hover, #main-menu .profil:active, #main-menu .search:hover, #main-menu .search:active {
+      box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.5);
+      background: -webkit-linear-gradient(bottom, #288ed4, #18557e); }
+>>>>>>> master

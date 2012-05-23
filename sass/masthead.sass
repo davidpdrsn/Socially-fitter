@@ -1,3 +1,5 @@
+@import "vars.sass"
+
 #main-menu
   background: -webkit-linear-gradient($bluedarken20, $bluedarken35)
   background: linear-gradient($bluedarken20, $bluedarken35)
@@ -27,6 +29,9 @@
     background: linear-gradient($bluedarken10, $bluedarken30)
     border: 1px solid $bluedarken35
     text-shadow: 1px 1px 1px $bluedarken25
+    &:hover, &:active
+      box-shadow: inset 2px 2px 5px rgba(0,0,0,.5)
+      background: -webkit-linear-gradient(bottom, $bluedarken15, $bluedarken35)
     
 //////////////////////////////////////
 // BUTTONS ///////////////////////////

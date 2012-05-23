@@ -25,6 +25,9 @@
     background: linear-gradient(#3c9ada, #1c6394);
     border: 1px solid #18557e;
     text-shadow: 1px 1px 1px #2072a9; }
+    #main-menu .timeline:hover, #main-menu .timeline:active, #main-menu .log:hover, #main-menu .log:active, #main-menu .profil:hover, #main-menu .profil:active, #main-menu .search:hover, #main-menu .search:active {
+      box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.5);
+      background: -webkit-linear-gradient(bottom, #288ed4, #18557e); }
 
 .logout {
   float: right;
@@ -82,3 +85,10 @@ body {
 
 .social {
   font-family: "FoundationIconsSocial"; }
+
+.clearfix:before, .clearfix:after {
+  content: "";
+  display: table; }
+
+.clearfix:after {
+  clear: both; }
