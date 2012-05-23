@@ -1,15 +1,18 @@
-#wrap {
-  margin-top: 56px;
-  font-family: "Lucida Grande", "Lucida Sans Unicode", Arial, Helvetica, sans-serif; }
-
 #timeline .log {
-  padding: 2%;
-  border-bottom: 1px solid #8e9699;
-  float: left;
-  width: 96.1%; }
+  padding: 2% 0px 0px 0px;
+  border-bottom: 2px solid #8e9699; }
   #timeline .log:nth-child(even) {
-    background: #c3c3c3; }
-  #timeline .log .profile-picture {
+    background: #cfcfcf; }
+#timeline .log-header {
+  padding: 0px 2%;
+  position: relative; }
+  #timeline .log-header .log-time {
+    position: absolute;
+    right: 2%;
+    top: 0;
+    font-size: 12px;
+    color: #8e9699; }
+  #timeline .log-header .profile-picture {
     width: 48px;
     height: 48px;
     border-radius: 4px;
@@ -17,9 +20,45 @@
     overflow: hidden;
     float: left;
     margin-right: 2%; }
-  #timeline .log div.log-title {
-    float: left; }
-    #timeline .log div.log-title p {
-      margin-bottom: 5px; }
-    #timeline .log div.log-title p.profile-name {
-      font-weight: bold; }
+  #timeline .log-header div.log-title p.profile-name {
+    font-weight: bold; }
+#timeline .log-footer {
+  text-align: center;
+  font-size: 12px; }
+  #timeline .log-footer .log-expand {
+    cursor: pointer;
+    user-select: none;
+    color: #8e9699;
+    display: inline-block;
+    margin-bottom: 2%; }
+  #timeline .log-footer .expanded-log {
+    display: none;
+    background: #a9a9a9;
+    padding: 2% 2% 2% 2%;
+    text-align: left;
+    box-shadow: inset 0px 1px 1px #4f5658; }
+    #timeline .log-footer .expanded-log .expanded-log-text {
+      margin-bottom: 2%;
+      text-indent: 2%;
+      float: left;
+      width: 100%; }
+    #timeline .log-footer .expanded-log .glyph {
+      font-size: 13px; }
+    #timeline .log-footer .expanded-log strong {
+      font-size: medium;
+      margin-top: 2%;
+      display: block; }
+    #timeline .log-footer .expanded-log p {
+      font-size: medium;
+      margin-left: 10px; }
+    #timeline .log-footer .expanded-log a {
+      color: #4f5658;
+      font-size: 12px; }
+    #timeline .log-footer .expanded-log .log-favorite, #timeline .log-footer .expanded-log .log-comment {
+      float: left;
+      margin-left: 0;
+      margin-right: 15px; }
+    #timeline .log-footer .expanded-log .log-favorite a:hover {
+      color: #f0d200; }
+    #timeline .log-footer .expanded-log .log-comment a:hover {
+      color: #2072a9; }
