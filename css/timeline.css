@@ -33,6 +33,8 @@
     margin-bottom: 2%; }
   #timeline .log-footer .expanded-log {
     display: none;
+    float: left;
+    width: 100%;
     background: #a9a9a9;
     padding: 2% 2% 2% 2%;
     text-align: left;
