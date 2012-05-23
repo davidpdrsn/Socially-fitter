@@ -33,8 +33,14 @@
 	}
 })( this );
 
-$(document).ready(function() {  
+$(document).ready(function() {
+
   $('.log').click(function() {
     $(this).children().children('.expanded-log').slideToggle('fast');
   });
+
+  $('span.addmore').click(function(){
+    alert("Aww! You hit me!");
+  });
+
 });
