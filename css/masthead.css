@@ -15,8 +15,9 @@
     font-weight: bold;
     color: white;
     padding: 10px 0 8px;
-    margin-right: 2.304%;
-    display: inline-block;
+    margin-right: 3%;
+    display: block;
+    float: left;
     width: 23%;
     box-sizing: border-box; }
     #main-menu a:last-of-type {
