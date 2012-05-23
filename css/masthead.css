@@ -1,81 +1,30 @@
-/*
-Syntax error: Undefined variable: "$bluedarken20".
-        on line 2 of sass/masthead.sass
-
-1: #main-menu
-2:   background: -webkit-linear-gradient($bluedarken20, $bluedarken35)
-3:   background: linear-gradient($bluedarken20, $bluedarken35)
-4:   padding: 10px $generalpadding
-5:   text-align: center
-6:   // +0.1 fixes a 1px spacing on the right side, very weird indeed
-7:   width: 100%
-
-Backtrace:
-sass/masthead.sass:2
-/Users/davidpedersen/.rvm/gems/ruby-1.9.2-p290/gems/sass-3.1.12/lib/sass/script/variable.rb:49:in `_perform'
-/Users/davidpedersen/.rvm/gems/ruby-1.9.2-p290/gems/sass-3.1.12/lib/sass/script/node.rb:40:in `perform'
-/Users/davidpedersen/.rvm/gems/ruby-1.9.2-p290/gems/sass-3.1.12/lib/sass/script/funcall.rb:76:in `block in _perform'
-/Users/davidpedersen/.rvm/gems/ruby-1.9.2-p290/gems/sass-3.1.12/lib/sass/script/funcall.rb:76:in `map'
-/Users/davidpedersen/.rvm/gems/ruby-1.9.2-p290/gems/sass-3.1.12/lib/sass/script/funcall.rb:76:in `_perform'
-/Users/davidpedersen/.rvm/gems/ruby-1.9.2-p290/gems/sass-3.1.12/lib/sass/script/node.rb:40:in `perform'
-/Users/davidpedersen/.rvm/gems/ruby-1.9.2-p290/gems/sass-3.1.12/lib/sass/tree/visitors/perform.rb:216:in `visit_prop'
-/Users/davidpedersen/.rvm/gems/ruby-1.9.2-p290/gems/sass-3.1.12/lib/sass/tree/visitors/base.rb:37:in `visit'
-/Users/davidpedersen/.rvm/gems/ruby-1.9.2-p290/gems/sass-3.1.12/lib/sass/tree/visitors/perform.rb:18:in `visit'
-/Users/davidpedersen/.rvm/gems/ruby-1.9.2-p290/gems/sass-3.1.12/lib/sass/tree/visitors/base.rb:53:in `block in visit_children'
-/Users/davidpedersen/.rvm/gems/ruby-1.9.2-p290/gems/sass-3.1.12/lib/sass/tree/visitors/base.rb:53:in `map'
-/Users/davidpedersen/.rvm/gems/ruby-1.9.2-p290/gems/sass-3.1.12/lib/sass/tree/visitors/base.rb:53:in `visit_children'
-/Users/davidpedersen/.rvm/gems/ruby-1.9.2-p290/gems/sass-3.1.12/lib/sass/tree/visitors/perform.rb:27:in `block in visit_children'
-/Users/davidpedersen/.rvm/gems/ruby-1.9.2-p290/gems/sass-3.1.12/lib/sass/tree/visitors/perform.rb:39:in `with_environment'
-/Users/davidpedersen/.rvm/gems/ruby-1.9.2-p290/gems/sass-3.1.12/lib/sass/tree/visitors/perform.rb:26:in `visit_children'
-/Users/davidpedersen/.rvm/gems/ruby-1.9.2-p290/gems/sass-3.1.12/lib/sass/tree/visitors/base.rb:37:in `block in visit'
-/Users/davidpedersen/.rvm/gems/ruby-1.9.2-p290/gems/sass-3.1.12/lib/sass/tree/visitors/perform.rb:236:in `visit_rule'
-/Users/davidpedersen/.rvm/gems/ruby-1.9.2-p290/gems/sass-3.1.12/lib/sass/tree/visitors/base.rb:37:in `visit'
-/Users/davidpedersen/.rvm/gems/ruby-1.9.2-p290/gems/sass-3.1.12/lib/sass/tree/visitors/perform.rb:18:in `visit'
-/Users/davidpedersen/.rvm/gems/ruby-1.9.2-p290/gems/sass-3.1.12/lib/sass/tree/visitors/base.rb:53:in `block in visit_children'
-/Users/davidpedersen/.rvm/gems/ruby-1.9.2-p290/gems/sass-3.1.12/lib/sass/tree/visitors/base.rb:53:in `map'
-/Users/davidpedersen/.rvm/gems/ruby-1.9.2-p290/gems/sass-3.1.12/lib/sass/tree/visitors/base.rb:53:in `visit_children'
-/Users/davidpedersen/.rvm/gems/ruby-1.9.2-p290/gems/sass-3.1.12/lib/sass/tree/visitors/perform.rb:27:in `block in visit_children'
-/Users/davidpedersen/.rvm/gems/ruby-1.9.2-p290/gems/sass-3.1.12/lib/sass/tree/visitors/perform.rb:39:in `with_environment'
-/Users/davidpedersen/.rvm/gems/ruby-1.9.2-p290/gems/sass-3.1.12/lib/sass/tree/visitors/perform.rb:26:in `visit_children'
-/Users/davidpedersen/.rvm/gems/ruby-1.9.2-p290/gems/sass-3.1.12/lib/sass/tree/visitors/base.rb:37:in `block in visit'
-/Users/davidpedersen/.rvm/gems/ruby-1.9.2-p290/gems/sass-3.1.12/lib/sass/tree/visitors/perform.rb:47:in `visit_root'
-/Users/davidpedersen/.rvm/gems/ruby-1.9.2-p290/gems/sass-3.1.12/lib/sass/tree/visitors/base.rb:37:in `visit'
-/Users/davidpedersen/.rvm/gems/ruby-1.9.2-p290/gems/sass-3.1.12/lib/sass/tree/visitors/perform.rb:18:in `visit'
-/Users/davidpedersen/.rvm/gems/ruby-1.9.2-p290/gems/sass-3.1.12/lib/sass/tree/visitors/perform.rb:7:in `visit'
-/Users/davidpedersen/.rvm/gems/ruby-1.9.2-p290/gems/sass-3.1.12/lib/sass/tree/root_node.rb:20:in `render'
-/Users/davidpedersen/.rvm/gems/ruby-1.9.2-p290/gems/sass-3.1.12/lib/sass/engine.rb:300:in `_render'
-/Users/davidpedersen/.rvm/gems/ruby-1.9.2-p290/gems/sass-3.1.12/lib/sass/engine.rb:247:in `render'
-/Users/davidpedersen/.rvm/gems/ruby-1.9.2-p290/gems/sass-3.1.12/lib/sass/plugin/compiler.rb:339:in `update_stylesheet'
-/Users/davidpedersen/.rvm/gems/ruby-1.9.2-p290/gems/sass-3.1.12/lib/sass/plugin/compiler.rb:202:in `block in update_stylesheets'
-/Users/davidpedersen/.rvm/gems/ruby-1.9.2-p290/gems/sass-3.1.12/lib/sass/plugin/compiler.rb:200:in `each'
-/Users/davidpedersen/.rvm/gems/ruby-1.9.2-p290/gems/sass-3.1.12/lib/sass/plugin/compiler.rb:200:in `update_stylesheets'
-/Users/davidpedersen/.rvm/gems/ruby-1.9.2-p290/gems/sass-3.1.12/lib/sass/plugin/compiler.rb:272:in `block (4 levels) in watch'
-/Users/davidpedersen/.rvm/gems/ruby-1.9.2-p290/gems/sass-3.1.12/vendor/fssm/lib/fssm/path.rb:73:in `call'
-/Users/davidpedersen/.rvm/gems/ruby-1.9.2-p290/gems/sass-3.1.12/vendor/fssm/lib/fssm/path.rb:73:in `run_callback'
-/Users/davidpedersen/.rvm/gems/ruby-1.9.2-p290/gems/sass-3.1.12/vendor/fssm/lib/fssm/path.rb:55:in `callback_action'
-/Users/davidpedersen/.rvm/gems/ruby-1.9.2-p290/gems/sass-3.1.12/vendor/fssm/lib/fssm/path.rb:35:in `update'
-/Users/davidpedersen/.rvm/gems/ruby-1.9.2-p290/gems/sass-3.1.12/vendor/fssm/lib/fssm/state/directory.rb:39:in `block in modified'
-/Users/davidpedersen/.rvm/gems/ruby-1.9.2-p290/gems/sass-3.1.12/vendor/fssm/lib/fssm/state/directory.rb:37:in `each'
-/Users/davidpedersen/.rvm/gems/ruby-1.9.2-p290/gems/sass-3.1.12/vendor/fssm/lib/fssm/state/directory.rb:37:in `modified'
-/Users/davidpedersen/.rvm/gems/ruby-1.9.2-p290/gems/sass-3.1.12/vendor/fssm/lib/fssm/state/directory.rb:18:in `refresh'
-/Users/davidpedersen/.rvm/gems/ruby-1.9.2-p290/gems/sass-3.1.12/vendor/fssm/lib/fssm/backends/polling.rb:17:in `block (2 levels) in run'
-/Users/davidpedersen/.rvm/gems/ruby-1.9.2-p290/gems/sass-3.1.12/vendor/fssm/lib/fssm/backends/polling.rb:17:in `each'
-/Users/davidpedersen/.rvm/gems/ruby-1.9.2-p290/gems/sass-3.1.12/vendor/fssm/lib/fssm/backends/polling.rb:17:in `block in run'
-/Users/davidpedersen/.rvm/gems/ruby-1.9.2-p290/gems/sass-3.1.12/vendor/fssm/lib/fssm/backends/polling.rb:15:in `loop'
-/Users/davidpedersen/.rvm/gems/ruby-1.9.2-p290/gems/sass-3.1.12/vendor/fssm/lib/fssm/backends/polling.rb:15:in `run'
-/Users/davidpedersen/.rvm/gems/ruby-1.9.2-p290/gems/sass-3.1.12/vendor/fssm/lib/fssm/monitor.rb:26:in `run'
-/Users/davidpedersen/.rvm/gems/ruby-1.9.2-p290/gems/sass-3.1.12/vendor/fssm/lib/fssm.rb:20:in `monitor'
-/Users/davidpedersen/.rvm/gems/ruby-1.9.2-p290/gems/sass-3.1.12/lib/sass/plugin/compiler.rb:265:in `watch'
-/Users/davidpedersen/.rvm/gems/ruby-1.9.2-p290/gems/sass-3.1.12/lib/sass/plugin.rb:107:in `method_missing'
-/Users/davidpedersen/.rvm/gems/ruby-1.9.2-p290/gems/sass-3.1.12/lib/sass/exec.rb:421:in `watch_or_update'
-/Users/davidpedersen/.rvm/gems/ruby-1.9.2-p290/gems/sass-3.1.12/lib/sass/exec.rb:302:in `process_result'
-/Users/davidpedersen/.rvm/gems/ruby-1.9.2-p290/gems/sass-3.1.12/lib/sass/exec.rb:41:in `parse'
-/Users/davidpedersen/.rvm/gems/ruby-1.9.2-p290/gems/sass-3.1.12/lib/sass/exec.rb:21:in `parse!'
-/Users/davidpedersen/.rvm/gems/ruby-1.9.2-p290/gems/sass-3.1.12/bin/sass:8:in `<top (required)>'
-/Users/davidpedersen/.rvm/gems/ruby-1.9.2-p290/bin/sass:19:in `load'
-/Users/davidpedersen/.rvm/gems/ruby-1.9.2-p290/bin/sass:19:in `<main>'
-*/
-body:before {
-  white-space: pre;
-  font-family: monospace;
-  content: "Syntax error: Undefined variable: \"$bluedarken20\".\A         on line 2 of sass/masthead.sass\A \A 1: #main-menu\A 2:   background: -webkit-linear-gradient($bluedarken20, $bluedarken35)\A 3:   background: linear-gradient($bluedarken20, $bluedarken35)\A 4:   padding: 10px $generalpadding\A 5:   text-align: center\A 6:   // +0.1 fixes a 1px spacing on the right side, very weird indeed\A 7:   width: 100%"; }
+#main-menu {
+  background: -webkit-linear-gradient(#2480bf, #18557e);
+  background: linear-gradient(#2480bf, #18557e);
+  padding: 10px 2%;
+  text-align: center;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  box-sizing: border-box; }
+  #main-menu a {
+    border-radius: 7px;
+    font-family: "Lucida Grande", "Lucida Sans Unicode", Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    font-weight: bold;
+    color: white;
+    padding: 10px 0 8px;
+    margin-right: 2.667%;
+    display: inline-block;
+    width: 23%;
+    box-sizing: border-box; }
+    #main-menu a:last-of-type {
+      margin-right: 0; }
+  #main-menu .timeline, #main-menu .log, #main-menu .profil, #main-menu .search {
+    background: -webkit-linear-gradient(#3c9ada, #1c6394);
+    background: linear-gradient(#3c9ada, #1c6394);
+    border: 1px solid #18557e;
+    text-shadow: 1px 1px 1px #2072a9; }
+    #main-menu .timeline:hover, #main-menu .timeline:active, #main-menu .log:hover, #main-menu .log:active, #main-menu .profil:hover, #main-menu .profil:active, #main-menu .search:hover, #main-menu .search:active {
+      box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.5);
+      background: -webkit-linear-gradient(bottom, #288ed4, #18557e); }
