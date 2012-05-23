@@ -9,11 +9,14 @@
   width: 96.1%; }
   #timeline .log:nth-child(even) {
     background: #c3c3c3; }
-  #timeline .log img {
-    float: left;
-    margin-right: 2%;
+  #timeline .log .profile-picture {
+    width: 48px;
+    height: 48px;
     border-radius: 4px;
-    border: 1px solid #8e9699; }
+    border: 1px solid #8e9699;
+    overflow: hidden;
+    float: left;
+    margin-right: 2%; }
   #timeline .log div.log-title {
     float: left; }
     #timeline .log div.log-title p {
