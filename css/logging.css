@@ -3,6 +3,8 @@
   #logging label {
     display: block;
     margin-bottom: 2%; }
+  #logging p {
+    margin-bottom: 2%; }
   #logging .exercise {
     background: #c3c3c3;
     padding: 2%;
@@ -20,7 +22,7 @@
     border: none;
     margin-bottom: 2%; }
   #logging input[name=workoutname] {
-    margin-bottom: 4%; }
+    margin-bottom: 2%; }
   #logging input[name=weight], #logging input[name=reps], #logging input[name=sets] {
     width: 32%;
     margin-right: 2%;
@@ -50,4 +52,20 @@
       background: linear-gradient(bottom, #20c138, #116a1f); }
   #logging .addmore {
     font-family: "FoundationIconsGeneral";
-    display: block; }
+    display: block;
+    margin-bottom: 2%;
+    background: -webkit-linear-gradient(-45deg, #20c138, #116a1f);
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    border-radius: 50%;
+    border: 3px solid white;
+    color: white;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); }
+    #logging .addmore:hover {
+      cursor: pointer; }
+    #logging .addmore:active {
+      box-shadow: none;
+      -webkit-transform: translate(2px, 2px);
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.3); }

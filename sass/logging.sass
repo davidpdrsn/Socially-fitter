@@ -9,6 +9,8 @@
   label
     display: block
     margin-bottom: $generalpadding
+  p
+    margin-bottom: $generalpadding
   .exercise
     background: $lightgraydarken10
     padding: $generalpadding
@@ -26,7 +28,7 @@
     border: none
     margin-bottom: $generalpadding
   input[name=workoutname]
-    margin-bottom: $generalpadding * 2
+    margin-bottom: $generalpadding
   input[name=weight], input[name=reps], input[name=sets]
     width: 32%
     margin-right: $generalpadding
@@ -57,3 +59,20 @@
   .addmore
     font-family: 'FoundationIconsGeneral'
     display: block
+    margin-bottom: $generalpadding
+    background: -webkit-linear-gradient(-45deg, $green, $greendarken20)
+    $size: 30px
+    width: $size
+    height: $size
+    text-align: center
+    border-radius: 50%
+    border: 3px solid white
+    color: #fff
+    text-shadow: 1px 1px 1px rgba(0,0,0,.3)
+    box-shadow: 2px 2px 5px rgba(0,0,0,.3)
+    &:hover
+      cursor: pointer
+    &:active
+      box-shadow: none
+      -webkit-transform: translate(2px, 2px)
+      box-shadow: 0 0 5px rgba(0,0,0,.3)
