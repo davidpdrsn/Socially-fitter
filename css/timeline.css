@@ -34,21 +34,30 @@
   #timeline .log-footer .expanded-log {
     display: none;
     background: #a9a9a9;
-    padding: 2%;
-    text-align: left; }
+    padding: 2% 2% 2% 2%;
+    text-align: left;
+    box-shadow: inset 0px 1px 1px #4f5658; }
     #timeline .log-footer .expanded-log .expanded-log-text {
-      padding-left: 4%;
       margin-bottom: 2%;
-      float: left; }
+      text-indent: 2%;
+      float: left;
+      width: 100%; }
     #timeline .log-footer .expanded-log .glyph {
       font-size: 13px; }
+    #timeline .log-footer .expanded-log strong {
+      font-size: medium;
+      margin-top: 2%;
+      display: block; }
     #timeline .log-footer .expanded-log p {
+      font-size: medium;
+      margin-left: 10px; }
+    #timeline .log-footer .expanded-log a {
+      color: #4f5658;
+      font-size: 12px; }
+    #timeline .log-footer .expanded-log .log-favorite, #timeline .log-footer .expanded-log .log-comment {
       float: left;
-      margin-right: 15px;
-      font-size: medium; }
-      #timeline .log-footer .expanded-log p a {
-        color: #4f5658;
-        font-size: 12px; }
+      margin-left: 0;
+      margin-right: 15px; }
     #timeline .log-footer .expanded-log .log-favorite a:hover {
       color: #f0d200; }
     #timeline .log-footer .expanded-log .log-comment a:hover {
