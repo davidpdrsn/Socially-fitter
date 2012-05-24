@@ -1,0 +1,65 @@
+#main-footer {
+  padding: 0 2%;
+  position: absolute;
+  bottom: 0;
+  height: 50px;
+  width: 100%;
+  box-sizing: border-box;
+  background: -webkit-linear-gradient(#43494b, #2b2f30);
+  box-shadow: inset 0 10px 10px -5px rgba(0, 0, 0, 0.7); }
+  @media (min-width: 500px) {
+    #main-footer {
+      height: 75px; } }
+  #main-footer h2 {
+    font-family: lobster, cursive;
+    line-height: 50px;
+    font-size: 30px;
+    font-weight: normal;
+    color: #dcdcdc;
+    text-shadow: 1px 1px 0 #5c6365, 2px 2px 0 #4f5658, 3px 3px 0 #43494b, 4px 4px 5px rgba(0, 0, 0, 0.5);
+    -webkit-transition: font-size 0.5s; }
+    #main-footer h2:hover {
+      -webkit-animation: shadowanimation 1s alternate infinite;
+      -webkit-animation-timing-function: linear; }
+    @media (max-width: 500px) {
+      #main-footer h2 {
+        font-size: 20px; } }
+    @media (min-width: 500px) {
+      #main-footer h2 {
+        height: 75px;
+        line-height: 75px; } }
+
+@-webkit-keyframes shadowanimation {
+  0% {
+    text-shadow: 1px 1px 0 #5c6365, 2px 2px 0 #4f5658, 3px 3px 0 #43494b, 4px 4px 5px rgba(0, 0, 0, 0.5); }
+
+  1% {
+    text-shadow: 1px 1px 0 #5c6365, 2px 2px 0 #4f5658, 3px 3px 0 #67b0e2, 4px 4px 5px rgba(0, 0, 0, 0.5); }
+
+  20% {
+    text-shadow: 1px 1px 0 #5c6365, 2px 2px 0 #4f5658, 3px 3px 0 #67b0e2, 4px 4px 5px rgba(0, 0, 0, 0.5); }
+
+  21% {
+    text-shadow: 1px 1px 0 #5c6365, 2px 2px 0 #67b0e2, 3px 3px 0 #43494b, 4px 4px 5px rgba(0, 0, 0, 0.5); }
+
+  40% {
+    text-shadow: 1px 1px 0 #5c6365, 2px 2px 0 #67b0e2, 3px 3px 0 #43494b, 4px 4px 5px rgba(0, 0, 0, 0.5); }
+
+  41% {
+    text-shadow: 1px 1px 0 #67b0e2, 2px 2px 0 #4f5658, 3px 3px 0 #43494b, 4px 4px 5px rgba(0, 0, 0, 0.5); }
+
+  60% {
+    text-shadow: 1px 1px 0 #67b0e2, 2px 2px 0 #4f5658, 3px 3px 0 #43494b, 4px 4px 5px rgba(0, 0, 0, 0.5); }
+
+  61% {
+    text-shadow: 1px 1px 0 #5c6365, 2px 2px 0 #4f5658, 3px 3px 0 #43494b, 4px 4px 5px rgba(0, 0, 0, 0.5); }
+
+  80% {
+    text-shadow: 1px 1px 0 #5c6365, 2px 2px 0 #4f5658, 3px 3px 0 #43494b, 4px 4px 5px rgba(0, 0, 0, 0.5);
+    color: #dcdcdc; }
+
+  81% {
+    color: #67b0e2; }
+
+  100% {
+    color: #67b0e2; } }
