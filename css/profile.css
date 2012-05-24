@@ -1,0 +1,69 @@
+#profile {
+  width: 96%;
+  margin: 0 auto;
+  padding: 2% 0;
+  position: relative; }
+  #profile .profile-picture {
+    float: left;
+    width: 100px;
+    height: 100px;
+    margin-right: 4%; }
+  #profile .profile-name {
+    margin: 10px 0 14px; }
+  #profile .social-activity a {
+    display: block;
+    background: -webkit-linear-gradient(#67b0e2, #1c6394);
+    float: left;
+    margin-right: 4%;
+    font-size: 9px;
+    color: black;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 20px;
+    border-radius: 4px;
+    overflow: hidden;
+    text-shadow: 0px 1px 1px #67b0e2; }
+    #profile .social-activity a span {
+      background: -webkit-linear-gradient(#92c6ea, #3c9ada);
+      box-shadow: 0px 1px 1px #103854;
+      display: block;
+      font-size: 14px;
+      line-height: 25px;
+      padding: 0 5px; }
+
+.profile-follow a {
+  display: block;
+  width: 100px;
+  margin: 2% auto;
+  -moz-border-radius: 7px;
+  border-radius: 7px;
+  color: white;
+  font-size: 15px;
+  padding: 4px 0;
+  text-align: center; }
+  .profile-follow a.follow {
+    background: -webkit-linear-gradient(#20c138, #116a1f);
+    background: -moz-linear-gradient(#20c138, #116a1f);
+    background: linear-gradient(#20c138, #116a1f);
+    border: 1px solid #0e5418;
+    -moz-text-shadow: 1px 1px 1px #0e5418;
+    text-shadow: 1px 1px 1px #0e5418; }
+    .profile-follow a.follow:hover, .profile-follow a.follow:active {
+      -moz-box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.5);
+      box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.5);
+      background: -webkit-linear-gradient(bottom, #20c138, #116a1f);
+      background: -moz-linear-gradient(bottom, #20c138, #116a1f);
+      background: linear-gradient(bottom, #20c138, #116a1f); }
+  .profile-follow a.unfollow {
+    background: -webkit-linear-gradient(#ff3c31, #b10900);
+    background: -moz-linear-gradient(#ff3c31, #b10900);
+    background: linear-gradient(#ff3c31, #b10900);
+    border: 1px solid #b10900;
+    -moz-text-shadow: 1px 1px 1px #b10900;
+    text-shadow: 1px 1px 1px #b10900; }
+    .profile-follow a.unfollow:hover, .profile-follow a.unfollow:active {
+      -moz-box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.5);
+      box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.5);
+      background: -webkit-linear-gradient(bottom, #ff3c31, #b10900);
+      background: -moz-linear-gradient(bottom, #ff3c31, #b10900);
+      background: linear-gradient(bottom, #ff3c31, #b10900); }

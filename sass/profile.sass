@@ -1,0 +1,80 @@
+@import "vars.sass"
+
+//////////////////////////////////////
+// PROFILE ///////////////////////////
+//////////////////////////////////////
+
+#profile
+  width: 96%
+  margin: 0 auto
+  padding: $generalpadding 0
+  position: relative
+  // border-bottom: 2px solid $darkgray
+  .profile-picture
+    float: left
+    width: 100px
+    height: 100px
+    margin-right: $generalpadding*2
+  .profile-name
+    margin: 10px 0 14px
+  .social-activity
+    a
+      display: block
+      background: -webkit-linear-gradient($blue, $bluedarken30)
+      float: left
+      margin-right: $generalpadding*2
+      font-size: 9px
+      color: black
+      text-transform: uppercase
+      text-align: center
+      line-height: 20px
+      border-radius: 4px
+      overflow: hidden
+      text-shadow: 0px 1px 1px $blue
+      span
+        background: -webkit-linear-gradient(lighten($blue, 10%), $bluedarken10)
+        box-shadow: 0px 1px 1px $bluedarken45
+        display: block
+        font-size: 14px
+        line-height: 25px
+        padding: 0 5px
+// .profile-follow
+//   position: absolute
+//   top: 0
+//   right: 0
+.profile-follow a
+  display: block
+  width: 100px
+  margin: $generalpadding auto
+  -moz-border-radius: 7px
+  border-radius: 7px
+  color: #fff
+  font-size: 15px
+  padding: 4px 0
+  text-align: center
+  &.follow
+    background: -webkit-linear-gradient($green, $greendarken20)
+    background: -moz-linear-gradient($green, $greendarken20)
+    background: linear-gradient($green, $greendarken20)
+    border: 1px solid $greendarken25
+    -moz-text-shadow: 1px 1px 1px $greendarken25
+    text-shadow: 1px 1px 1px $greendarken25
+    &:hover, &:active
+      -moz-box-shadow: inset 2px 2px 5px rgba(0,0,0,.5)
+      box-shadow: inset 2px 2px 5px rgba(0,0,0,.5)
+      background: -webkit-linear-gradient(bottom, $green, $greendarken20)
+      background: -moz-linear-gradient(bottom, $green, $greendarken20)
+      background: linear-gradient(bottom, $green, $greendarken20)
+  &.unfollow
+    background: -webkit-linear-gradient($red, $reddarken25)
+    background: -moz-linear-gradient($red, $reddarken25)
+    background: linear-gradient($red, $reddarken25)
+    border: 1px solid $reddarken25
+    -moz-text-shadow: 1px 1px 1px $reddarken25
+    text-shadow: 1px 1px 1px $reddarken25
+    &:hover, &:active
+      -moz-box-shadow: inset 2px 2px 5px rgba(0,0,0,.5)
+      box-shadow: inset 2px 2px 5px rgba(0,0,0,.5)
+      background: -webkit-linear-gradient(bottom, $red, $reddarken25)
+      background: -moz-linear-gradient(bottom, $red, $reddarken25)
+      background: linear-gradient(bottom, $red, $reddarken25)
