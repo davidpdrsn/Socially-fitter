@@ -92,7 +92,6 @@ body {
       background: linear-gradient(bottom, #288ed4, #18557e); }
 
 .logout {
-  float: right;
   background: -webkit-linear-gradient(#8e9699, #5c6365);
   background: -moz-linear-gradient(#8e9699, #5c6365);
   background: linear-gradient(#8e9699, #5c6365);
@@ -135,7 +134,8 @@ body {
     font-weight: normal;
     color: #dcdcdc;
     text-shadow: 1px 1px 0 #5c6365, 2px 2px 0 #4f5658, 3px 3px 0 #43494b, 4px 4px 5px rgba(0, 0, 0, 0.5);
-    -webkit-transition: font-size 0.5s; }
+    -webkit-transition: font-size 0.5s;
+    float: left; }
     #main-footer h2:hover {
       -webkit-animation: shadowanimation 1s alternate infinite;
       -webkit-animation-timing-function: linear; }
@@ -146,6 +146,28 @@ body {
       #main-footer h2 {
         height: 75px;
         line-height: 75px; } }
+  #main-footer a.logout {
+    float: right;
+    display: block;
+    position: relative;
+    top: 50%;
+    margin-top: -12.5px;
+    text-align: center;
+    width: 75px;
+    height: 25px;
+    line-height: 25px;
+    -moz-border-radius: 7px;
+    border-radius: 7px;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    background: -webkit-linear-gradient(#5c6365, #373c3d);
+    border: 1px solid #2b2f30;
+    text-shadow: 1px 1px 1px #43494b; }
+    #main-footer a.logout:hover, #main-footer a.logout:active {
+      -moz-box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.5);
+      box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.5);
+      background: -webkit-linear-gradient(bottom, #5c6365, #373c3d); }
 
 @-webkit-keyframes shadowanimation {
   0% {
