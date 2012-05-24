@@ -63,7 +63,7 @@
       margin-left: 0;
       margin-right: 15px;
       text-indent: 0; }
-    #timeline .log-footer .expanded-log .log-favorite a:hover {
+    #timeline .log-footer .expanded-log .log-favorite a:hover, #timeline .log-footer .expanded-log .log-favorite.clicked a {
       color: #f0d200; }
     #timeline .log-footer .expanded-log .log-comment a:hover, #timeline .log-footer .expanded-log .log-comment.clicked a {
       color: #2072a9; }

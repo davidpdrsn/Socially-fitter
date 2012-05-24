@@ -6,7 +6,7 @@ function hideAddressBar() {
   window.scrollTo(0, 1);
 }
 
-
+// fading and slidetoggle
 jQuery.fn.fadeSliderToggle = function(settings) {
  	/* Damn you jQuery opacity:'toggle' that dosen't work!~!!!*/
  	 settings = jQuery.extend({
@@ -28,12 +28,11 @@ jQuery.fn.fadeSliderToggle = function(settings) {
 	}
 };
 
-
-
 $(document).ready(function() {
 
   $('.log').click(function() {
-    $(this).children().children('.expanded-log').slideToggle('fast');
+    //$(this).children().children('.expanded-log').slideToggle('fast');
+    $(this).children().children('.expanded-log').fadeSliderToggle();
   });
 
   $('span.addmore').click(function(){
