@@ -24,24 +24,17 @@ $(document).ready(function() {
     label.attr('data-number', number);
   });
 
-
-  /*$("div").attr("id", function (arr) {
-    return "div-id" + arr;
-  }).each(function () {
-    $("span", this).html("(ID = '<b>" + this.id + "</b>')");
-  });*/
-
-  /*$('span.remove').click(function(){
-    $(this).parent().remove();
-    console.log('Remove clicked');
-  });*/
-
   $('.remove').live('click', function(e){
     e.preventDefault();
     $(this).parent().remove();
     if ($('.exercise').length == 1) {
       $('.remove').hide();
     }
+    var i = 1;
+    $('label[for=exercise]').each(function(){
+      $(this).attr('data-number', i);
+      i++;
+    });
   });
 
 });
