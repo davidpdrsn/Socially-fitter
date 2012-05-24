@@ -5,10 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Socially Fitter - Lets get fit together</title>
   <link rel="stylesheet" type="text/css" href="css/global.css">
-  <link rel="stylesheet" type="text/css" href="css/timeline.css">
+  <link rel="stylesheet" type="text/css" href="css/profile.css">
 </head>
 <body>
-
+  
   <div id="wrap">
 
       <div id="main-menu">
@@ -17,8 +17,27 @@
         <a href="profile.html" class="profil"><span class="glyph social">x</span></a>
         <a href="search.html" class="search"><span class="glyph general">=</span></a>
       </div> <!-- #main-menu -->
-
-	    <div id="timeline">
+      
+      <div id="profile" class="clearfix">
+        <div class="profile-picture">
+          <img src="http://www.placekitten.com/100/100/" alt="Profile Picture" />
+        </div>
+        <div class="profile-name">
+          <h3>Træner Jørgen</h3>
+        </div>
+        <div class="social-activity">
+          <a href=""><span class="workouts">13.921</span>Workouts</a>
+          <a href=""><span class="followers">98.900</span>Followers</a>
+          <a href=""><span class="following">22.600</span>Following</a>
+        </div>
+      </div>
+      
+      <div class="profile-follow clearfix">
+        <a href="" class="follow">Follow</a>
+        <!-- <a href="" class="unfollow">Unfollow</a> -->
+      </div>
+      
+      <div id="profile-workouts">
 
         <div class="log clearfix">
           <div class="log-header clearfix">
@@ -112,7 +131,8 @@
           </div> <!-- .log-footer -->
         </div> <!-- .log -->
 
-	    </div> <!-- #timleine -->
+	    </div> <!-- #profile-workouts -->
+    
   </div> <!-- #wrap -->
 
   <script type="text/javascript" src="js/jquery.js"></script>
