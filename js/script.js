@@ -13,7 +13,7 @@ jQuery.fn.fadeSliderToggle = function(settings) {
 		speed:300,
 		easing : "swing"
 	}, settings)
-	
+
 	caller = this
  	if($(caller).css("display") == "none"){
  		$(caller).animate({
@@ -79,7 +79,7 @@ $(document).ready(function() {
       i++;
     });
   });
-  
+
   $('.commenting-log').click(function(){
     $(this).parent().parent().parent('.log');
     return false;
@@ -88,10 +88,10 @@ $(document).ready(function() {
     $(this).parent().parent().parent('.log');
     return false;
   });
-  
+
   $('.log-comment a').click(function(){
     var $commentinglog = $(this).parent().parent().children('.commenting-log');
-    $(this).parent().toggleClass('clicked');   
+    $(this).parent().toggleClass('clicked');
 		$commentinglog.fadeSliderToggle();
 		return false;
   });

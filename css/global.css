@@ -117,8 +117,6 @@ body {
 
 #main-footer {
   padding: 0 2%;
-  position: absolute;
-  bottom: 0;
   height: 50px;
   width: 100%;
   box-sizing: border-box;
