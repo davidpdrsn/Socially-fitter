@@ -12,6 +12,8 @@
     border-radius: 4px;
     margin-bottom: 2%;
     position: relative; }
+  #logging label[for=exercise]:after {
+    content: attr(data-number); }
   #logging .remove {
     display: none;
     position: absolute;
