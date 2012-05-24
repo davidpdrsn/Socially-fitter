@@ -44,7 +44,7 @@
       float: left
       width: 100%
       background: darken($lightgray, 20%)
-      padding: $generalpadding $generalpadding $generalpadding $generalpadding
+      padding: $generalpadding
       //box-shadow: inset 0px 2px 1px $darkgray, inset 0px -2px 1px $darkgray
       text-align: left
       box-shadow: inset 0px 1px 1px $darkgraydarken25
@@ -74,18 +74,53 @@
         text-indent: 0
       .log-favorite a:hover
         color: rgb(240,210,0)
-      .log-comment a:hover
+      .log-comment a:hover, .log-comment.clicked a
         color: $bluedarken25
       .commenting-log
         float: left
-        width: 100% + $generalpadding*2
-        // background: $lightgray
-        margin-left: - $generalpadding
-        padding: $generalpadding 0px
-        input
-          border: 1px solid $darkgraydarken20
-          border-radius: 20px
-          padding: $generalpadding $generalpadding*2
-          width: 85%
-          margin: 0 auto
+        width: 96%
+        padding: $generalpadding
+        position: relative
+        background: $lightgray
+        border-radius: 10px
+        margin-top: $generalpadding
+        display: none
+        &:before
+          content: ""
+          width: 0
+          height: 0
+          border-left: 10px solid  transparent
+          border-right: 10px solid transparent
+          border-bottom: 10px solid $lightgray
+          position: absolute
+          top: -5px
+          left: 110px
+        input[type=text]
           display: block
+          box-shadow: inset 2px 2px 7px rgba(0,0,0,.3), inset 0 0 0 1px $lightgraydarken10
+          border-radius: 4px
+          font-size: 15px
+          width: 100%
+          padding: $generalpadding
+          box-sizing: border-box
+          border: none
+          margin-bottom: $generalpadding
+          //border: 1px solid $darkgraydarken20
+          &:focus
+            outline: none
+        .log-comments-list
+          margin-top: $generalpadding*2
+          h4
+            font-size: 14px
+          .log-single-comment
+            margin: 0px $generalpadding $generalpadding $generalpadding
+            position: relative
+            span
+              float: left
+              color: $darkgraydarken20
+              position: absolute
+              top: 0
+              right: 0
+      .commenting-log.show-content
+        visibility: visible
+            

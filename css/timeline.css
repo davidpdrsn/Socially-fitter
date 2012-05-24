@@ -36,7 +36,7 @@
     float: left;
     width: 100%;
     background: #a9a9a9;
-    padding: 2% 2% 2% 2%;
+    padding: 2%;
     text-align: left;
     box-shadow: inset 0px 1px 1px #4f5658;
     box-sizing: border-box; }
@@ -65,17 +65,51 @@
       text-indent: 0; }
     #timeline .log-footer .expanded-log .log-favorite a:hover {
       color: #f0d200; }
-    #timeline .log-footer .expanded-log .log-comment a:hover {
+    #timeline .log-footer .expanded-log .log-comment a:hover, #timeline .log-footer .expanded-log .log-comment.clicked a {
       color: #2072a9; }
     #timeline .log-footer .expanded-log .commenting-log {
       float: left;
-      width: 104%;
-      margin-left: -2%;
-      padding: 2% 0px; }
-      #timeline .log-footer .expanded-log .commenting-log input {
-        border: 1px solid #5c6365;
-        border-radius: 20px;
-        padding: 2% 4%;
-        width: 85%;
-        margin: 0 auto;
-        display: block; }
+      width: 96%;
+      padding: 2%;
+      position: relative;
+      background: #dcdcdc;
+      border-radius: 10px;
+      margin-top: 2%;
+      display: none; }
+      #timeline .log-footer .expanded-log .commenting-log:before {
+        content: "";
+        width: 0;
+        height: 0;
+        border-left: 10px solid transparent;
+        border-right: 10px solid transparent;
+        border-bottom: 10px solid #dcdcdc;
+        position: absolute;
+        top: -5px;
+        left: 110px; }
+      #timeline .log-footer .expanded-log .commenting-log input[type=text] {
+        display: block;
+        box-shadow: inset 2px 2px 7px rgba(0, 0, 0, 0.3), inset 0 0 0 1px #c3c3c3;
+        border-radius: 4px;
+        font-size: 15px;
+        width: 100%;
+        padding: 2%;
+        box-sizing: border-box;
+        border: none;
+        margin-bottom: 2%; }
+        #timeline .log-footer .expanded-log .commenting-log input[type=text]:focus {
+          outline: none; }
+      #timeline .log-footer .expanded-log .commenting-log .log-comments-list {
+        margin-top: 4%; }
+        #timeline .log-footer .expanded-log .commenting-log .log-comments-list h4 {
+          font-size: 14px; }
+        #timeline .log-footer .expanded-log .commenting-log .log-comments-list .log-single-comment {
+          margin: 0px 2% 2% 2%;
+          position: relative; }
+          #timeline .log-footer .expanded-log .commenting-log .log-comments-list .log-single-comment span {
+            float: left;
+            color: #5c6365;
+            position: absolute;
+            top: 0;
+            right: 0; }
+    #timeline .log-footer .expanded-log .commenting-log.show-content {
+      visibility: visible; }
