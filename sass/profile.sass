@@ -15,29 +15,41 @@
     width: 100px
     height: 100px
     margin-right: $generalpadding*2
+    border-radius: 4px
+    -moz-border-radius: 4px
+    border: 1px solid $darkgray
+    overflow: hidden
   .profile-name
     margin: 10px 0 14px
   .social-activity
     a
       display: block
       background: -webkit-linear-gradient($blue, $bluedarken30)
+      background: -moz-linear-gradient($blue, $bluedarken30)
+      background: linear-gradient($blue, $bluedarken30)
       float: left
-      margin-right: $generalpadding*2
+      margin-right: $generalpadding*1.5
       font-size: 9px
       color: black
       text-transform: uppercase
       text-align: center
       line-height: 20px
+      -moz-border-radius: 4px
       border-radius: 4px
       overflow: hidden
       text-shadow: 0px 1px 1px $blue
+      font-weight: bold
       span
         background: -webkit-linear-gradient(lighten($blue, 10%), $bluedarken10)
+        background: -moz-linear-gradient(lighten($blue, 10%), $bluedarken10)
+        background: linear-gradient(lighten($blue, 10%), $bluedarken10)
         box-shadow: 0px 1px 1px $bluedarken45
         display: block
         font-size: 14px
         line-height: 25px
         padding: 0 5px
+        min-width: 60px
+        font-weight: normal
 // .profile-follow
 //   position: absolute
 //   top: 0

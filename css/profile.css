@@ -7,29 +7,41 @@
     float: left;
     width: 100px;
     height: 100px;
-    margin-right: 4%; }
+    margin-right: 4%;
+    border-radius: 4px;
+    -moz-border-radius: 4px;
+    border: 1px solid #8e9699;
+    overflow: hidden; }
   #profile .profile-name {
     margin: 10px 0 14px; }
   #profile .social-activity a {
     display: block;
     background: -webkit-linear-gradient(#67b0e2, #1c6394);
+    background: -moz-linear-gradient(#67b0e2, #1c6394);
+    background: linear-gradient(#67b0e2, #1c6394);
     float: left;
-    margin-right: 4%;
+    margin-right: 3%;
     font-size: 9px;
     color: black;
     text-transform: uppercase;
     text-align: center;
     line-height: 20px;
+    -moz-border-radius: 4px;
     border-radius: 4px;
     overflow: hidden;
-    text-shadow: 0px 1px 1px #67b0e2; }
+    text-shadow: 0px 1px 1px #67b0e2;
+    font-weight: bold; }
     #profile .social-activity a span {
       background: -webkit-linear-gradient(#92c6ea, #3c9ada);
+      background: -moz-linear-gradient(#92c6ea, #3c9ada);
+      background: linear-gradient(#92c6ea, #3c9ada);
       box-shadow: 0px 1px 1px #103854;
       display: block;
       font-size: 14px;
       line-height: 25px;
-      padding: 0 5px; }
+      padding: 0 5px;
+      min-width: 60px;
+      font-weight: normal; }
 
 .profile-follow a {
   display: block;
