@@ -3,6 +3,7 @@
   #search form .search-input-container {
     position: relative;
     background: white;
+    -moz-border-radius: 4px;
     border-radius: 4px;
     border: 2px solid #8e9699;
     display: block;
@@ -17,10 +18,12 @@
       left: 6px;
       top: 50%; }
     #search form .search-input-container input {
+      -moz-box-shadow: inset 2px 2px 7px rgba(0, 0, 0, 0.3);
       box-shadow: inset 2px 2px 7px rgba(0, 0, 0, 0.3);
       font-size: 15px;
       width: 100%;
       padding: 2% 2% 2% 24px;
+      -moz-box-sizing: border-box;
       box-sizing: border-box;
       border: none; }
   #search form p {
@@ -32,6 +35,7 @@
     display: block;
     width: 100px;
     margin: 0 auto;
+    -moz-border-radius: 7px;
     border-radius: 7px;
     color: white;
     font-size: 15px;
@@ -39,12 +43,16 @@
     padding: 10px 0 8px;
     margin-bottom: 2%;
     background: -webkit-linear-gradient(#20c138, #116a1f);
+    background: -moz-linear-gradient(#20c138, #116a1f);
     background: linear-gradient(#20c138, #116a1f);
     border: 1px solid #0e5418;
+    -moz-text-shadow: 1px 1px 1px #0e5418;
     text-shadow: 1px 1px 1px #0e5418; }
     #search form input[type=submit]:hover, #search form input[type=submit]:active {
+      -moz-box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.5);
       box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.5);
       background: -webkit-linear-gradient(bottom, #20c138, #116a1f);
+      background: -moz-linear-gradient(bottom, #20c138, #116a1f);
       background: linear-gradient(bottom, #20c138, #116a1f); }
 
 #results .log {
@@ -59,6 +67,7 @@
   #results .log-header .profile-picture {
     width: 48px;
     height: 48px;
+    -moz-border-radius: 4px;
     border-radius: 4px;
     border: 1px solid #8e9699;
     overflow: hidden;
@@ -81,5 +90,6 @@
     display: none;
     background: #a9a9a9;
     padding: 2%;
+    -moz-box-shadow: inset 0px 2px 1px #8e9699, inset 0px -2px 1px #8e9699;
     box-shadow: inset 0px 2px 1px #8e9699, inset 0px -2px 1px #8e9699;
     text-align: left; }
