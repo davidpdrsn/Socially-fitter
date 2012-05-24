@@ -31,8 +31,17 @@ jQuery.fn.fadeSliderToggle = function(settings) {
 $(document).ready(function() {
 
   $('.log').click(function() {
-    //$(this).children().children('.expanded-log').slideToggle('fast');
-    $(this).children().children('.expanded-log').fadeSliderToggle();
+    if ($(this).hasClass('open')) {
+      $(this).children().children('.expanded-log').fadeSliderToggle();
+      $(this).removeClass('open');
+    }
+    else {
+      $('.log.open').children().children('.expanded-log').fadeSliderToggle();
+      $('.log.open').removeClass('open');
+      $(this).addClass('open');
+      $(this).children().children('.expanded-log').fadeSliderToggle();
+    }
+    return false;
   });
 
   // Add more input fields for logging page
