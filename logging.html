@@ -25,14 +25,16 @@
           <input type="text" name="workoutname" placeholder="Back">
 
           <p><strong>Exercises:</strong></p>
-          <div class="exercise">
-            <label for="exercise">#1</label>
-            <input type="text" name="exercise" placeholder="Name of exercise">
-            <input type="text" name="reps" placeholder="Reps"><input type="text" name="weight" placeholder="Kg"><input type="text" name="sets" placeholder="Sets">
-            <span class="remove">e</span>
-          </div> <!-- .exercise -->
+          <div class="exercises">
+            <div class="exercise">
+              <label for="exercise" data-number="1">#</label>
+              <input type="text" name="exercise" placeholder="Name of exercise">
+              <input type="text" name="reps" placeholder="Reps"><input type="text" name="weight" placeholder="Kg"><input type="text" name="sets" placeholder="Sets">
+              <a href="#" class="remove">e</a>
+            </div> <!-- .exercise -->
+          </div> <!-- .exercises -->
 
-          <span class="addmore">d</span>
+          <a href="#" class="addmore">d</a>
 
           <label for="notes"><strong>Notes:</strong></label>
           <textarea name="notes" placeholder="Boy that was a tough one!"></textarea>
