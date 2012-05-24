@@ -1,19 +1,19 @@
 #profile {
   width: 96%;
   margin: 0 auto;
-  padding: 2% 0;
+  padding: 4% 0 2%;
   position: relative; }
   #profile .profile-picture {
     float: left;
-    width: 100px;
-    height: 100px;
+    width: 74px;
+    height: 74px;
     margin-right: 4%;
     border-radius: 4px;
     -moz-border-radius: 4px;
     border: 1px solid #8e9699;
     overflow: hidden; }
   #profile .profile-name {
-    margin: 10px 0 14px; }
+    margin: 0px 0 10px; }
   #profile .social-activity a {
     display: block;
     background: -webkit-linear-gradient(#67b0e2, #1c6394);
@@ -31,6 +31,8 @@
     overflow: hidden;
     text-shadow: 0px 1px 1px #67b0e2;
     font-weight: bold; }
+    #profile .social-activity a:last-child {
+      margin-right: 0; }
     #profile .social-activity a span {
       background: -webkit-linear-gradient(#92c6ea, #3c9ada);
       background: -moz-linear-gradient(#92c6ea, #3c9ada);
@@ -40,7 +42,7 @@
       font-size: 14px;
       line-height: 25px;
       padding: 0 5px;
-      min-width: 60px;
+      min-width: 54px;
       font-weight: normal; }
 
 .profile-follow {
@@ -55,7 +57,8 @@
   color: white;
   font-size: 15px;
   padding: 4px 0;
-  text-align: center; }
+  text-align: center;
+  font-weight: bold; }
   .profile-follow a.follow {
     background: -webkit-linear-gradient(#20c138, #116a1f);
     background: -moz-linear-gradient(#20c138, #116a1f);

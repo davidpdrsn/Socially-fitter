@@ -7,20 +7,20 @@
 #profile
   width: 96%
   margin: 0 auto
-  padding: $generalpadding 0
+  padding: $generalpadding*2 0 $generalpadding
   position: relative
   // border-bottom: 2px solid $darkgray
   .profile-picture
     float: left
-    width: 100px
-    height: 100px
+    width: 74px
+    height: 74px
     margin-right: $generalpadding*2
     border-radius: 4px
     -moz-border-radius: 4px
     border: 1px solid $darkgray
     overflow: hidden
   .profile-name
-    margin: 10px 0 14px
+    margin: 0px 0 10px
   .social-activity
     a
       display: block
@@ -39,6 +39,8 @@
       overflow: hidden
       text-shadow: 0px 1px 1px $blue
       font-weight: bold
+      &:last-child
+        margin-right: 0
       span
         background: -webkit-linear-gradient(lighten($blue, 10%), $bluedarken10)
         background: -moz-linear-gradient(lighten($blue, 10%), $bluedarken10)
@@ -48,7 +50,7 @@
         font-size: 14px
         line-height: 25px
         padding: 0 5px
-        min-width: 60px
+        min-width: 54px
         font-weight: normal
 
         
@@ -68,6 +70,7 @@
   font-size: 15px
   padding: 4px 0
   text-align: center
+  font-weight: bold
   &.follow
     background: -webkit-linear-gradient($green, $greendarken20)
     background: -moz-linear-gradient($green, $greendarken20)
