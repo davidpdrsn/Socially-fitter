@@ -53,7 +53,7 @@
     border-radius: 4px;
     font-size: 15px;
     width: 100%;
-    padding: 2%;
+    padding: 6px;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
     border: none;
@@ -63,9 +63,12 @@
   #logging input[name=weight], #logging input[name=reps], #logging input[name=sets] {
     width: 32%;
     margin-right: 2%;
-    display: inline-block; }
+    display: block;
+    float: left; }
   #logging input[name=sets] {
-    margin-right: 0; }
+    width: 32%;
+    margin-right: 0;
+    float: right; }
   #logging input[type=submit] {
     display: block;
     width: 100px;
@@ -128,7 +131,7 @@
     border-radius: 4px;
     font-size: 15px;
     width: 100%;
-    padding: 2%;
+    padding: 6px;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
     border: none;
