@@ -6,42 +6,43 @@ function hideAddressBar() {
   window.scrollTo(0, 1);
 }
 
-// fading and slidetoggle
-jQuery.fn.fadeSliderToggle = function(settings) {
- 	/* Damn you jQuery opacity:'toggle' that dosen't work!~!!!*/
- 	 settings = jQuery.extend({
-		speed: 300,
-		easing: "swing"
-	}, settings)
-	
-	caller = this
- 	if($(caller).css("display") == "none"){
- 		$(caller).animate({
- 			opacity: 1,
- 			height: 'toggle'
- 		}, settings.speed, settings.easing);
-	}else{
-		$(caller).animate({
- 			opacity: 0,
- 			height: 'toggle'
- 		}, settings.speed, settings.easing);
-	}
-};
+
 
 $(document).ready(function() {
-
-  $('.log').click(function() {
-    if ($(this).hasClass('open')) {
-      $(this).children().children('.expanded-log').fadeSliderToggle();
+  
+  var fade_not_running = true;
+  
+  $('.log:not(:animated)').live('click', function() {
+    if ($(this).hasClass('open') && fade_not_running) {
+      fade_not_running = false;
+      $(this).children().children('.expanded-log').animate({
+        opacity: 0,
+        height: 'toggle'
+      }, 300, "swing", function(){
+        fade_not_running = true;
+      });
+      // $(this).children().children('.expanded-log').fadeSliderToggle();
       $(this).removeClass('open');
     }
-    else {
-      $('.log.open').children().children('.expanded-log').fadeSliderToggle();
+    else if (fade_not_running){
+      //$('.log.open').children().children('.expanded-log').fadeSliderToggle();
+      fade_not_running = false;
+      $('.log.open').children().children('.expanded-log').animate({
+        opacity: 0,
+        height: 'toggle'
+      }, 300, "swing", function(){
+        fade_not_running = true;
+      });
       $('.log.open').removeClass('open');
       $(this).addClass('open');
-      $(this).children().children('.expanded-log').fadeSliderToggle();
+      //$(this).children().children('.expanded-log').fadeSliderToggle();
+      $(this).children().children('.expanded-log').animate({
+        opacity: 1,
+        height: 'toggle'
+      }, 300, "swing", function(){
+        fade_not_running = true;
+      });
     }
-    return false;
   });
 
   // Add more input fields for logging page
