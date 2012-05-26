@@ -40,6 +40,7 @@
     padding: 2%;
     text-align: left;
     box-shadow: inset 0px 1px 1px #4f5658;
+    -moz-box-sizing: border-box;
     box-sizing: border-box; }
     #timeline .log-footer .expanded-log .expanded-log-text {
       margin-bottom: 2%;
@@ -94,6 +95,7 @@
         font-size: 15px;
         width: 100%;
         padding: 2%;
+        -moz-box-sizing: border-box;
         box-sizing: border-box;
         border: none;
         margin-bottom: 2%; }
