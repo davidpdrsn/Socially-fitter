@@ -173,7 +173,11 @@
         text-indent: 0
       .log-favorite a:hover, .log-favorite.clicked a
         color: rgb(240,210,0)
-      .log-comment a:hover, .log-comment.clicked a
+      .log-comment a:hover
+        color: $bluedarken25
+        @media only screen and (min-device-width: 320px) and (max-device-width: 480px)
+          color: inherit
+      .log-comment.clicked a
         color: $bluedarken25
       .commenting-log
         float: left
