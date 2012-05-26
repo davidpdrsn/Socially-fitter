@@ -96,4 +96,17 @@ $(document).ready(function() {
 		return false;
   });
 
+  // for placing footer at bottom, when there are only a few logs 
+  if (!($(document).height() > $(window).height())) {
+      $('#main-footer').css({
+        'position': 'fixed',
+        'bottom': 0,
+        'left': 0
+      });
+      var wrapHeight = $('#wrap').height();
+      $('#wrap').css('height', wrapHeight + 50 + 'px');
+  }  
+  
 });
+
+
