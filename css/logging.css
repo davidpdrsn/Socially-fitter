@@ -95,17 +95,20 @@
     background: -webkit-linear-gradient(-45deg, #20c138, #116a1f);
     background: -moz-linear-gradient(-45deg, #20c138, #116a1f);
     background: linear-gradient(-45deg, #20c138, #116a1f);
-    width: 30px;
-    height: 30px;
+    width: 33px;
+    height: 33px;
     text-align: center;
     -moz-border-radius: 50%;
     border-radius: 50%;
     border: 3px solid white;
     color: white;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
     -moz-text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
     text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
     -moz-box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); }
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    line-height: 18.5px; }
     #logging .addmore:hover {
       cursor: pointer; }
     #logging .addmore:active {
