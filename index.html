@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Socially Fitter - Lets get fit together</title>
   <link rel="stylesheet" type="text/css" href="css/global.css">
-  <link rel="stylesheet" type="text/css" href="css/timeline.css">
 </head>
 <body>
 
@@ -17,102 +16,27 @@
         <a href="profile.html" class="profil"><span class="glyph social">x</span></a>
         <a href="search.html" class="search"><span class="glyph general">=</span></a>
       </div> <!-- #main-menu -->
-
-	    <div id="timeline">
-
-        <div class="log clearfix">
-          <div class="log-header clearfix">
-            <div class="log-time">
-              <p>15.02</p>
-            </div> <!-- .log-time -->
-            <div class="profile-picture">
-              <img src="http://placekitten.com/48/48/" alt="profile picture" class="picture" />
-            </div> <!-- .profile-picture -->
-            <div class="log-title">
-              <p class="profile-name">Navn</p>
-              <p>Workout navn</p>
-            </div> <!-- .log-title -->
-          </div> <!-- .log-header -->
-          <div class="log-footer">
-            <span class="log-expand">Show more!</span>
-            <div class="expanded-log">
-              <div class="expanded-log-text clearfix">
-                <strong>Brench press</strong>
-                <p>8 reps, 95kg, 3 sets</p>
-                <strong>Brench press</strong>
-                <p>8 reps, 95kg, 3 sets</p>
-                <strong>Brench press</strong>
-                <p>8 reps, 95kg, 3 sets</p>
-              </div> <!-- .expanded-log-text -->
-              <p class="log-favorite"><a href=""><span class="glyph general">c</span> Favorite</a></p>
-              <p class="log-comment"><a href=""><span class="glyph social">w</span> Comment</a></p>
-              <div class="commenting-log clearfix">
-                <form action="">
-                  <input type="text" name="writing-comment-log" placeholder="Wicked training bro!" id="writing-comment-log">
-                </form>
-                <div class="log-comments-list">
-                  <h4>Comments</h4>
-                  <div class="log-single-comment">
-                    <span class="comment-time">16.04</span><strong>Træner Jørgen</strong>
-                    <p>Det må jeg nok sige. Du har løftet vægte jo!</p>
-                  </div> <!-- .log-single-comment -->
-                  <div class="log-single-comment">
-                    <strong>Gurli Fit</strong><span class="comment-time">16.04</span>
-                    <p>Vis mig din mund.</p>
-                  </div> <!-- .log-single-comment -->
-                </div> <!-- .log-comments-lits -->
-              </div> <!-- .commenting-log -->
-            </div> <!-- .expanded-log -->
-          </div> <!-- .log-footer -->
-        </div> <!-- .log -->
-        
-        <div class="log clearfix">
-          <div class="log-header clearfix">
-            <div class="log-time">
-              <p>15.02</p>
-            </div> <!-- .log-time -->
-            <div class="profile-picture">
-              <img src="http://placekitten.com/48/48/" alt="profile picture" class="picture" />
-            </div> <!-- .profile-picture -->
-            <div class="log-title">
-              <p class="profile-name">Navn</p>
-              <p>Workout navn</p>
-            </div> <!-- .log-title -->
-          </div> <!-- .log-header -->
-          <div class="log-footer">
-            <span class="log-expand">Show more!</span>
-            <div class="expanded-log">
-              <div class="expanded-log-text clearfix">
-                <strong>Brench press</strong>
-                <p>8 reps, 95kg, 3 sets</p>
-                <strong>Brench press</strong>
-                <p>8 reps, 95kg, 3 sets</p>
-                <strong>Brench press</strong>
-                <p>8 reps, 95kg, 3 sets</p>
-              </div> <!-- .expanded-log-text -->
-              <p class="log-favorite"><a href=""><span class="glyph general">c</span> Favorite</a></p>
-              <p class="log-comment"><a href=""><span class="glyph social">w</span> Comment</a></p>
-              <div class="commenting-log clearfix">
-                <form action="">
-                  <input type="text" name="writing-comment-log" placeholder="Wicked training bro!" id="writing-comment-log">
-                </form>
-                <div class="log-comments-list">
-                  <h4>Comments</h4>
-                  <div class="log-single-comment">
-                    <span class="comment-time">16.04</span><strong>Træner Jørgen</strong>
-                    <p>Det må jeg nok sige. Du har løftet vægte jo!</p>
-                  </div> <!-- .log-single-comment -->
-                  <div class="log-single-comment">
-                    <strong>Gurli Fit</strong><span class="comment-time">16.04</span>
-                    <p>Vis mig din mund.</p>
-                  </div> <!-- .log-single-comment -->
-                </div> <!-- .log-comments-lits -->
-              </div> <!-- .commenting-log -->
-            </div> <!-- .expanded-log -->
-          </div> <!-- .log-footer -->
-        </div> <!-- .log -->
-
-	    </div> <!-- #timleine -->
+      
+      <div id="signup">
+        <h2>Not a member yet?</h2>
+        <h3>Sign up right here</h3>
+        <form action="signup.html">
+          <label for="signup-name">Your name:</label><input type="text" name="signup-name" placeholder="Jack Johnson" id="signup-name">
+          <label for="signup-email">Your email:</label><input type="text" name="signup-email" placeholder="jack@johnson.com" id="signup-email">
+          <label for="signup-password">Your password:</label><input type="password" name="signup-password" placeholder="&#8226;&#8226;&#8226;&#8226;&#8226;&#8226;" id="signup-password">
+          <label for="repeat_password">Repeat password:</label><input type="password" name="repeat_password" placeholder="&#8226;&#8226;&#8226;&#8226;&#8226;&#8226;" id="repeat_password">
+        </form>
+      </div> <!-- #sign-up -->
+      
+      <div id="login-area">
+        <h2>Already a member?</h2>
+        <h3>Log in right here</h3>
+        <form action="login.html">
+          <label for="login-email">Your email:</label><input type="text" name="login-email" placeholder="jack@johnson.com" id="signup-email">
+          <label for="login-password">Your password:</label><input type="password" name="login-password" placeholder="&#8226;&#8226;&#8226;&#8226;&#8226;&#8226;" id="login-password">
+        </form>
+      </div> <!-- #sign-up -->
+      
   </div> <!-- #wrap -->
 
   <script type="text/javascript" src="js/jquery.js"></script>
