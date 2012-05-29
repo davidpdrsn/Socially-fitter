@@ -67,12 +67,15 @@ $(document).ready(function() {
 
   // Add more input fields for logging page
   // Dunno what the live method does but it should help with the clicks not registering
-  $('.addmore').live('click', function(e){
+  $('#logging form').delegate('.addmore', 'click', function(e) {
+  // $('.addmore').live('click', function(e){
     // Prevent the button from sending you to a new page
     e.preventDefault();
-    // clone the last exercise element and append it to the container
-    $('.exercise').last().clone().appendTo('.exercises');
-    // if there is less than one hide the remove button
+    // clone the last exercise element (with empty input and textarea) and append it to the container
+    var cloned = $('.exercise').last().clone();
+    cloned.find('input,textarea').val(null);
+    $(cloned).appendTo('.exercises');
+    // if there more than one show the remove button
     if ($('.exercise').length > 1) {
       $('.remove').show();
     }
