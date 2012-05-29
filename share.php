@@ -3,8 +3,8 @@
   include "inc/head.php";
 ?>
 
-	    <div id="share">
-        <p>Share here!</p>
-	    </div> <!-- #share -->
+<div id="share">
+  <p>Share here!</p>
+</div> <!-- #share -->
 
-      <?php include "inc/footer.php"; ?>
+<?php include "inc/footer.php"; ?>
