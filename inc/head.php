@@ -1,5 +1,5 @@
 <?php
-include "inc/global.php"
+include "inc/controller.php"
 ?>
 <!DOCTYPE HTML>
 <html>
