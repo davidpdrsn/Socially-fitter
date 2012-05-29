@@ -51,9 +51,10 @@
     box-shadow: inset 2px 2px 7px rgba(0, 0, 0, 0.3), inset 0 0 0 1px #c3c3c3;
     -moz-border-radius: 4px;
     border-radius: 4px;
+    -webkit-appearance: none;
     font-size: 15px;
     width: 100%;
-    padding: 2%;
+    padding: 6px;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
     border: none;
@@ -63,9 +64,12 @@
   #logging input[name=weight], #logging input[name=reps], #logging input[name=sets] {
     width: 32%;
     margin-right: 2%;
-    display: inline-block; }
+    display: block;
+    float: left; }
   #logging input[name=sets] {
-    margin-right: 0; }
+    width: 32%;
+    margin-right: 0;
+    float: right; }
   #logging input[type=submit] {
     display: block;
     width: 100px;
@@ -95,17 +99,20 @@
     background: -webkit-linear-gradient(-45deg, #20c138, #116a1f);
     background: -moz-linear-gradient(-45deg, #20c138, #116a1f);
     background: linear-gradient(-45deg, #20c138, #116a1f);
-    width: 30px;
-    height: 30px;
+    width: 33px;
+    height: 33px;
     text-align: center;
     -moz-border-radius: 50%;
     border-radius: 50%;
     border: 3px solid white;
     color: white;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
     -moz-text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
     text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
     -moz-box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); }
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    line-height: 18.5px; }
     #logging .addmore:hover {
       cursor: pointer; }
     #logging .addmore:active {
@@ -125,7 +132,7 @@
     border-radius: 4px;
     font-size: 15px;
     width: 100%;
-    padding: 2%;
+    padding: 6px;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
     border: none;
