@@ -1,17 +1,7 @@
 <?php
-include "inc/global.php"
-?>
-<!DOCTYPE HTML>
-<html>
-<?php
   $page_name = "profile";
   include "inc/head.php";
 ?>
-<body>
-
-  <div id="wrap">
-
-      <?php include "inc/menu.php"; ?>
 
       <div id="profile" class="clearfix">
         <div class="profile-picture">

@@ -1,17 +1,7 @@
 <?php
-include "inc/global.php"
-?>
-<!DOCTYPE HTML>
-<html>
-<?php
   $page_name = "logging";
   include "inc/head.php";
 ?>
-<body>
-
-  <div id="wrap">
-
-      <?php include "inc/menu.php"; ?>
 
 	    <div id="logging">
         <form action="share.php">
