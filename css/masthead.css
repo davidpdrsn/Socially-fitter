@@ -8,6 +8,7 @@
   position: fixed;
   z-index: 9999;
   top: 0;
+  overflow: hidden;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   -moz-box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.5);
@@ -20,14 +21,17 @@
     font-weight: bold;
     color: white;
     padding: 10px 0 8px;
-    margin-right: 2.6%;
+    margin-right: 2%;
     display: block;
     float: left;
-    width: 23%;
+    width: 23.5%;
     -moz-box-sizing: border-box;
     box-sizing: border-box; }
     #main-menu a:last-of-type {
-      margin-right: 0; }
+      margin-right: 0;
+      overflow: hidden;
+      width: auto;
+      float: none; }
   #main-menu .timeline, #main-menu .logging, #main-menu .profil, #main-menu .search {
     background: -webkit-linear-gradient(#3c9ada, #1c6394);
     background: -moz-linear-gradient(#3c9ada, #1c6394);
@@ -43,7 +47,6 @@
       background: linear-gradient(bottom, #288ed4, #18557e); }
 
 .logout {
-  float: right;
   background: -webkit-linear-gradient(#8e9699, #5c6365);
   background: -moz-linear-gradient(#8e9699, #5c6365);
   background: linear-gradient(#8e9699, #5c6365);

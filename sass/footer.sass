@@ -1,0 +1,109 @@
+@import "vars.sass"
+
+//////////////////////////////////////
+// FOOTER ////////////////////////////
+//////////////////////////////////////
+
+#main-footer
+  padding: 0 $generalpadding
+  $height: 50px
+  height: $height
+  width: 100%
+  -moz-box-sizing: border-box
+  box-sizing: border-box
+  background: -webkit-linear-gradient($darkgraydarken30, $darkgraydarken40)
+  background: -moz-linear-gradient($darkgraydarken30, $darkgraydarken40)
+  box-shadow: inset 0 10px 10px -5px rgba(0,0,0,.7)
+  @media (min-width: 500px)
+    height: 75px
+  h2
+    font-family: lobster, cursive
+    line-height: $height
+    font-size: 30px
+    font-weight: normal
+    color: $lightgray
+    text-shadow: 1px 1px 0 $darkgraydarken20, 2px 2px 0 $darkgraydarken25, 3px 3px 0 $darkgraydarken30, 4px 4px 5px rgba(0,0,0,.5)
+    -webkit-transition: font-size .5s
+    float: left
+    &:hover
+      -webkit-animation: shadowanimation 1s alternate infinite
+      -moz-animation: shadowanimation 1s alternate infinite
+    @media (max-width: 500px)
+      font-size: 20px
+    @media (min-width: 500px)
+      height: 75px
+      line-height: 75px
+  a.logout
+    float: right
+    display: block
+    position: relative
+    top: 50%
+    margin-top: (-25px / 2)
+    text-align: center
+    width: 75px
+    height: 25px
+    line-height: 25px
+    -moz-border-radius: 7px
+    border-radius: 7px
+    color: #fff
+    font-size: 12px
+    font-weight: bold
+    background: -webkit-linear-gradient($darkgraydarken20, $darkgraydarken35)
+    background: -moz-linear-gradient($darkgraydarken20, $darkgraydarken35)
+    border: 1px solid $darkgraydarken40
+    text-shadow: 1px 1px 1px $darkgraydarken30
+    &:hover, &:active
+      -moz-box-shadow: inset 2px 2px 5px rgba(0,0,0,.5)
+      box-shadow: inset 2px 2px 5px rgba(0,0,0,.5)
+      background: -webkit-linear-gradient(bottom, $darkgraydarken20, $darkgraydarken35)
+      background: -moz-linear-gradient(bottom, $darkgraydarken20, $darkgraydarken35)
+
+@-moz-keyframes shadowanimation
+  0%
+    text-shadow: 1px 1px 0 $darkgraydarken20, 2px 2px 0 $darkgraydarken25, 3px 3px 0 $darkgraydarken30, 4px 4px 5px rgba(0,0,0,.5)
+  1%
+    text-shadow: 1px 1px 0 $darkgraydarken20, 2px 2px 0 $darkgraydarken25, 3px 3px 0 $blue, 4px 4px 5px rgba(0,0,0,.5)
+  20%
+    text-shadow: 1px 1px 0 $darkgraydarken20, 2px 2px 0 $darkgraydarken25, 3px 3px 0 $blue, 4px 4px 5px rgba(0,0,0,.5)
+  21%
+    text-shadow: 1px 1px 0 $darkgraydarken20, 2px 2px 0 $blue, 3px 3px 0 $darkgraydarken30, 4px 4px 5px rgba(0,0,0,.5)
+  40%
+    text-shadow: 1px 1px 0 $darkgraydarken20, 2px 2px 0 $blue, 3px 3px 0 $darkgraydarken30, 4px 4px 5px rgba(0,0,0,.5)
+  41%
+    text-shadow: 1px 1px 0 $blue, 2px 2px 0 $darkgraydarken25, 3px 3px 0 $darkgraydarken30, 4px 4px 5px rgba(0,0,0,.5)
+  60%
+    text-shadow: 1px 1px 0 $blue, 2px 2px 0 $darkgraydarken25, 3px 3px 0 $darkgraydarken30, 4px 4px 5px rgba(0,0,0,.5)
+  61%
+    text-shadow: 1px 1px 0 $darkgraydarken20, 2px 2px 0 $darkgraydarken25, 3px 3px 0 $darkgraydarken30, 4px 4px 5px rgba(0,0,0,.5)
+  80%
+    text-shadow: 1px 1px 0 $darkgraydarken20, 2px 2px 0 $darkgraydarken25, 3px 3px 0 $darkgraydarken30, 4px 4px 5px rgba(0,0,0,.5)
+    color: $lightgray
+  81%
+    color: $blue
+  100%
+    color: $blue
+
+@-webkit-keyframes shadowanimation
+  0%
+    text-shadow: 1px 1px 0 $darkgraydarken20, 2px 2px 0 $darkgraydarken25, 3px 3px 0 $darkgraydarken30, 4px 4px 5px rgba(0,0,0,.5)
+  1%
+    text-shadow: 1px 1px 0 $darkgraydarken20, 2px 2px 0 $darkgraydarken25, 3px 3px 0 $blue, 4px 4px 5px rgba(0,0,0,.5)
+  20%
+    text-shadow: 1px 1px 0 $darkgraydarken20, 2px 2px 0 $darkgraydarken25, 3px 3px 0 $blue, 4px 4px 5px rgba(0,0,0,.5)
+  21%
+    text-shadow: 1px 1px 0 $darkgraydarken20, 2px 2px 0 $blue, 3px 3px 0 $darkgraydarken30, 4px 4px 5px rgba(0,0,0,.5)
+  40%
+    text-shadow: 1px 1px 0 $darkgraydarken20, 2px 2px 0 $blue, 3px 3px 0 $darkgraydarken30, 4px 4px 5px rgba(0,0,0,.5)
+  41%
+    text-shadow: 1px 1px 0 $blue, 2px 2px 0 $darkgraydarken25, 3px 3px 0 $darkgraydarken30, 4px 4px 5px rgba(0,0,0,.5)
+  60%
+    text-shadow: 1px 1px 0 $blue, 2px 2px 0 $darkgraydarken25, 3px 3px 0 $darkgraydarken30, 4px 4px 5px rgba(0,0,0,.5)
+  61%
+    text-shadow: 1px 1px 0 $darkgraydarken20, 2px 2px 0 $darkgraydarken25, 3px 3px 0 $darkgraydarken30, 4px 4px 5px rgba(0,0,0,.5)
+  80%
+    text-shadow: 1px 1px 0 $darkgraydarken20, 2px 2px 0 $darkgraydarken25, 3px 3px 0 $darkgraydarken30, 4px 4px 5px rgba(0,0,0,.5)
+    color: $lightgray
+  81%
+    color: $blue
+  100%
+    color: $blue

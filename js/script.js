@@ -13,7 +13,7 @@ jQuery.fn.fadeSliderToggle = function(settings) {
 		speed: 300,
 		easing: "swing"
 	}, settings)
-	
+
 	caller = this
  	if($(caller).css("display") == "none"){
  		$(caller).animate({
@@ -67,12 +67,15 @@ $(document).ready(function() {
 
   // Add more input fields for logging page
   // Dunno what the live method does but it should help with the clicks not registering
-  $('.addmore').live('click', function(e){
+  $('#logging form').delegate('.addmore', 'click', function(e) {
+  // $('.addmore').live('click', function(e){
     // Prevent the button from sending you to a new page
     e.preventDefault();
-    // clone the last exercise element and append it to the container
-    $('.exercise').last().clone().appendTo('.exercises');
-    // if there is less than one hide the remove button
+    // clone the last exercise element (with empty input and textarea) and append it to the container
+    var cloned = $('.exercise').last().clone();
+    cloned.find('input,textarea').val(null);
+    $(cloned).appendTo('.exercises');
+    // if there more than one show the remove button
     if ($('.exercise').length > 1) {
       $('.remove').show();
     }
@@ -100,7 +103,7 @@ $(document).ready(function() {
       i++;
     });
   });
-  
+
   $('.commenting-log').click(function(){
     $(this).parent().parent().parent('.log');
     return false;
@@ -109,12 +112,34 @@ $(document).ready(function() {
     $(this).parent().parent().parent('.log');
     return false;
   });
-  
+
   $('.log-comment a').click(function(){
     var $commentinglog = $(this).parent().parent().children('.commenting-log');
-    $(this).parent().toggleClass('clicked');   
+    $(this).parent().toggleClass('clicked');
 		$commentinglog.fadeSliderToggle();
 		return false;
   });
 
+  // for placing footer at bottom, when there are only a few logs 
+  $(placeFooterAtBottom);
+  
+  function placeFooterAtBottom() {
+    if (!($(document).height() > $(window).height())) {
+        $('#main-footer').css({
+          'position': 'fixed',
+          'bottom': 0,
+          'left': 0
+        });
+        var wrapHeight = $('#wrap').height();
+        $('#wrap').css('height', wrapHeight + 50 + 'px');
+    } 
+    else {
+      $('#main-footer').css('position', 'relative');
+      var wrapHeight = $('#wrap').height();
+      $('#wrap').css('height', wrapHeight - 50 + 'px');
+    }
+  }
+  
 });
+
+

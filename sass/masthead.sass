@@ -10,6 +10,7 @@
   position: fixed
   z-index: 9999
   top: 0
+  overflow: hidden
   -moz-box-sizing: border-box
   box-sizing: border-box
   -moz-box-shadow: 0 0 10px 5px rgba(0,0,0,.5)
@@ -23,14 +24,17 @@
     font-weight: bold
     color: #fff
     padding: 10px 0 8px
-    margin-right: $generalpadding + 0.6
+    margin-right: $generalpadding //+ 0.6
     display: block
     float: left
-    width: 25% - $generalpadding
+    width: 25% - $generalpadding + 0.5
     -moz-box-sizing: border-box
     box-sizing: border-box
     &:last-of-type
       margin-right: 0
+      overflow: hidden
+      width: auto
+      float: none
   .timeline, .logging, .profil, .search
     background: -webkit-linear-gradient($bluedarken10, $bluedarken30)
     background: -moz-linear-gradient($bluedarken10, $bluedarken30)
@@ -50,7 +54,6 @@
 //////////////////////////////////////
 
 .logout
-  float: right
   background: -webkit-linear-gradient($darkgray, $darkgraydarken20)
   background: -moz-linear-gradient($darkgray, $darkgraydarken20)
   background: linear-gradient($darkgray, $darkgraydarken20)
