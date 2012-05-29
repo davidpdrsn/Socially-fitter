@@ -61,10 +61,3 @@
         </div> <!-- .log -->
       </div> <!-- #results -->
       <?php include "inc/footer.php"; ?>
-  </div> <!-- #wrap -->
-
-  <script type="text/javascript" src="js/jquery.js"></script>
-  <script type="text/javascript" src="js/script.js"></script>
-
-</body>
-</html>
