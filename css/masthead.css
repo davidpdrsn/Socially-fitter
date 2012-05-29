@@ -47,7 +47,6 @@
       background: linear-gradient(bottom, #288ed4, #18557e); }
 
 .logout {
-  float: right;
   background: -webkit-linear-gradient(#8e9699, #5c6365);
   background: -moz-linear-gradient(#8e9699, #5c6365);
   background: linear-gradient(#8e9699, #5c6365);
