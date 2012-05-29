@@ -1,23 +1,17 @@
+<?php
+include "inc/global.php"
+?>
 <!DOCTYPE HTML>
 <html>
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-  <title>Socially Fitter - Lets get fit together</title>
-  <link rel="stylesheet" type="text/css" href="css/global.css">
-  <link rel="stylesheet" type="text/css" href="css/landing.css">
-  <link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
-</head>
+<?php
+  $page_name = "landing";
+  include "inc/head.php";
+?>
 <body>
 
   <div id="wrap">
 
-      <div id="main-menu">
-        <a href="timeline.html" class="timeline"><span class="glyph general">m</span></a>
-        <a href="logging.html" class="logging"><span class="glyph general">[</span></a>
-        <a href="profile.html" class="profil"><span class="glyph social">x</span></a>
-        <a href="search.html" class="search"><span class="glyph general">=</span></a>
-      </div> <!-- #main-menu -->
+      <?php include "inc/menu.php"; ?>
 
       <div id="logotype">
         <h1>Socially Fitter</h1>
@@ -27,7 +21,7 @@
       <div id="signup">
         <h2>Not a member yet?</h2>
         <h3>Sign up right here</h3>
-        <form action="signup.html">
+        <form action="signup.php">
           <!--label for="signup-name">Your name:</label--><input type="text" name="signup-name" placeholder="Your Name" id="signup-name">
           <!--label for="signup-email">Your email:</label--><input type="text" name="signup-email" placeholder="Your Email" id="signup-email">
           <!--label for="signup-password">Your password:</label--><input type="password" name="signup-password" placeholder="Your Password" id="signup-password">
@@ -40,7 +34,7 @@
       <!--div id="login-area">
         <h2>Already a member?</h2>
         <h3><span class="glyph general">u</span> Log in right here <span class="glyph general">v</span></h3>
-        <form action="login.html">
+        <form action="login.php">
           <input type="text" name="login-email" placeholder="Your Email" id="signup-email">
           <input type="password" name="login-password" placeholder="Your Password" id="login-password">
           <input type="submit" name="login-submit" value="Log in!" id="login-submit">
@@ -53,10 +47,7 @@
         <h3>Here are a few examples:</h3>
       </div> <!-- #examples -->
 
-      <footer id="main-footer" class="clearfix">
-        <h2>Socially Fitter</h2>
-        <a href="#" class="logout">Logout</a>
-      </footer>
+      <?php include "inc/footer.php"; ?>
 
   </div> <!-- #wrap -->
 

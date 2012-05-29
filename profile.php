@@ -1,23 +1,18 @@
+<?php
+include "inc/global.php"
+?>
 <!DOCTYPE HTML>
 <html>
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-  <title>Socially Fitter - Lets get fit together</title>
-  <link rel="stylesheet" type="text/css" href="css/global.css">
-  <link rel="stylesheet" type="text/css" href="css/profile.css">
-</head>
+<?php
+  $page_name = "profile";
+  include "inc/head.php";
+?>
 <body>
-  
+
   <div id="wrap">
 
-      <div id="main-menu">
-        <a href="timeline.html" class="timeline"><span class="glyph general">m</span></a>
-        <a href="logging.html" class="logging"><span class="glyph general">[</span></a>
-        <a href="profile.html" class="profil"><span class="glyph social">x</span></a>
-        <a href="search.html" class="search"><span class="glyph general">=</span></a>
-      </div> <!-- #main-menu -->
-      
+      <?php include "inc/menu.php"; ?>
+
       <div id="profile" class="clearfix">
         <div class="profile-picture">
           <img src="http://www.placekitten.com/74/74/" alt="Profile Picture" />
@@ -31,12 +26,12 @@
           <a href=""><span class="following">22.600</span>Following</a>
         </div>
       </div>
-      
+
       <div class="profile-follow clearfix">
         <a href="" class="follow">Follow</a>
         <!-- <a href="" class="unfollow">Unfollow</a> -->
       </div>
-      
+
       <div id="profile-workouts">
 
         <div class="log clearfix">
@@ -84,7 +79,7 @@
             </div> <!-- .expanded-log -->
           </div> <!-- .log-footer -->
         </div> <!-- .log -->
-        
+
         <div class="log clearfix">
           <div class="log-header clearfix">
             <div class="log-time">
@@ -132,7 +127,9 @@
         </div> <!-- .log -->
 
 	    </div> <!-- #profile-workouts -->
-    
+
+      <?php include "inc/footer.php"; ?>
+
   </div> <!-- #wrap -->
 
   <script type="text/javascript" src="js/jquery.js"></script>

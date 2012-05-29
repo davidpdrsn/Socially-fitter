@@ -1,25 +1,20 @@
+<?php
+include "inc/global.php"
+?>
 <!DOCTYPE HTML>
 <html>
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-  <title>Socially Fitter - Lets get fit together</title>
-  <link rel="stylesheet" type="text/css" href="css/global.css">
-  <link rel="stylesheet" type="text/css" href="css/logging.css">
-</head>
+<?php
+  $page_name = "logging";
+  include "inc/head.php";
+?>
 <body>
 
   <div id="wrap">
 
-      <div id="main-menu">
-        <a href="timeline.html" class="timeline"><span class="glyph general">m</span></a>
-        <a href="logging.html" class="logging"><span class="glyph general">[</span></a>
-        <a href="profile.html" class="profil"><span class="glyph social">x</span></a>
-        <a href="search.html" class="search"><span class="glyph general">=</span></a>
-      </div> <!-- #main-menu -->
+      <?php include "inc/menu.php"; ?>
 
 	    <div id="logging">
-        <form action="share.html">
+        <form action="share.php">
           <label for="workoutname"><strong>Workout name:</strong></label>
           <input type="text" name="workoutname" placeholder="Back">
 
@@ -43,6 +38,8 @@
           <input type="submit" value="Done!">
         </form>
 	    </div> <!-- #logging -->
+
+      <?php include "inc/footer.php"; ?>
 
   </div> <!-- #wrap -->
 
