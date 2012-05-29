@@ -21,7 +21,7 @@
         font-family: 'FoundationIconsGeneral'
         color: #ccc
         position: absolute
-        margin-top: -17px
+        margin-top: -15px
         left: 6px
         top: 50%
       input
@@ -29,7 +29,7 @@
         box-shadow: inset 2px 2px 7px rgba(0,0,0,.3)
         font-size: 15px
         width: 100%
-        padding: $generalpadding $generalpadding $generalpadding 24px
+        padding: 6px 6px 6px 25px
         -moz-box-sizing: border-box
         box-sizing: border-box
         border: none
@@ -63,15 +63,21 @@
         background: linear-gradient(bottom, $green, $greendarken20)
 
 #results
+  border-top: 1px solid $darkgray
   .log
     padding: $generalpadding 0px 0px 0px
-    border-bottom: 1px solid $darkgray
+    border-bottom: 2px solid $darkgray
     &:nth-child(odd)
-      background: darken($lightgray, 10%)
-    &:first-of-type
-      border-top: 1px solid $darkgray
+      background: darken($lightgray, 5%)
   .log-header
     padding: 0px $generalpadding
+    position: relative
+    .log-time
+      position: absolute
+      right: $generalpadding
+      top: 0
+      font-size: 12px
+      color: $darkgray
     .profile-picture
       width: 48px
       height: 48px
@@ -82,8 +88,6 @@
       float: left
       margin-right: $generalpadding
     div.log-title
-      p
-        margin-bottom: 5px
       p.profile-name
         font-weight: bold
   .log-footer
@@ -97,8 +101,85 @@
       margin-bottom: $generalpadding
     .expanded-log
       display: none
+      float: left
+      width: 100%
       background: darken($lightgray, 20%)
       padding: $generalpadding
-      -moz-box-shadow: inset 0px 2px 1px $darkgray, inset 0px -2px 1px $darkgray
-      box-shadow: inset 0px 2px 1px $darkgray, inset 0px -2px 1px $darkgray
+      //box-shadow: inset 0px 2px 1px $darkgray, inset 0px -2px 1px $darkgray
       text-align: left
+      box-shadow: inset 0px 1px 1px $darkgraydarken25
+      -moz-box-sizing: border-box
+      box-sizing: border-box
+      .expanded-log-text
+        margin-bottom: $generalpadding
+        text-indent: $generalpadding
+        float: left
+        width: 100%
+      .glyph
+        font-size: 12px
+      strong
+        font-size: 13px
+        margin-top: $generalpadding
+        display: block
+      p
+        font-size: 13px
+        text-indent: $generalpadding + $generalpadding/2
+      a
+        color: $darkgraydarken25
+        font-size: 13px
+      .log-favorite, .log-comment
+        font-size: 12px
+        float: left
+        margin-left: 0
+        margin-right: 15px
+        text-indent: 0
+      .log-favorite a:hover, .log-favorite.clicked a
+        color: rgb(240,210,0)
+      .log-comment a:hover, .log-comment.clicked a
+        color: $bluedarken25
+      .commenting-log
+        float: left
+        width: 96%
+        padding: $generalpadding
+        position: relative
+        background: $lightgray
+        border-radius: 10px
+        margin-top: $generalpadding
+        display: none
+        &:before
+          content: ""
+          width: 0
+          height: 0
+          border-left: 10px solid  transparent
+          border-right: 10px solid transparent
+          border-bottom: 10px solid $lightgray
+          position: absolute
+          top: -5px
+          left: 110px
+        input[type=text]
+          display: block
+          box-shadow: inset 2px 2px 7px rgba(0,0,0,.3), inset 0 0 0 1px $lightgraydarken10
+          border-radius: 4px
+          font-size: 15px
+          width: 100%
+          padding: 6px
+          -moz-box-sizing: border-box
+          box-sizing: border-box
+          border: none
+          margin-bottom: $generalpadding
+          //border: 1px solid $darkgraydarken20
+          &:focus
+            outline: none
+        .log-comments-list
+          margin-top: $generalpadding*2
+          h4
+            font-size: 14px
+          .log-single-comment
+            margin: 0px $generalpadding $generalpadding $generalpadding
+            position: relative
+            span
+              float: left
+              color: $darkgraydarken20
+              position: absolute
+              top: 0
+              right: 0
