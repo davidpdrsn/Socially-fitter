@@ -60,6 +60,18 @@ class User {
     return $object;
   }
 
+  static public function username_is_free($username){
+    global $database;
+    $sql = "SELECT * FROM " . self::$table_name . " ";
+    $sql .= "WHERE username='{$username}'";
+    $result_set = $database->query($sql);
+    if($database->num_rows($result_set) != 0){
+      return false;
+    } else {
+      return true;
+    }
+  }
+
   private function has_attribute($attribute){
     $object_vars = $this->attributes();
     return array_key_exists($attribute, $object_vars);
@@ -68,6 +80,26 @@ class User {
   protected function attributes(){
     // return an array of attribute keys and their values
     return get_object_vars($this);
+  }
+
+  public function input_validates($username, $email, $password, $password_repeat){
+    $message = "";
+    if(!self::username_is_free($username)){
+      $message .= "Username already taken. ";
+    }
+    if($password != $password_repeat){
+      $message .= "Passwords did not match. ";
+    }
+    if(!filter_var($email, FILTER_VALIDATE_EMAIL)){
+      $message .= "Email is not real.";
+    }
+    $_SESSION["message"] = $message;
+    if(strlen($message) > 0){
+      $_SESSION["message"] .= " negative";
+      return false;
+    } else {
+      return true;
+    }
   }
 
   public function save(){

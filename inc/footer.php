@@ -11,30 +11,41 @@
   <script type="text/javascript" src="js/script.js"></script>
 
   <?php if(isset($message)): ?>
-    
+
     <script type="text/javascript">
       $(document).ready(function(){
         $(errorInLogin);
 
         function errorInLogin() {
+          var messageHeight = $('.error-message').outerHeight();
+          
+          $('.error-message').css('top', -messageHeight+'px');
+          
           $('.error-message').delay(100).animate({
             top: 0
           });
-          $('.error-message').delay(2000).animate({
-            top: -53
+          $('.error-message').delay(1300).animate({
+            top: -messageHeight
           });
         }
       });
     </script>
-    
-    <div class="error-message">
-      <h2>Incorrect username or password</h2>
+
+    <?php
+      // if $message contains the word positive
+      if (strpos($message, 'positive')) {
+        $message_kind = "positive";
+      } else {
+        $message_kind = "negative";
+      }
+      // remove the last word from $message
+      $message = substr($message, 0, strrpos($message, " "));
+    ?>
+      <div class="error-message <?= $message_kind; ?>">
+      <h2><?= $message; ?></h2>
     </div>
-    
+
   <?php endif; ?>
-  
-  
-  
-  
+
 </body>
 </html>
