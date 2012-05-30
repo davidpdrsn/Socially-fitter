@@ -2,7 +2,7 @@
 require_once("inc/controller.php");
 
 if ($session->is_logged_in()){
-  redirect_to("index.php");
+  redirect_to("timeline.php");
 }
 
 if (isset($_POST["submit"])) {
@@ -13,7 +13,7 @@ if (isset($_POST["submit"])) {
 
   if ($found_user){
     $session->login($found_user);
-    redirect_to("index.php");
+    redirect_to("timeline.php");
   } else {
     $_SESSION["message"] = "Incorrect username or password";
     redirect_to("index.php");

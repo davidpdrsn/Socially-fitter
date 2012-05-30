@@ -8,6 +8,7 @@
   <h2>Making workout social</h2>
 </div>
 
+<?php if(!$session->is_logged_in()): ?>
 <div id="signup">
   <h2>Not a member yet?</h2>
   <h3>Sign up right here</h3>
@@ -19,6 +20,7 @@
     <input type="submit" name="submit" value="Sign up!" id="submit">
   </form>
 </div> <!-- #sign-up -->
+<? endif; ?>
 
 <div id="examples">
   <h2>What is Socially Fitter?</h2>
