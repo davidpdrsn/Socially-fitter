@@ -247,14 +247,14 @@ body {
 
 .error-message {
   height: 68px;
-  width: 40%;
+  width: 80%;
   background: -webkit-linear-gradient(#e40c00, #b10900);
   background: -moz-linear-gradient(#e40c00, #b10900);
   border: 1px solid #4b0400;
   position: absolute;
   top: -68px;
   left: 50%;
-  margin-left: -20%;
+  margin-left: -40%;
   z-index: 999999999;
   border-radius: 7px;
   padding: 2%;
@@ -262,8 +262,9 @@ body {
   box-sizing: border-box; }
   .error-message h2 {
     color: white;
-    font-family: lobster, cursive;
-    font-weight: normal;
+    font-family: "Lucida Grande", "Lucida Sans Unicode", Arial, Helvetica, sans-serif;
+    font-weight: bold;
     text-align: center;
-    line-height: 20px;
+    font-size: 14px;
+    line-height: 45px;
     margin-top: 8px; }
