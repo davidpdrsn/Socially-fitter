@@ -139,8 +139,9 @@ $(document).ready(function() {
       $('#wrap').css('height', wrapHeight - 50 + 'px');
     }
   }
-
-
   
+  //Placing wrapper underneath #main-menu
+  $menuHeight = $('#main-menu').outerHeight();
+  $('#wrap').css('margin-top', $menuHeight + 'px');
   
-});
+}); //End of $(document).ready();
