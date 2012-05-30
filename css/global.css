@@ -246,15 +246,12 @@ body {
     color: #67b0e2; } }
 
 .error-message {
-  height: 51px;
   width: 80%;
-  background: -webkit-linear-gradient(#e40c00, #b10900);
-  background: -moz-linear-gradient(#e40c00, #b10900);
-  border: 1px solid #4b0400;
   position: absolute;
-  top: -53px;
+  top: -100px;
   left: 50%;
-  margin-left: -40%;
+  padding: 2%;
+  margin-left: -42%;
   z-index: 999999999;
   border-radius: 0px 0px 7px 7px; }
   .error-message h2 {
@@ -263,4 +260,14 @@ body {
     font-weight: bold;
     text-align: center;
     font-size: 14px;
-    line-height: 52px; }
+    line-height: 37px; }
+
+.error-message.positive {
+  background: -webkit-linear-gradient(#20c138, #157f25);
+  background: -moz-linear-gradient(#20c138, #157f25);
+  border: 1px solid #0e5418; }
+
+.error-message.negative {
+  background: -webkit-linear-gradient(#e40c00, #b10900);
+  background: -moz-linear-gradient(#e40c00, #b10900);
+  border: 1px solid #4b0400; }
