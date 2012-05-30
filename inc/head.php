@@ -24,6 +24,13 @@ include "inc/controller.php"
   <?php endif; ?>
 
   <link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+
+  <?php if(isset($message)): ?>
+    <script>
+      alert("<?= $message; ?>");
+    </script>
+  <?php endif; ?>
+
 </head>
 <body>
 

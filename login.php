@@ -15,7 +15,7 @@ if (isset($_POST["submit"])) {
     $session->login($found_user);
     redirect_to("index.php");
   } else {
-    $message = "Incorrect username or password";
+    $_SESSION["message"] = "Incorrect username or password";
     redirect_to("index.php");
   }
 } else { // form has not been submitted
