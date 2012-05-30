@@ -5,7 +5,7 @@ class MySQLDatabase {
   private $host = "localhost";
   private $username = "root";
   private $password = "root";
-  private $db_name = "guestbook";
+  private $db_name = "sociallyfitter";
   private $connection = false;
   public $last_query;
 

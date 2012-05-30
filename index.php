@@ -1,6 +1,7 @@
 <?php
   $page_name = "landing";
   include "inc/head.php";
+  require_once("inc/class.user.inc.php");
 ?>
 
 <div id="logotype">
