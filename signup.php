@@ -6,21 +6,23 @@ if($session->is_logged_in()){
 }
 
 if(isset($_POST["submit"])){
-  if($_POST["password"] == $_POST["repeat_password"]){
-    if(User::username_is_free($_POST["username"])){
-      $user = new User();
-      $user->username = $_POST["username"];
-      $user->email = $_POST["email"];
-      $user->password = $_POST["password"];
-      $user->create();
-      $_SESSION["message"] = "Welcome!";
-      redirect_to("index.php");
-    } else { // username already taken
-      $_SESSION["message"] = "Username already taken";
-      redirect_to("index.php");
-    }
-  } else { // passwords did not match
-    $_SESSION["message"] = "Passwords did not match";
+  $username = $_POST["username"];
+  $email = $_POST["email"];
+  $password = $_POST["password"];
+  $password_repeat = $_POST["password_repeat"];
+
+  $user = new User();
+
+  if($user->input_validates($username, $email, $password, $password_repeat)){
+    $user->username = $username;
+    $user->email = $email;
+    $user->password = $password;
+    $user->create();
+    $_SESSION["message"] = "Welcome on board!";
+    redirect_to("index.php");
+  } else {
+    // $_SESSION["message"] gets set by the input_validates method
+    // so no need to set here
     redirect_to("index.php");
   }
 } else { // form has not been submitted

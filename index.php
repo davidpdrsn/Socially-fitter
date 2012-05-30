@@ -13,10 +13,10 @@
   <h2>Not a member yet?</h2>
   <h3>Sign up right here</h3>
   <form action="signup.php" method="post">
-    <input type="text" name="username" placeholder="Your Name">
+    <input type="text" name="username" placeholder="Your Username">
     <input type="text" name="email" placeholder="Your Email">
     <input type="password" name="password" placeholder="Your Password">
-    <input type="password" name="repeat_password" placeholder="Repeat Your Password">
+    <input type="password" name="password_repeat" placeholder="Repeat Your Password">
     <input type="submit" name="submit" value="Sign up!" id="submit">
   </form>
 </div> <!-- #sign-up -->
