@@ -23,7 +23,7 @@ include "inc/controller.php"
     <link rel="stylesheet" type="text/css" href="css/timeline.css">
   <?php endif; ?>
 
-  <link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700|Lobster' rel='stylesheet' type='text/css'>
 
 </head>
 <body>

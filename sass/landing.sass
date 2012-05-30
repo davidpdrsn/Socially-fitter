@@ -4,26 +4,55 @@
 // LANDING - GLOBALS /////////////////
 //////////////////////////////////////
 
-#signup, #login-area, #examples, #logotype
+#logotype
+  height: 200px
+  color: #fff
+  background: -webkit-linear-gradient(top, $darkgraydarken40, $darkgraydarken30, $darkgraydarken40)
+  box-shadow: inset 0px -25px 25px -20px rgba(0,0,0,.5)
+  text-align: center
+  h1, h2
+    text-shadow: 2px 2px 0 rgba(0,0,0,.4), 4px 4px 0 rgba(0,0,0,.4)
   h1
+    margin: 35px 0 30px
     font-family: lobster, cursive
-    text-align: center
-    color: $blue
-    font-size: 36px
-    line-height: 40px
-    text-shadow: 1px 1px 0 $bluedarken30, 2px 2px 0 $bluedarken35, 3px 3px 0 $bluedarken45//, 1px 1px 10px lighten($lightgray, 10%)
-    margin-bottom: $generalpadding
-  h2, h3
-    text-align: center
-    font-family: lobster, cursive
+    //text-shadow: 2px 2px 5px rgba(0,0,0,.7)
+    font-size: 25px
     font-weight: normal
+    span
+      font-family: "Lucida Grande", "Lucida Sans Unicode", Arial, Helvetica, sans-serif
+      font-weight: normal
+      font-size: 20px
+      opacity: .7
   h2
-    margin: $generalpadding 0 $generalpadding 0
-    color: $bluedarken30
-    font-size: 26px
-  h3
-    margin-bottom: $generalpadding*2
-    color: $bluedarken20
+    font-weight: normal
+    font-size: 38px
+    font-family: 'PT Sans Narrow', sans-serif
+    margin-bottom: 35px
+  a
+    padding: 2px 5px
+    display: block
+    width: 75px
+    margin: 0 auto
+    -moz-border-radius: 7px
+    border-radius: 7px
+    color: #fff
+    font-size: 12px
+    font-weight: bold
+    margin-bottom: $generalpadding
+    background: -webkit-linear-gradient($green, $greendarken20)
+    background: -moz-linear-gradient($green, $greendarken20)
+    background: linear-gradient($green, $greendarken20)
+    border: 1px solid $greendarken25
+    -moz-text-shadow: 1px 1px 1px $greendarken25
+    text-shadow: 1px 1px 1px $greendarken25
+    &:hover, &:active
+      -moz-box-shadow: inset 2px 2px 5px rgba(0,0,0,.5)
+      box-shadow: inset 2px 2px 5px rgba(0,0,0,.5)
+      background: -webkit-linear-gradient(bottom, $green, $greendarken20)
+      background: -moz-linear-gradient(bottom, $green, $greendarken20)
+      background: linear-gradient(bottom, $green, $greendarken20)
+
+#signup
   form
     background: $lightgraydarken10
     -moz-box-shadow: inset 0 0 10px rgba(0,0,0,.5)
@@ -86,29 +115,11 @@
 // SIGN UP ///////////////////////////
 //////////////////////////////////////
 
-#signup, #login-area, #examples
+#logotype, #signup, #login-area, #examples
   padding: $generalpadding
 
 #signup
-  border-bottom: 2px solid $darkgraydarken25
   padding-bottom: $generalpadding*2
-
-#logotype
-  border-bottom: 2px solid $darkgraydarken25
-  padding-bottom: $generalpadding*4
-  padding-top: $generalpadding*4
-  margin-top: -$generalpadding
-  margin-bottom: $generalpadding
-  background: lighten($darkgray, 20%)
-  h2
-    margin-top: 0
-    color: $bluedarken20
-    text-shadow: 0px 0px 2px $lightgray
-#examples
-  padding-top:  $generalpadding*2
-  h2
-    margin-bottom: $generalpadding*2
-
 
 //////////////////////////////////////
 // LOGIN /////////////////////////////

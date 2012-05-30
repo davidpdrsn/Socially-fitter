@@ -4,8 +4,9 @@
 ?>
 
 <div id="logotype">
-  <h1>Socially Fitter</h1>
-  <h2>Making workout social</h2>
+  <h1>Socially Fitter <span>is</span></h1>
+  <h2>The best way to get fit</h2>
+  <a href="#">Learn why</a>
 </div>
 
 <?php if(!$session->is_logged_in()): ?>
@@ -21,11 +22,5 @@
   </form>
 </div> <!-- #sign-up -->
 <? endif; ?>
-
-<div id="examples">
-  <h2>What is Socially Fitter?</h2>
-  <h3>Socially Fitter is a place for you to share your training in a fast and effective way.</h3>
-  <h3>Here are a few examples:</h3>
-</div> <!-- #examples -->
 
 <?php include "inc/footer.php"; ?>
