@@ -6,9 +6,9 @@
       <input type="submit" name="submit" value="Login" id="login-button" class="login">
     </form>
   <?php else: ?>
-    <a href="timeline.html" class="timeline"><span class="glyph general">m</span></a>
-    <a href="logging.html" class="logging"><span class="glyph general">[</span></a>
-    <a href="profile.html" class="profil"><span class="glyph social">x</span></a>
-    <a href="search.html" class="search"><span class="glyph general">=</span></a>
+    <a href="timeline.php" class="timeline"><span class="glyph general">m</span></a>
+    <a href="logging.php" class="logging"><span class="glyph general">[</span></a>
+    <a href="profile.php" class="profil"><span class="glyph social">x</span></a>
+    <a href="search.php" class="search"><span class="glyph general">=</span></a>
   <?php endif; ?>
 </div> <!-- #main-menu -->

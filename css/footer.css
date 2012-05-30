@@ -123,3 +123,26 @@
 
   100% {
     color: #67b0e2; } }
+
+.error-message {
+  height: 68px;
+  width: 40%;
+  background: -webkit-linear-gradient(#e40c00, #b10900);
+  background: -moz-linear-gradient(#e40c00, #b10900);
+  border: 1px solid #4b0400;
+  position: absolute;
+  top: -68px;
+  left: 50%;
+  margin-left: -20%;
+  z-index: 999999999;
+  border-radius: 7px;
+  padding: 2%;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+  .error-message h2 {
+    color: white;
+    font-family: lobster, cursive;
+    font-weight: normal;
+    text-align: center;
+    line-height: 20px;
+    margin-top: 8px; }
