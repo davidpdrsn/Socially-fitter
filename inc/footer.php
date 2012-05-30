@@ -18,10 +18,10 @@
 
         function errorInLogin() {
           $('.error-message').delay(100).animate({
-            top: -15
+            top: 0
           });
           $('.error-message').delay(2000).animate({
-            top: -68
+            top: -53
           });
         }
       });

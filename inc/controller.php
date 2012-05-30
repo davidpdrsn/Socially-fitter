@@ -3,8 +3,8 @@
 error_reporting(E_ALL);
 ini_set('display_errors', '1');
 
-require_once("inc/class.mysqldatabase.inc.php");
-require_once("inc/class.session.inc.php");
+require_once("inc/class.MySQLDatabase.inc.php");
+require_once("inc/class.Session.inc.php");
 
 // automatically load classes when they are requested
 function __autoload($class_name) {
