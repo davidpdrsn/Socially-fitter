@@ -60,6 +60,19 @@ class User {
     return $object;
   }
 
+  static public function username_is_free($username){
+    global $database;
+    $sql = "SELECT * FROM " . self::$table_name . " ";
+    $sql .= "WHERE username='{$username}'";
+    $result_set = $database->query($sql);
+    if($database->num_rows($result_set) != 0){
+      return false;
+    } else {
+      return true;
+    }
+
+  }
+
   private function has_attribute($attribute){
     $object_vars = $this->attributes();
     return array_key_exists($attribute, $object_vars);
