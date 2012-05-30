@@ -2,14 +2,32 @@
 
 class MySQLDatabase {
 
+  // in prodcution
   private $host = "localhost";
-  private $username = "root";
-  private $password = "root";
-  private $db_name = "sociallyfitter";
+  private $username = "mmd4s12b12";
+  private $password = "8rohyo4z";
+  private $db_name = "mmd4s12b12";
   private $connection = false;
   public $last_query;
 
+  private function in_development(){
+    if($_SERVER["HTTP_HOST"] == "localhost:8888" || $_SERVER["HTTP_HOST"] == "sociallyfitter.dev"){
+      // in development
+      return true;
+    } else {
+      // in production
+      return false;
+    }
+  }
+
   function __construct(){
+
+    if($this->in_development()){
+      $this->username = "root";
+      $this->password = "root";
+      $this->db_name = "sociallyfitter";
+    }
+
     if(!$this->connection) {
       $connection = mysql_connect($this->host, $this->username, $this->password);
       if($connection) {
