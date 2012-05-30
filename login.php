@@ -13,7 +13,7 @@ if (isset($_POST["submit"])) {
 
   if ($found_user){
     $session->login($found_user);
-    $_SESSION["message"] = "Welcome user! positive";
+    $_SESSION["message"] = "Welcome {$username}! positive";
     redirect_to("timeline.php");
   } else {
     $_SESSION["message"] = "Incorrect username or password. negative";
