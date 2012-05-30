@@ -97,3 +97,59 @@
   padding-top: 4%; }
   #examples h2 {
     margin-bottom: 4%; }
+
+#main-menu form {
+  overflow: hidden; }
+#main-menu input[type=text], #main-menu input[type=password] {
+  display: block;
+  -moz-border-radius: 7px;
+  border-radius: 7px;
+  -webkit-appearance: none;
+  font-size: 15px;
+  width: 36%;
+  float: left;
+  margin-right: 2%;
+  padding: 6px;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  background: -webkit-linear-gradient(#3c9ada, #1c6394);
+  background: -moz-linear-gradient(#3c9ada, #1c6394);
+  background: linear-gradient(#3c9ada, #1c6394);
+  border: 1px solid #18557e;
+  outline: none;
+  transition: all 0.5s ease-in-out;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out; }
+  #main-menu input[type=text]::-webkit-input-placeholder, #main-menu input[type=password]::-webkit-input-placeholder {
+    color: #144669; }
+  #main-menu input[type=text]:-moz-placeholder, #main-menu input[type=password]:-moz-placeholder {
+    color: #dcdcdc;
+    font-weight: bold; }
+  #main-menu input[type=text]:focus, #main-menu input[type=password]:focus {
+    opacity: 1;
+    background: white;
+    -moz-box-shadow: inset 2px 2px 7px rgba(0, 0, 0, 0.3);
+    box-shadow: inset 2px 2px 7px rgba(0, 0, 0, 0.3); }
+#main-menu input[type=submit] {
+  display: block;
+  width: 24%;
+  float: right;
+  border-radius: 7px;
+  color: white;
+  font-size: 12px;
+  line-height: 18px;
+  font-weight: bold;
+  padding: 6px;
+  cursor: pointer;
+  background: -webkit-linear-gradient(#3c9ada, #1c6394);
+  background: -moz-linear-gradient(#3c9ada, #1c6394);
+  background: linear-gradient(#3c9ada, #1c6394);
+  border: 1px solid #18557e;
+  -moz-text-shadow: 1px 1px 1px #2072a9;
+  text-shadow: 1px 1px 1px #2072a9; }
+  #main-menu input[type=submit]:hover, #main-menu input[type=submit]:active {
+    -moz-box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.5);
+    box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.5);
+    background: -webkit-linear-gradient(bottom, #288ed4, #18557e);
+    background: -moz-linear-gradient(bottom, #288ed4, #18557e);
+    background: linear-gradient(bottom, #288ed4, #18557e); }
