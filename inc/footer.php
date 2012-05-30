@@ -11,7 +11,7 @@
   <script type="text/javascript" src="js/script.js"></script>
 
   <?php if(isset($message)): ?>
-    
+
     <script type="text/javascript">
       $(document).ready(function(){
         $(errorInLogin);
@@ -26,15 +26,15 @@
         }
       });
     </script>
-    
+
     <div class="error-message">
-      <h2>Incorrect username or password</h2>
+      <h2><?= $message; ?></h2>
     </div>
-    
+
   <?php endif; ?>
-  
-  
-  
-  
+
+
+
+
 </body>
 </html>
