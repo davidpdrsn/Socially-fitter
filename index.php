@@ -6,7 +6,7 @@
 <div id="logotype">
   <h1>Socially Fitter <span>is</span></h1>
   <h2>The best way to get fit</h2>
-  <a href="#">Learn why</a>
+  <a href="#">See why</a>
 </div>
 
 <?php if(!$session->is_logged_in()): ?>
@@ -21,6 +21,6 @@
     <input type="submit" name="submit" value="Sign up!" id="submit">
   </form>
 </div> <!-- #sign-up -->
-<? endif; ?>
+<?php endif; ?>
 
 <?php include "inc/footer.php"; ?>
