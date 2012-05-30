@@ -7,6 +7,7 @@ include "inc/controller.php"
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
   <title>Socially Fitter - Lets get fit together</title>
+
   <link rel="stylesheet" type="text/css" href="css/global.css">
   <?php if ($page_name == "landing"): ?>
     <link rel="stylesheet" type="text/css" href="css/landing.css">
@@ -21,6 +22,7 @@ include "inc/controller.php"
   <?php elseif ($page_name == "timeline"): ?>
     <link rel="stylesheet" type="text/css" href="css/timeline.css">
   <?php endif; ?>
+
   <link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
 </head>
 <body>
