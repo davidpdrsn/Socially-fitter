@@ -28,11 +28,13 @@
     </script>
 
     <?php
+      // if $message contains the word positive
       if (strpos($message, 'positive')) {
         $message_kind = "positive";
       } else {
         $message_kind = "negative";
       }
+      // remove the last word from $message
       $message = substr($message, 0, strrpos($message, " "));
     ?>
       <div class="error-message <?= $message_kind; ?>">
