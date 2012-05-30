@@ -23,4 +23,8 @@
 </div> <!-- #sign-up -->
 <? endif; ?>
 
+<div id="examples">
+  <p>hallo</p>
+</div>
+
 <?php include "inc/footer.php"; ?>
