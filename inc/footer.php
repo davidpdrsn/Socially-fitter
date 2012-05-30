@@ -17,11 +17,15 @@
         $(errorInLogin);
 
         function errorInLogin() {
+          var messageHeight = $('.error-message').outerHeight();
+          
+          $('.error-message').css('top', -messageHeight+'px');
+          
           $('.error-message').delay(100).animate({
             top: 0
           });
-          $('.error-message').delay(2000).animate({
-            top: -53
+          $('.error-message').delay(1300).animate({
+            top: -messageHeight
           });
         }
       });
@@ -42,9 +46,6 @@
     </div>
 
   <?php endif; ?>
-
-
-
 
 </body>
 </html>

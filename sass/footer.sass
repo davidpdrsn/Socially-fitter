@@ -114,12 +114,12 @@
 //////////////////////////////////////
 
 .error-message
-  height: 51px
   width: 80%
   position: absolute
-  top: -53px
+  top: -100px
   left: 50%
-  margin-left: -40%
+  padding: $generalpadding
+  margin-left: -40%-$generalpadding
   z-index: 999999999
   border-radius: 0px 0px 7px 7px
   h2
@@ -128,7 +128,7 @@
     font-weight: bold
     text-align: center
     font-size: 14px
-    line-height: 52px
+    line-height: 37px
 .error-message.positive
   background: -webkit-linear-gradient($green, darken($green, 15%))
   background: -moz-linear-gradient($green, darken($green, 15%))
