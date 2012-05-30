@@ -18,9 +18,7 @@
 
         function errorInLogin() {
           var messageHeight = $('.error-message').outerHeight();
-          
           $('.error-message').css('top', -messageHeight+1+'px');
-          
           $('.error-message').delay(100).animate({
             top: -1
           });
