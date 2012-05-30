@@ -127,7 +127,7 @@
     font-weight: bold; }
   #main-menu input[type=text]:focus, #main-menu input[type=password]:focus {
     opacity: 1;
-    background: rgba(255, 255, 255, 0.7);
+    background: white;
     -moz-box-shadow: inset 2px 2px 7px rgba(0, 0, 0, 0.3);
     box-shadow: inset 2px 2px 7px rgba(0, 0, 0, 0.3); }
 #main-menu input[type=submit] {
