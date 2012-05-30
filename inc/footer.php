@@ -27,7 +27,15 @@
       });
     </script>
 
-    <div class="error-message">
+    <?php
+      if (strpos($message, 'positive')) {
+        $message_kind = "positive";
+      } else {
+        $message_kind = "negative";
+      }
+      $message = substr($message, 0, strrpos($message, " "));
+    ?>
+      <div class="error-message <?= $message_kind; ?>">
       <h2><?= $message; ?></h2>
     </div>
 

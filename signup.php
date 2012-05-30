@@ -18,7 +18,7 @@ if(isset($_POST["submit"])){
     $user->email = $email;
     $user->password = $password;
     $user->create();
-    $_SESSION["message"] = "Welcome on board!";
+    $_SESSION["message"] = "Welcome on board! positive";
     redirect_to("index.php");
   } else {
     // $_SESSION["message"] gets set by the input_validates method
@@ -26,7 +26,7 @@ if(isset($_POST["submit"])){
     redirect_to("index.php");
   }
 } else { // form has not been submitted
-  $_SESSION["message"] = "Something went wrong!";
+  $_SESSION["message"] = "Something went wrong! negative";
   redirect_to("index.php");
 }
 

@@ -95,6 +95,7 @@ class User {
     }
     $_SESSION["message"] = $message;
     if(strlen($message) > 0){
+      $_SESSION["message"] .= " negative";
       return false;
     } else {
       return true;

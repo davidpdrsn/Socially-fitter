@@ -107,8 +107,8 @@
     color: $blue
   100%
     color: $blue
-    
-    
+
+
 //////////////////////////////////////
 // ERROR MESSAGE /////////////////////
 //////////////////////////////////////
@@ -116,9 +116,6 @@
 .error-message
   height: 51px
   width: 80%
-  background: -webkit-linear-gradient(darken($red, 15%), darken($red, 25%))
-  background: -moz-linear-gradient(darken($red, 15%), darken($red, 25%))
-  border: 1px solid darken($red, 45%)
   position: absolute
   top: -53px
   left: 50%
@@ -132,3 +129,11 @@
     text-align: center
     font-size: 14px
     line-height: 52px
+.error-message.positive
+  background: -webkit-linear-gradient($green, darken($green, 15%))
+  background: -moz-linear-gradient($green, darken($green, 15%))
+  border: 1px solid darken($green, 25%)
+.error-message.negative
+  background: -webkit-linear-gradient(darken($red, 15%), darken($red, 25%))
+  background: -moz-linear-gradient(darken($red, 15%), darken($red, 25%))
+  border: 1px solid darken($red, 45%)

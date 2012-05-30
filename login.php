@@ -13,9 +13,10 @@ if (isset($_POST["submit"])) {
 
   if ($found_user){
     $session->login($found_user);
+    $_SESSION["message"] = "Welcome user! positive";
     redirect_to("timeline.php");
   } else {
-    $_SESSION["message"] = "Incorrect username or password";
+    $_SESSION["message"] = "Incorrect username or password. negative";
     redirect_to("index.php");
   }
 } else { // form has not been submitted
