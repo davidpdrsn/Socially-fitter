@@ -156,7 +156,12 @@
         text-indent: 0; }
       #profile-workouts .log-footer .expanded-log .log-favorite a:hover, #profile-workouts .log-footer .expanded-log .log-favorite.clicked a {
         color: #f0d200; }
-      #profile-workouts .log-footer .expanded-log .log-comment a:hover, #profile-workouts .log-footer .expanded-log .log-comment.clicked a {
+      #profile-workouts .log-footer .expanded-log .log-comment a:hover {
+        color: #2072a9; }
+        @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+          #profile-workouts .log-footer .expanded-log .log-comment a:hover {
+            color: inherit; } }
+      #profile-workouts .log-footer .expanded-log .log-comment.clicked a {
         color: #2072a9; }
       #profile-workouts .log-footer .expanded-log .commenting-log {
         float: left;
