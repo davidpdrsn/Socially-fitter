@@ -140,6 +140,9 @@ $(document).ready(function() {
     }
   }
   
-});
-
+  //Placing wrapper underneath #main-menu
+  $menuHeight = $('#main-menu').outerHeight();
+  $('#wrap').css('margin-top', $menuHeight + 'px');
+  
+}); //End of $(document).ready();
 
