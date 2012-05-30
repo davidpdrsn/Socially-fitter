@@ -10,13 +10,6 @@ require_once("inc/controller.php");
   <p>
     <a href="logout.php">Logout</a>
   </p>
-  <?php
-    $user = new User();
-    $user->username = "hallosk";
-    $user->password = "hemmeligkode";
-    $user->email = "email@kode.com";
-    $user->create();
-  ?>
 <?php else: ?>
   <form action="login.php" method="post">
     <label for="username">Username: </label><input type="text" name="username">

@@ -1,6 +1,8 @@
 <footer id="main-footer" class="clearfix">
   <h2>Socially Fitter</h2>
-  <a href="#" class="logout">Logout</a>
+  <?php if($session->is_logged_in()): ?>
+    <a href="logout.php" class="logout">Logout</a>
+  <?php endif; ?>
 </footer>
 
   </div> <!-- #wrap -->
