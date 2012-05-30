@@ -16,11 +16,11 @@
         <input type="text" name="reps" placeholder="Reps">
         <input type="text" name="weight" placeholder="Kg">
         <input type="text" name="sets" placeholder="Sets">
-        <a href="#" class="remove">e</a>
+        <a href="#" class="remove"><img src="images/minus.png" alt="Minus"></a>
       </div> <!-- .exercise -->
     </div> <!-- .exercises -->
 
-    <a href="#" class="addmore">d</a>
+    <a href="#" class="addmore"><img src="images/plus.png" alt="Plus"></a>
 
     <label for="notes"><strong>Notes:</strong></label>
     <textarea name="notes" placeholder="Boy that was a tough one!"></textarea>
