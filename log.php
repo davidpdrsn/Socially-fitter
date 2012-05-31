@@ -7,10 +7,21 @@ if(!$session->is_logged_in()){
 
 if(isset($_POST["submit"])){
   $title = $_POST["title"];
-  $body = $_POST["exercise"] . ": " . $_POST["weight"] . " kg, " . $_POST["reps"] . " reps, " . $_POST["sets"] . " sets";
   $time = date("d-m-Y");
-  $notes = $_POST["notes"];
+  $notes = str_replace("\n", "<br>", $_POST["notes"]);
   $user_id = $session->user_id;
+  $body = "";
+  foreach($_POST as $key=>$value){
+    if(strpos($key,"exercise") !== false) {
+      $body .= $value . ": ";
+    } elseif(strpos($key,"reps") !== false) {
+      $body .= $value . " reps, ";
+    } elseif(strpos($key,"weight") !== false) {
+      $body .= $value . " kg, ";
+    } elseif(strpos($key,"sets") !== false) {
+      $body .= $value . " sets<br>\n";
+    }
+  }
 
   $log = new Log();
 
