@@ -5,10 +5,10 @@
 
 <div id="profile" class="clearfix">
   <div class="profile-picture">
-    <img src="http://www.placekitten.com/74/74/" alt="Profile Picture" />
+    <img src="images/profile-picture.jpg" alt="Profile Picture" />
   </div>
   <div class="profile-name">
-    <h3>Træner Jørgen</h3>
+    <h3>Coach Hansson</h3>
   </div>
   <div class="social-activity">
     <a href=""><span class="workouts">13.921</span>Workouts</a>
@@ -30,7 +30,7 @@
         <p>15.02</p>
       </div> <!-- .log-time -->
       <div class="profile-picture">
-        <img src="http://placekitten.com/48/48/" alt="profile picture" class="picture" />
+        <img src="images/profile-picture.jpg" alt="profile picture" class="picture" />
       </div> <!-- .profile-picture -->
       <div class="log-title">
         <p class="profile-name">Navn</p>
