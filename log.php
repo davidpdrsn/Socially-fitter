@@ -13,13 +13,13 @@ if(isset($_POST["submit"])){
   $body = "";
   foreach($_POST as $key=>$value){
     if(strpos($key,"exercise") !== false) {
-      $body .= $value . ": ";
+      $body .= "<strong>" . $value . "</strong>\n";
     } elseif(strpos($key,"reps") !== false) {
-      $body .= $value . " reps, ";
+      $body .= "<p>" . $value . " reps, ";
     } elseif(strpos($key,"weight") !== false) {
       $body .= $value . " kg, ";
     } elseif(strpos($key,"sets") !== false) {
-      $body .= $value . " sets<br>\n";
+      $body .= $value . " sets</p>\n";
     }
   }
 
