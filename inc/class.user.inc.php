@@ -179,6 +179,17 @@ class User {
     return $result_array["COUNT(user_id)"];
   }
 
+  public function is_following($follower_id, $following_id){
+    global $database;
+    $result_set = $database->query("SELECT user_id FROM users, follow WHERE users.user_id = follow.follower_id AND follow.following_id = {$follower_id} AND follow.follower_id = {$following_id}");
+    $result_array = $database->fetch_array($result_set);
+    if($result_array){
+      return true;
+    } else {
+      return false;
+    }
+  }
+
 }
 
 ?>

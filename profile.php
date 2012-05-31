@@ -27,10 +27,11 @@
 <div class="profile-follow clearfix">
   <?php if($session->user_id == $user->user_id): ?>
     <a href="" class="follow">This is you!</a>
+  <?php elseif($user->is_following($user->user_id, $session->user_id)): ?>
+    <a href="unfollow.php?user_id=<?= $user->user_id; ?>" class="unfollow">Unfollow</a>
   <?php else: ?>
-    <a href="follow.php" class="follow">Follow</a>
+    <a href="follow.php?user_id=<?= $user->user_id; ?>" class="follow">Follow</a>
   <?php endif; ?>
-  <!-- <a href="" class="unfollow">Unfollow</a> -->
 </div>
 
 <div id="profile-workouts">
