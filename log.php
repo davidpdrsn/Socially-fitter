@@ -8,7 +8,7 @@ if(!$session->is_logged_in()){
 if(isset($_POST["submit"])){
   $title = $_POST["title"];
   $time = date("d-m-Y");
-  $notes = $_POST["notes"];
+  $notes = str_replace("\n", "<br>", $_POST["notes"]);
   $user_id = $session->user_id;
   $body = "";
   foreach($_POST as $key=>$value){
