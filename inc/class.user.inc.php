@@ -5,7 +5,7 @@ require_once("controller.php");
 class User {
 
   protected static $table_name="users";
-  public $id;
+  public $user_id;
   public $username;
   public $email;
   public $password;
@@ -14,9 +14,9 @@ class User {
     return self::find_by_sql("SELECT * FROM users");
   }
 
-  static public function find_by_id($id=0){
+  static public function find_by_id($user_id=0){
     global $database;
-    $result_array = self::find_by_sql("SELECT * FROM users WHERE id={$id} LIMIT 1");
+    $result_array = self::find_by_sql("SELECT * FROM users WHERE user_id={$user_id} LIMIT 1");
     return !empty($result_array) ? array_shift($result_array) : false;
   }
 
@@ -46,7 +46,7 @@ class User {
     $object = new self();
 
     /* Simple, long from approach
-    $object->id       = $record["id"];
+    $object->user_id       = $record["user_id"];
     $object->username     = $record["username"];
     $object->email    = $record["email"];
     $object->password = $record["password"];
@@ -103,8 +103,8 @@ class User {
   }
 
   public function save(){
-    // a new record wont have an id yet
-    return isset($this->id) ? $this->update() : $this->create();
+    // a new record wont have an user_id yet
+    return isset($this->user_id) ? $this->update() : $this->create();
   }
 
   public function create(){
@@ -116,7 +116,7 @@ class User {
     $sql .= join("', '", array_values($attributes));
     $sql .= "')";
     if ($database->query($sql)){
-      $this->id = $database->insert_id();
+      $this->user_id = $database->insert_id();
       return true;
     } else {
       return false;
@@ -132,7 +132,7 @@ class User {
     }
     $sql = "UPDATE " . self::$table_name . " SET ";
     $sql .= join(", ", $attribute_pairs);
-    $sql .= " WHERE id=" . $this->id;
+    $sql .= " WHERE user_id=" . $this->user_id;
     $database->query($sql);
     return ($database->affected_rows() == 1) ? true : false;
   }
@@ -140,7 +140,7 @@ class User {
   public function delete(){
     global $database;
     $sql = "DELETE FROM " . self::$table_name . " ";
-    $sql .= "WHERE id=" . $this->id;
+    $sql .= "WHERE user_id=" . $this->user_id;
     $sql .= " LIMIT 1";
     $database->query($sql);
     return ($database->affected_rows() == 1) ? true : false;
