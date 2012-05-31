@@ -10,19 +10,19 @@ class User {
   public $email;
   public $password;
 
-  // find all users
+  // find all users and return as object
   static public function find_all(){
     return self::find_by_sql("SELECT * FROM " . self::$table_name);
   }
 
-  // find user by user_id
+  // find user by user_id and return as object
   static public function find_by_id($user_id=0){
     global $database;
     $result_array = self::find_by_sql("SELECT * FROM " . self::$table_name . " WHERE user_id={$user_id} LIMIT 1");
     return !empty($result_array) ? array_shift($result_array) : false;
   }
 
-  // find users by sql statement
+  // find users by sql statement and return as object
   static public function find_by_sql($sql=""){
     global $database;
     $result_set = $database->query($sql);
@@ -156,6 +156,38 @@ class User {
     $sql .= " LIMIT 1";
     $database->query($sql);
     return ($database->affected_rows() == 1) ? true : false;
+  }
+
+  public function find_number_of_followers($user_id){
+    global $database;
+    $result_set = $database->query("SELECT COUNT(follower_id) FROM follow WHERE following_id={$user_id}");
+    $result_array = $database->fetch_array($result_set);
+    return $result_array["COUNT(follower_id)"];
+  }
+
+  public function find_number_of_following($user_id){
+    global $database;
+    $result_set = $database->query("SELECT COUNT(following_id) FROM follow WHERE follower_id={$user_id}");
+    $result_array = $database->fetch_array($result_set);
+    return $result_array["COUNT(following_id)"];
+  }
+
+  public function find_number_of_logs($user_id){
+    global $database;
+    $result_set = $database->query("SELECT COUNT(user_id) FROM logs WHERE user_id={$user_id}");
+    $result_array = $database->fetch_array($result_set);
+    return $result_array["COUNT(user_id)"];
+  }
+
+  public function is_following($follower_id, $following_id){
+    global $database;
+    $result_set = $database->query("SELECT user_id FROM users, follow WHERE users.user_id = follow.follower_id AND follow.following_id = {$follower_id} AND follow.follower_id = {$following_id}");
+    $result_array = $database->fetch_array($result_set);
+    if($result_array){
+      return true;
+    } else {
+      return false;
+    }
   }
 
 }
