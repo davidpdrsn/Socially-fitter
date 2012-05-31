@@ -27,11 +27,16 @@
   <h2>Is Socially Fitter the best way?</h2>
   <h3>In short: Yes! Socially Fitter is the best way to get fit, and here is three reasons why:</h3>
   <h4>Making workout social</h4>
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+  <p>With this web application you can share all your trainings with your friends, family or other people finding your workout interesting. These people can then view your training log, comment on it or even fav it. Also you can follow others and see their training logs, and you can give them advices for improvement in the comments.</p>
+  <img src="images/logging-workout.png" width="80%" alt="Logging Workout">
+  <em>Logging a workout.</em>
   <h4>Take it with you anywhere</h4>
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+  <p>This web application is designed to fit every device. Which mean that you can use it everywhere. The only thing you need to use this application, is a device with an internet connection.</p>
   <h4>No need to download</h4>
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+  <p>This application doesn't take any space on your mobile device, but is stored on the web.</p>
+  <p>There is a simple way, to simulate a download. Simply add the web application to you Home Screen.</p>
+  <p class="clickbutton">Click this button <span class="curvedarrow"></span></p>
+  <img src="images/iphone-bottom.png" width="320" height="43" alt="iPhone Bottom">
 </div> <!-- #seewhy -->
 
 <?php include "inc/footer.php"; ?>

@@ -132,7 +132,8 @@
   padding: $generalpadding
 
 #signup
-  padding-bottom: $generalpadding*2
+  padding-bottom: 0
+  margin-bottom: -30px
 
 //////////////////////////////////////
 // LOGIN /////////////////////////////
@@ -203,7 +204,9 @@
 
       
 #seewhy
+  margin-bottom: $generalpadding*3
   &.not-signed
+    padding-top: 52px
   h2, h3, h4
     text-shadow: 2px 2px 0 rgba(255,255,255,.4), 4px 4px 0 rgba(255,255,255,.4)
   h2
@@ -224,9 +227,53 @@
     text-align: center
     font-size: 15px
     opacity: .7
-    margin: 0 $generalpadding 10px
+    margin: 20px $generalpadding 10px
   p
     font-size: 12px
     opacity: .7
-    margin: 0 $generalpadding 20px
-      
+    margin: 0 $generalpadding 10px
+  em
+    font-size: 12px
+    opacity: .7
+    text-align: center
+    display: block
+  img
+    margin: 0 auto
+    display: block
+    padding: 2px
+    border: 1px solid $darkgray
+    max-width: 80%
+    height: auto
+  .clickbutton
+    display: block
+    position: relative
+    left: 50%
+    width: 150px
+    margin-left: -130px
+    font-style: italic
+  .curvedarrow
+    position: relative
+    display: inline-block
+    margin: 0 0 -12px 15px
+    width: 0
+    height: 0
+    border-top: 14px solid transparent
+    border-right: 14px solid $darkgraydarken25
+    -webkit-transform: rotate(10deg)
+    -moz-transform: rotate(10deg)
+    -ms-transform: rotate(10deg)
+    -o-transform: rotate(10deg)
+  .curvedarrow:after 
+    content: ""
+    position: absolute
+    border: 0 solid transparent
+    border-top: 8px solid $darkgraydarken25
+    border-radius: 25px 0 0 0
+    top: -20px
+    left: -16px
+    width: 20px
+    height: 20px
+    -webkit-transform: rotate(45deg)
+    -moz-transform: rotate(45deg)
+    -ms-transform: rotate(45deg)
+    -o-transform: rotate(45deg)

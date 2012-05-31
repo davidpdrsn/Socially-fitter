@@ -143,7 +143,7 @@ $(document).ready(function() {
         var $target = $(this.hash), target = this.hash;
         if (target) {
           var firstTargetOffset = $target.offset().top;
-          var targetOffset = firstTargetOffset - $menuHeight - 20;
+          var targetOffset = firstTargetOffset;
           $(this).click(function(event) {
             event.preventDefault();
             $(scrollElem).animate({scrollTop: targetOffset}, 400, function() {
