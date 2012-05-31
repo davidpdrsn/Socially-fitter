@@ -89,10 +89,10 @@ class Follow {
     return ($database->affected_rows() == 1) ? true : false;
   }
 
-  public function delete(){
+  public function unfollow(){
     global $database;
     $sql = "DELETE FROM " . self::$table_name . " ";
-    $sql .= "WHERE user_id=" . $this->user_id;
+    $sql .= "WHERE follower_id=" . $this->follower_id . " AND following_id=" . $this->following_id;
     $sql .= " LIMIT 1";
     $database->query($sql);
     return ($database->affected_rows() == 1) ? true : false;
