@@ -24,6 +24,8 @@
           });
           $('.error-message').delay(1300).animate({
             top: -messageHeight-1
+          }, function(){
+            $('.error-message').hide();
           });
         }
       });
