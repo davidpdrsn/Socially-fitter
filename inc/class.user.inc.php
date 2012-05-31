@@ -10,16 +10,19 @@ class User {
   public $email;
   public $password;
 
+  // find all users
   static public function find_all(){
-    return self::find_by_sql("SELECT * FROM users");
+    return self::find_by_sql("SELECT * FROM " . self::$table_name);
   }
 
+  // find user by user_id
   static public function find_by_id($user_id=0){
     global $database;
-    $result_array = self::find_by_sql("SELECT * FROM users WHERE user_id={$user_id} LIMIT 1");
+    $result_array = self::find_by_sql("SELECT * FROM " . self::$table_name . " WHERE user_id={$user_id} LIMIT 1");
     return !empty($result_array) ? array_shift($result_array) : false;
   }
 
+  // find users by sql statement
   static public function find_by_sql($sql=""){
     global $database;
     $result_set = $database->query($sql);
@@ -30,6 +33,7 @@ class User {
     return $object_array;
   }
 
+  // check if username and password matches
   static public function authenticate($username="", $password=""){
     global $database;
     // escape username and password
@@ -42,6 +46,7 @@ class User {
     return !empty($result_array) ? array_shift($result_array) : false;
   }
 
+  // build a user object from an SQL record and return the object
   static private function instantiate($record){
     $object = new self();
 
@@ -60,6 +65,7 @@ class User {
     return $object;
   }
 
+  // check if username is free
   static public function username_is_free($username){
     global $database;
     $sql = "SELECT * FROM " . self::$table_name . " ";
@@ -72,16 +78,18 @@ class User {
     }
   }
 
+  // check if attribute is part of object
   private function has_attribute($attribute){
     $object_vars = $this->attributes();
     return array_key_exists($attribute, $object_vars);
   }
 
+  // return an array of attribute keys and their values
   protected function attributes(){
-    // return an array of attribute keys and their values
     return get_object_vars($this);
   }
 
+  // check if signup input validates and build error message
   public function input_validates($username, $email, $password, $password_repeat){
     $message = "";
     if(!self::username_is_free($username)){
@@ -102,11 +110,13 @@ class User {
     }
   }
 
+  // create the user in the database if it doesn't exist otherwise update it
   public function save(){
     // a new record wont have an user_id yet
     return isset($this->user_id) ? $this->update() : $this->create();
   }
 
+  // create the user in the database
   public function create(){
     global $database;
     $attributes = $this->attributes();
@@ -123,6 +133,7 @@ class User {
     }
   }
 
+  // update the user in the database
   public function update(){
     global $database;
     $attributes = $this->attributes();
@@ -137,6 +148,7 @@ class User {
     return ($database->affected_rows() == 1) ? true : false;
   }
 
+  // delete the user from the database
   public function delete(){
     global $database;
     $sql = "DELETE FROM " . self::$table_name . " ";

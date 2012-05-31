@@ -4,9 +4,9 @@
 ?>
 
 <div id="logging">
-  <form action="share.php">
+  <form action="log.php" method="post">
     <label for="workoutname"><strong>Workout name:</strong></label>
-    <input type="text" name="workoutname" placeholder="Back">
+    <input type="text" name="title" placeholder="Back">
 
     <p><strong>Exercises:</strong></p>
     <div class="exercises">
@@ -25,7 +25,7 @@
     <label for="notes"><strong>Notes:</strong></label>
     <textarea name="notes" placeholder="Boy that was a tough one!"></textarea>
 
-    <input type="submit" value="Done!">
+    <input type="submit" name="submit" value="Done!">
   </form>
 </div> <!-- #logging -->
 
