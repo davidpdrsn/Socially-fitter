@@ -4,18 +4,18 @@
 ?>
 
 <div id="logging">
-  <form action="share.php">
+  <form action="log.php" method="post">
     <label for="workoutname"><strong>Workout name:</strong></label>
-    <input type="text" name="workoutname" placeholder="Back">
+    <input type="text" name="title" placeholder="Back">
 
     <p><strong>Exercises:</strong></p>
     <div class="exercises">
       <div class="exercise clearfix">
         <label for="exercise" data-number="1">#</label>
-        <input type="text" name="exercise" placeholder="Name of exercise">
-        <input type="text" name="reps" placeholder="Reps">
-        <input type="text" name="weight" placeholder="Kg">
-        <input type="text" name="sets" placeholder="Sets">
+        <input type="text" name="exercise1" placeholder="Name of exercise">
+        <input type="text" class="reps" name="reps1" placeholder="Reps">
+        <input type="text" class="weight" name="weight1" placeholder="Kg">
+        <input type="text" class="sets" name="sets1" placeholder="Sets">
         <a href="#" class="remove"><img src="images/minus.png" alt="Minus"></a>
       </div> <!-- .exercise -->
     </div> <!-- .exercises -->
@@ -25,7 +25,7 @@
     <label for="notes"><strong>Notes:</strong></label>
     <textarea name="notes" placeholder="Boy that was a tough one!"></textarea>
 
-    <input type="submit" value="Done!">
+    <input type="submit" name="submit" value="Done!">
   </form>
 </div> <!-- #logging -->
 

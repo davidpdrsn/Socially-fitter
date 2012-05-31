@@ -2,27 +2,29 @@
 
 require_once("controller.php");
 
-class User {
+class Log {
 
-  protected static $table_name="users";
+  protected static $table_name="logs";
+  public $log_id;
+  public $title;
+  public $body;
+  public $notes;
+  public $time;
   public $user_id;
-  public $username;
-  public $email;
-  public $password;
 
-  // find all users
+  // find all
   static public function find_all(){
     return self::find_by_sql("SELECT * FROM " . self::$table_name);
   }
 
-  // find user by user_id
-  static public function find_by_id($user_id=0){
+  // find by id
+  static public function find_by_id($log_id=0){
     global $database;
-    $result_array = self::find_by_sql("SELECT * FROM " . self::$table_name . " WHERE user_id={$user_id} LIMIT 1");
+    $result_array = self::find_by_sql("SELECT * FROM " . self::$table_name . " WHERE log_id={$log_id} LIMIT 1");
     return !empty($result_array) ? array_shift($result_array) : false;
   }
 
-  // find users by sql statement
+  // find by sql statement
   static public function find_by_sql($sql=""){
     global $database;
     $result_set = $database->query($sql);
@@ -33,49 +35,16 @@ class User {
     return $object_array;
   }
 
-  // check if username and password matches
-  static public function authenticate($username="", $password=""){
-    global $database;
-    // escape username and password
-    $sql = "SELECT * FROM users ";
-    $sql .= "WHERE username = '{$username}' ";
-    $sql .= "AND password = '{$password}' ";
-    $sql .= "LIMIT 1";
-
-    $result_array = self::find_by_sql($sql);
-    return !empty($result_array) ? array_shift($result_array) : false;
-  }
-
-  // build a user object from an SQL record and return the object
+  // build a log object from an SQL record and return the object
   static private function instantiate($record){
     $object = new self();
-
-    /* Simple, long from approach
-    $object->user_id       = $record["user_id"];
-    $object->username     = $record["username"];
-    $object->email    = $record["email"];
-    $object->password = $record["password"];
-     */
-
+    // loop through each part of the record array and assign the value to a object property
     foreach($record as $attribute=>$value){
       if($object->has_attribute($attribute)){
         $object->$attribute = $value;
       }
     }
     return $object;
-  }
-
-  // check if username is free
-  static public function username_is_free($username){
-    global $database;
-    $sql = "SELECT * FROM " . self::$table_name . " ";
-    $sql .= "WHERE username='{$username}'";
-    $result_set = $database->query($sql);
-    if($database->num_rows($result_set) != 0){
-      return false;
-    } else {
-      return true;
-    }
   }
 
   // check if attribute is part of object
@@ -89,17 +58,11 @@ class User {
     return get_object_vars($this);
   }
 
-  // check if signup input validates and build error message
-  public function input_validates($username, $email, $password, $password_repeat){
+  // check if input validates and build error message
+  public function input_validates(/* INPUT */){
     $message = "";
-    if(!self::username_is_free($username)){
-      $message .= "Username already taken. ";
-    }
-    if($password != $password_repeat){
-      $message .= "Passwords did not match. ";
-    }
-    if(!filter_var($email, FILTER_VALIDATE_EMAIL)){
-      $message .= "Email is not real.";
+    if(false){
+      $message .= "Error message. ";
     }
     $_SESSION["message"] = $message;
     if(strlen($message) > 0){
@@ -110,13 +73,11 @@ class User {
     }
   }
 
-  // create the user in the database if it doesn't exist otherwise update it
   public function save(){
     // a new record wont have an user_id yet
     return isset($this->user_id) ? $this->update() : $this->create();
   }
 
-  // create the user in the database
   public function create(){
     global $database;
     $attributes = $this->attributes();
@@ -133,7 +94,6 @@ class User {
     }
   }
 
-  // update the user in the database
   public function update(){
     global $database;
     $attributes = $this->attributes();
@@ -148,7 +108,6 @@ class User {
     return ($database->affected_rows() == 1) ? true : false;
   }
 
-  // delete the user from the database
   public function delete(){
     global $database;
     $sql = "DELETE FROM " . self::$table_name . " ";
