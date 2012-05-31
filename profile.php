@@ -1,6 +1,9 @@
 <?php
   $page_name = "profile";
   include "inc/head.php";
+
+  $user = new User();
+  $user = $user->find_by_id($session->user_id);
 ?>
 
 <div id="profile" class="clearfix">
@@ -8,12 +11,12 @@
     <img src="http://www.placekitten.com/74/74/" alt="Profile Picture" />
   </div>
   <div class="profile-name">
-    <h3>Træner Jørgen</h3>
+  <h3><?= $user->username; ?></h3>
   </div>
   <div class="social-activity">
-    <a href=""><span class="workouts">13.921</span>Workouts</a>
-    <a href=""><span class="followers">998.900</span>Followers</a>
-    <a href=""><span class="following">22.600</span>Following</a>
+    <a href=""><span class="workouts"><?= $user->find_number_of_logs($user->user_id); ?></span>Workouts</a>
+    <a href=""><span class="followers"><?= $user->find_number_of_followers($user->user_id); ?></span>Followers</a>
+    <a href=""><span class="following"><?= $user->find_number_of_following($user->user_id); ?></span>Following</a>
   </div>
 </div>
 
