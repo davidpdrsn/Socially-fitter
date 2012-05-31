@@ -13,9 +13,9 @@
       <div class="exercise clearfix">
         <label for="exercise" data-number="1">#</label>
         <input type="text" name="exercise1" placeholder="Name of exercise">
-        <input type="text" name="reps1" placeholder="Reps">
-        <input type="text" name="weight1" placeholder="Kg">
-        <input type="text" name="sets1" placeholder="Sets">
+        <input type="text" class="reps" name="reps1" placeholder="Reps">
+        <input type="text" class="weight" name="weight1" placeholder="Kg">
+        <input type="text" class="sets" name="sets1" placeholder="Sets">
         <a href="#" class="remove"><img src="images/minus.png" alt="Minus"></a>
       </div> <!-- .exercise -->
     </div> <!-- .exercises -->
