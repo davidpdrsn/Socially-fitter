@@ -84,6 +84,17 @@ $(document).ready(function() {
     var number = label.attr('data-number');
     number++;
     label.attr('data-number', number);
+    $(".exercise label[for=exercise]").each(function() {
+      var attrNumber = $(this).attr('data-number');
+      if (attrNumber == number) {
+        $(this).parent().children('input[type=text]').each(function(){
+          var inputName = $(this).attr('name');
+          newInputName = inputName.replace(/\d+/g, '');
+          updatedInputName = newInputName + attrNumber;
+          $(this).attr('name', updatedInputName);
+        });
+      }
+    });
   });
 
   // for removing input fields on logging page
@@ -100,6 +111,13 @@ $(document).ready(function() {
     var i = 1;
     $('label[for=exercise]').each(function(){
       $(this).attr('data-number', i);
+      $(this).parent().children('input[type=text]').each(function() {
+        var inputName = $(this).attr('name');
+        newInputName = inputName.replace(/\d+/g, '');
+        updatedInputName = newInputName + i;
+        $(this).attr('name', updatedInputName);
+        console.log('hej');
+      });
       i++;
     });
   });
