@@ -19,7 +19,12 @@ if(isset($_POST["comment"])){
   $comment->log_id = $log_id;
   $comment->create();
   $_SESSION["message"] = "You just commented! positive";
-  redirect_to("profile.php?user_id={$_POST["user_id"]}");
+
+  if($_POST["from_page"] == "profile"){
+    redirect_to("profile.php?user_id={$_POST["user_id"]}&log_id_commented_on={$comment->log_id}");
+  } elseif($_POST["from_page"] == "search"){
+    redirect_to("search.php?query={$_POST["query"]}&log_id_commented_on={$comment->log_id}");
+  }
 
   /* validation of input
   if($user->input_validates($username, $email, $password, $password_repeat)){

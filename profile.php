@@ -52,7 +52,7 @@
       </div> <!-- .log-title -->
     </div> <!-- .log-header -->
     <div class="log-footer">
-      <span class="log-expand">Show more!</span>
+      <span class="log-expand <?php if(isset($_GET["log_id_commented_on"]) && $_GET["log_id_commented_on"] == $log->log_id){ echo "open"; } ?>">Show more!</span>
       <div class="expanded-log">
         <div class="expanded-log-text clearfix">
           <?php echo $log->body; ?>
@@ -64,6 +64,7 @@
             <input type="text" name="comment" placeholder="Wicked training bro!" id="writing-comment-log">
             <input type="hidden" name="log_id" value="<?php echo $log->log_id; ?>">
             <input type="hidden" name="user_id" value="<?php echo $user->user_id; ?>">
+            <input type="hidden" name="from_page" value="profile">
           </form>
           <div class="log-comments-list">
             <h4>Comments</h4>

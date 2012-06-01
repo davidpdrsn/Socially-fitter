@@ -43,7 +43,7 @@
             </div> <!-- .log-title -->
           </div> <!-- .log-header -->
           <div class="log-footer">
-            <span class="log-expand">Show more!</span>
+            <span class="log-expand <?php if(isset($_GET["log_id_commented_on"]) && $_GET["log_id_commented_on"] == $log->log_id){ echo "open"; } ?>">Show more!</span>
             <div class="expanded-log">
               <div class="expanded-log-text clearfix">
                 <?php echo $log->body; ?>
@@ -51,8 +51,12 @@
               <p class="log-favorite"><a href=""><span class="glyph general">c</span> Favorite</a></p>
               <p class="log-comment"><a href=""><span class="glyph social">w</span> Comment</a></p>
               <div class="commenting-log clearfix">
-                <form action="">
-                  <input type="text" name="writing-comment-log" placeholder="Wicked training bro!" id="writing-comment-log">
+                <form action="comment.php" method="post">
+                  <input type="text" name="comment" placeholder="Wicked training bro!" id="writing-comment-log">
+                  <input type="hidden" name="log_id" value="<?php echo $log->log_id; ?>">
+                  <input type="hidden" name="user_id" value="<?php echo $user->user_id; ?>">
+                  <input type="hidden" name="from_page" value="search">
+                  <input type="hidden" name="query" value="<?php echo $_GET["query"]; ?>">
                 </form>
                 <div class="log-comments-list">
                   <h4>Comments</h4>
