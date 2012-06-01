@@ -41,7 +41,17 @@
       transform: translate(2px, 2px)
       -moz-box-shadow: 0 0 5px rgba(0,0,0,.3)
       box-shadow: 0 0 5px rgba(0,0,0,.3)
-  input[type=text]
+  input[type=number]
+    &::-webkit-outer-spin-button
+      -webkit-appearance: none
+      margin: 0
+    &::-webkit-inner-spin-button
+      -webkit-appearance: none
+      margin: 0
+    &::-webkit-input-spin-button
+      -webkit-appearance: none
+      margin: 0
+  input[type=text], input[type=number]
     display: block
     -moz-box-shadow: inset 2px 2px 7px rgba(0,0,0,.3), inset 0 0 0 1px $lightgraydarken10
     box-shadow: inset 2px 2px 7px rgba(0,0,0,.3), inset 0 0 0 1px $lightgraydarken10
