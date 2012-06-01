@@ -32,21 +32,21 @@
         <div class="log clearfix">
           <div class="log-header clearfix">
             <div class="log-time">
-              <p><?= $log->time; ?></p>
+              <p><?php echo $log->time; ?></p>
             </div> <!-- .log-time -->
             <div class="profile-picture">
               <img src="http://placekitten.com/48/48/" alt="profile picture" class="picture" />
             </div> <!-- .profile-picture -->
             <div class="log-title">
-              <p class="profile-name"><a href="profile.php?user_id=<?= $user->user_id; ?>"><?= $user->username; ?></a></p>
-              <p><?= $log->title; ?></p>
+              <p class="profile-name"><a href="profile.php?user_id=<?php echo $user->user_id; ?>"><?php echo $user->username; ?></a></p>
+              <p><?php echo $log->title; ?></p>
             </div> <!-- .log-title -->
           </div> <!-- .log-header -->
           <div class="log-footer">
             <span class="log-expand">Show more!</span>
             <div class="expanded-log">
               <div class="expanded-log-text clearfix">
-                <?= $log->body; ?>
+                <?php echo $log->body; ?>
               </div> <!-- .expanded-log-text -->
               <p class="log-favorite"><a href=""><span class="glyph general">c</span> Favorite</a></p>
               <p class="log-comment"><a href=""><span class="glyph social">w</span> Comment</a></p>
