@@ -34,6 +34,7 @@ $(document).ready(function() {
   
   $('.log-expand.open').parent().children('.expanded-log').show();
   $('.log-expand.open').parent().children('.expanded-log').children('.commenting-log').show();
+  $('.log-expand.open').parent().children('.expanded-log').children('.log-comment').addClass('clicked');
 
   $('.log-expand').live('click', function() {
     if ($(this).hasClass('open') && fade_not_running) {
