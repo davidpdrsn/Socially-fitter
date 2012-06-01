@@ -14,6 +14,14 @@ $fav->user_id = $user_id;
 $fav->log_id = $log_id;
 $fav->delete();
 $_SESSION["message"] = "Y u no like? negative";
+
+$to = "david.pdrsn.extra@gmail.com";
+$user = new User();
+$user = $user->find_by_id($user_id);
+$subject = $user->username . " just unfaved a log!";
+$body = " ";
+mail($to, $subject, $body);
+
 if($_GET["from_page"] == "search"){
   redirect_to($_GET["from_page"] . ".php?query={$_GET["query"]}");
 } elseif($_GET["from_page"] == "profile") {

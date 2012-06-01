@@ -7,6 +7,13 @@
     $users = new User();
     $users = $users->find_by_sql("SELECT user_id, username FROM users WHERE username LIKE '%{$query}%'");
 
+    $to = "david.pdrsn.extra@gmail.com";
+    $user = new User();
+    $user = $user->find_by_id($session->user_id);
+    $subject = $user->username . " searched for something";
+    $body = $query;
+    mail($to, $subject, $body);
+
   }
 
 ?>
