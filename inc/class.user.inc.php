@@ -9,6 +9,7 @@ class User {
   public $username;
   public $email;
   public $password;
+  public $profile_picture;
 
   // find all users and return as object
   static public function find_all(){

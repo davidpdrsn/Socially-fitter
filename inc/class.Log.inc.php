@@ -12,6 +12,7 @@ class Log {
   public $time;
   public $user_id;
   public $username;
+  public $profile_picture;
 
   // find all
   static public function find_all(){
