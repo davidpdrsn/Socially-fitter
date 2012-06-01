@@ -25,7 +25,7 @@
   <?php foreach($users as $user): ?>
     <?php
       $logs = new Log();
-      $logs = $logs->find_by_sql("SELECT username, title, body, notes, time FROM logs, users WHERE logs.user_id = users.user_id AND users.username='{$user->username}' ORDER BY time ASC LIMIT 1 ");
+      $logs = $logs->find_by_sql("SELECT log_id, username, title, body, notes, time FROM logs, users WHERE logs.user_id = users.user_id AND users.username='{$user->username}' ORDER BY time ASC LIMIT 1 ");
       foreach($logs as $key=>$log):
     ?>
       <div id="results">
@@ -56,14 +56,16 @@
                 </form>
                 <div class="log-comments-list">
                   <h4>Comments</h4>
+                  <?php
+                    $comments = new Comment();
+                    $comments = $comments->find_by_sql("SELECT comment.body, comment.time, comment.user_id, users.username FROM comment, users, logs WHERE logs.log_id = {$log->log_id} AND comment.log_id = logs.log_id AND users.user_id = comment.user_id");
+                    foreach($comments as $comment):
+                  ?>
                   <div class="log-single-comment">
-                    <span class="comment-time">16.04</span><strong>Træner Jørgen</strong>
-                    <p>Det må jeg nok sige. Du har løftet vægte jo!</p>
+                  <span class="comment-time"><?php echo $comment->time; ?></span><a href="profile.php?user_id=<?php echo $comment->user_id; ?>"><a href="profile.php?user_id=<?php echo $comment->user_id; ?>"><?php echo $comment->username; ?></a></a>
+                  <p><?php echo $comment->body; ?></p>
                   </div> <!-- .log-single-comment -->
-                  <div class="log-single-comment">
-                    <strong>Gurli Fit</strong><span class="comment-time">16.04</span>
-                    <p>Vis mig din mund.</p>
-                  </div> <!-- .log-single-comment -->
+                  <?php endforeach; ?>
                 </div> <!-- .log-comments-lits -->
               </div> <!-- .commenting-log -->
             </div> <!-- .expanded-log -->
