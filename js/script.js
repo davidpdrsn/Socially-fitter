@@ -134,10 +134,6 @@ $(document).ready(function() {
     //return false;
   });
   
-  $('.log-favorite a').click(function() {
-    return false;
-  });
-  
   $('.log-comment a').click(function(){
     $(this).parent().parent().parent('.log');
     return false;
