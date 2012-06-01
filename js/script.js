@@ -31,6 +31,9 @@ jQuery.fn.fadeSliderToggle = function(settings) {
 $(document).ready(function() {
 
   var fade_not_running = true;
+  
+  $('.log-expand.open').parent().children('.expanded-log').show();
+  $('.log-expand.open').parent().children('.expanded-log').children('.commenting-log').show();
 
   $('.log-expand').live('click', function() {
     if ($(this).hasClass('open') && fade_not_running) {
