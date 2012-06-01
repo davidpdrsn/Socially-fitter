@@ -7,8 +7,6 @@
 
   $logs = new Log();
   $logs = $logs->find_by_sql("SELECT log_id, title, body, notes, time FROM logs, users WHERE logs.user_id = users.user_id AND users.user_id = {$user->user_id} ORDER BY time ASC");
-
-
 ?>
 
 <div id="profile" class="clearfix">

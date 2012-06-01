@@ -24,6 +24,8 @@ if(isset($_POST["comment"])){
     redirect_to("profile.php?user_id={$_POST["user_id"]}&log_id_commented_on={$comment->log_id}");
   } elseif($_POST["from_page"] == "search"){
     redirect_to("search.php?query={$_POST["query"]}&log_id_commented_on={$comment->log_id}");
+  } elseif($_POST["from_page"] == "timeline"){
+    redirect_to("timeline.php?log_id_commented_on={$comment->log_id}");
   }
 
   /* validation of input

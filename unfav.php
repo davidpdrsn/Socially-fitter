@@ -16,8 +16,10 @@ $fav->delete();
 $_SESSION["message"] = "Y u no like? negative";
 if($_GET["from_page"] == "search"){
   redirect_to($_GET["from_page"] . ".php?query={$_GET["query"]}");
-  } else {
+} elseif($_GET["from_page"] == "profile") {
   redirect_to($_GET["from_page"] . ".php?user_id={$_GET["user_id"]}");
+} elseif($_GET["from_page"] = "timeline") {
+  redirect_to($_GET["from_page"] . ".php");
 }
 
 ?>
