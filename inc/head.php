@@ -16,7 +16,7 @@ include "inc/controller.php"
   <!-- For non-Retina iPhone, iPod Touch, and Android 2.1+ devices: -->
   <link rel="apple-touch-icon" href="apple-touch-icon.png">
 
-  <title>Socially Fitter - Lets get fit together</title>
+  <title>Socially Fitter - The best way to get fit</title>
 
   <link rel="stylesheet" type="text/css" href="css/global.css">
   <?php if ($page_name == "landing"): ?>

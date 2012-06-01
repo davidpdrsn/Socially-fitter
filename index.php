@@ -5,7 +5,7 @@
 
 <div id="logotype">
   <h1>Socially Fitter <span>is</span></h1>
-  <h2>The best way to get fit</h2>
+  <h2>Lets get fit together</h2>
   <a href="#seewhy">See why</a>
 </div>
 
