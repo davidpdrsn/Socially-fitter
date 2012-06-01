@@ -2,15 +2,11 @@
 
 require_once("controller.php");
 
-class Log {
+class Fav {
 
-  protected static $table_name="logs";
-  public $log_id;
-  public $title;
-  public $body;
-  public $notes;
-  public $time;
+  protected static $table_name="fav";
   public $user_id;
+  public $log_id;
 
   // find all
   static public function find_all(){
@@ -115,13 +111,6 @@ class Log {
     $sql .= " LIMIT 1";
     $database->query($sql);
     return ($database->affected_rows() == 1) ? true : false;
-  }
-
-  public function is_faved(){
-    global $database;
-    global $session;
-    $result = $this->find_by_sql("SELECT user_id, log_id FROM fav WHERE user_id = {$session->user_id} AND log_id = {$this->log_id}");
-    return $result;
   }
 
 }

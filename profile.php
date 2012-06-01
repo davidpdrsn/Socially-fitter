@@ -57,7 +57,18 @@
         <div class="expanded-log-text clearfix">
           <?php echo $log->body; ?>
         </div> <!-- .expanded-log-text -->
-        <p class="log-favorite"><a href=""><span class="glyph general">c</span> Favorite</a></p>
+        <?php
+          $fav_url = "";
+          $fav_text = "";
+          if($log->is_faved()){
+            $fav_url = "unfav.php?log_id={$log->log_id}&user_id{$user->user_id}";
+            $fav_text = "Unfavorite";
+          } else {
+            $fav_url = "fav.php?log_id={$log->log_id}&user_id={$user->user_id}";
+            $fav_text = "Favorite";
+          }
+        ?>
+        <p class="log-favorite <?php if($log->is_faved()){ echo "faved"; } ?>"><a href="<?php echo $fav_url; ?>"><span class="glyph general">c</span> <?php echo $fav_text; ?></a></p>
         <p class="log-comment"><a href=""><span class="glyph social">w</span> Comment</a></p>
         <div class="commenting-log clearfix">
           <form action="comment.php" method="post">
