@@ -1,6 +1,7 @@
 <?php
 
-require_once("inc/controller.php");
+$foo = "foo";
 
 ?>
 
+<?= $foo; ?>
