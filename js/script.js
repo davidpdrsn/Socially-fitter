@@ -35,6 +35,7 @@ $(document).ready(function() {
   $('.log-expand').live('click', function() {
     if ($(this).hasClass('open') && fade_not_running) {
       fade_not_running = false;
+      $(this).text('Show less!' ? 'Show more!' : 'Show less!');
       $(this).parent().children('.expanded-log').animate({
         opacity: 0,
         height: 'toggle'
@@ -47,6 +48,7 @@ $(document).ready(function() {
     else if (fade_not_running){
       //$('.log.open').children().children('.expanded-log').fadeSliderToggle();
       fade_not_running = false;
+      $(this).text('Show more!' ? 'Show less!' : 'Show more!');
       $('.log-expand.open').parent().children('.expanded-log').animate({
         opacity: 0,
         height: 'toggle'
