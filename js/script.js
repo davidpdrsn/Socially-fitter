@@ -32,10 +32,10 @@ $(document).ready(function() {
 
   var fade_not_running = true;
 
-  $('.log:not(:animated)').live('click', function() {
+  $('.log-expand').live('click', function() {
     if ($(this).hasClass('open') && fade_not_running) {
       fade_not_running = false;
-      $(this).children().children('.expanded-log').animate({
+      $(this).parent().children('.expanded-log').animate({
         opacity: 0,
         height: 'toggle'
       }, 300, "swing", function(){
@@ -47,16 +47,16 @@ $(document).ready(function() {
     else if (fade_not_running){
       //$('.log.open').children().children('.expanded-log').fadeSliderToggle();
       fade_not_running = false;
-      $('.log.open').children().children('.expanded-log').animate({
+      $('.log-expand.open').parent().children('.expanded-log').animate({
         opacity: 0,
         height: 'toggle'
       }, 300, "swing", function(){
         fade_not_running = true;
       });
-      $('.log.open').removeClass('open');
+      $('.log-expand.open').removeClass('open');
       $(this).addClass('open');
       //$(this).children().children('.expanded-log').fadeSliderToggle();
-      $(this).children().children('.expanded-log').animate({
+      $(this).parent().children('.expanded-log').animate({
         opacity: 1,
         height: 'toggle'
       }, 300, "swing", function(){
