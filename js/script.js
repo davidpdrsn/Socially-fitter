@@ -29,9 +29,9 @@ jQuery.fn.fadeSliderToggle = function(settings) {
 };
 
 $(document).ready(function() {
-  
+
   var fade_not_running = true;
-  
+
   $('.log:not(:animated)').live('click', function() {
     if ($(this).hasClass('open') && fade_not_running) {
       fade_not_running = false;
@@ -84,6 +84,17 @@ $(document).ready(function() {
     var number = label.attr('data-number');
     number++;
     label.attr('data-number', number);
+    $(".exercise label[for=exercise]").each(function() {
+      var attrNumber = $(this).attr('data-number');
+      if (attrNumber == number) {
+        $(this).parent().children('input[type=text]').each(function(){
+          var inputName = $(this).attr('name');
+          newInputName = inputName.replace(/\d+/g, '');
+          updatedInputName = newInputName + attrNumber;
+          $(this).attr('name', updatedInputName);
+        });
+      }
+    });
   });
 
   // for removing input fields on logging page
@@ -100,6 +111,13 @@ $(document).ready(function() {
     var i = 1;
     $('label[for=exercise]').each(function(){
       $(this).attr('data-number', i);
+      $(this).parent().children('input[type=text]').each(function() {
+        var inputName = $(this).attr('name');
+        newInputName = inputName.replace(/\d+/g, '');
+        updatedInputName = newInputName + i;
+        $(this).attr('name', updatedInputName);
+        console.log('hej');
+      });
       i++;
     });
   });
@@ -119,12 +137,12 @@ $(document).ready(function() {
 		$commentinglog.fadeSliderToggle();
 		return false;
   });
-  
+
   //Placing wrapper underneath #main-menu
   $menuHeight = $('#main-menu').outerHeight();
   $('#wrap').css('margin-top', $menuHeight + 'px');
-  
-  
+
+
   //Smooth scrolling
   function filterPath(string) {
     return string
@@ -172,5 +190,5 @@ $(document).ready(function() {
       return [];
     }
     //End of smooth scrolling
-  
+
 }); //End of $(document).ready();
