@@ -52,6 +52,7 @@ $(document).ready(function() {
       //$('.log.open').children().children('.expanded-log').fadeSliderToggle();
       fade_not_running = false;
       $(this).text('Show more!' ? 'Show less!' : 'Show more!');
+      $('.log-expand.open').text('Show less!' ? 'Show more!' : 'Show less!');
       $('.log-expand.open').parent().children('.expanded-log').animate({
         opacity: 0,
         height: 'toggle'
