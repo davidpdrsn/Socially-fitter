@@ -61,7 +61,7 @@
           $fav_url = "";
           $fav_text = "";
           if($log->is_faved()){
-            $fav_url = "unfav.php?log_id={$log->log_id}&user_id{$user->user_id}&from_page=profile";
+            $fav_url = "unfav.php?log_id={$log->log_id}&user_id={$user->user_id}&from_page=profile";
             $fav_text = "Unfavorite";
           } else {
             $fav_url = "fav.php?log_id={$log->log_id}&user_id={$user->user_id}&from_page=profile";
