@@ -41,8 +41,8 @@
       // remove the last word from $message
       $message = substr($message, 0, strrpos($message, " "));
     ?>
-      <div class="error-message <?= $message_kind; ?>">
-      <h2><?= $message; ?></h2>
+      <div class="error-message <?php echo $message_kind; ?>">
+      <h2><?php echo $message; ?></h2>
     </div>
 
   <?php endif; ?>

@@ -15,12 +15,12 @@
     <img src="http://www.placekitten.com/74/74/" alt="Profile Picture" />
   </div>
   <div class="profile-name">
-  <h3><?= $user->username; ?></h3>
+  <h3><?php echo $user->username; ?></h3>
   </div>
   <div class="social-activity">
-    <a href=""><span class="workouts"><?= $user->find_number_of_logs($user->user_id); ?></span>Workouts</a>
-    <a href=""><span class="followers"><?= $user->find_number_of_followers($user->user_id); ?></span>Followers</a>
-    <a href=""><span class="following"><?= $user->find_number_of_following($user->user_id); ?></span>Following</a>
+    <a href=""><span class="workouts"><?php echo $user->find_number_of_logs($user->user_id); ?></span>Workouts</a>
+    <a href=""><span class="followers"><?php echo $user->find_number_of_followers($user->user_id); ?></span>Followers</a>
+    <a href=""><span class="following"><?php echo $user->find_number_of_following($user->user_id); ?></span>Following</a>
   </div>
 </div>
 
@@ -28,9 +28,9 @@
   <?php if($session->user_id == $user->user_id): ?>
     <!-- this is you! -->
   <?php elseif($user->is_following($user->user_id, $session->user_id)): ?>
-    <a href="unfollow.php?user_id=<?= $user->user_id; ?>" class="unfollow">Unfollow</a>
+    <a href="unfollow.php?user_id=<?php echo $user->user_id; ?>" class="unfollow">Unfollow</a>
   <?php else: ?>
-    <a href="follow.php?user_id=<?= $user->user_id; ?>" class="follow">Follow</a>
+    <a href="follow.php?user_id=<?php echo $user->user_id; ?>" class="follow">Follow</a>
   <?php endif; ?>
 </div>
 
@@ -40,21 +40,21 @@
   <div class="log clearfix">
     <div class="log-header clearfix">
       <div class="log-time">
-        <p><?= $log->time; ?></p>
+        <p><?php echo $log->time; ?></p>
       </div> <!-- .log-time -->
       <div class="profile-picture">
         <img src="http://placekitten.com/48/48/" alt="profile picture" class="picture" />
       </div> <!-- .profile-picture -->
       <div class="log-title">
-        <p class="profile-name"><a href="profile.php?user_id=<?= $user->user_id; ?>"><?= $user->username ?></a></p>
-        <p><?= $log->title; ?></p>
+        <p class="profile-name"><a href="profile.php?user_id=<?php echo $user->user_id; ?>"><?php echo $user->username ?></a></p>
+        <p><?php echo $log->title; ?></p>
       </div> <!-- .log-title -->
     </div> <!-- .log-header -->
     <div class="log-footer">
       <span class="log-expand">Show more!</span>
       <div class="expanded-log">
         <div class="expanded-log-text clearfix">
-          <?= $log->body; ?>
+          <?php echo $log->body; ?>
         </div> <!-- .expanded-log-text -->
         <p class="log-favorite"><a href=""><span class="glyph general">c</span> Favorite</a></p>
         <p class="log-comment"><a href=""><span class="glyph social">w</span> Comment</a></p>

@@ -8,7 +8,7 @@ if(!$session->is_logged_in() || !isset($_GET["user_id"]) || $_GET["user_id"] == 
 $follower_id = $session->user_id;
 $following_id = $_GET["user_id"];
 
-$follow = new follow();
+$follow = new Follow();
 
 $follow->follower_id = $follower_id;
 $follow->following_id = $following_id;
