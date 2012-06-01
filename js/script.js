@@ -124,8 +124,13 @@ $(document).ready(function() {
 
   $('.commenting-log').click(function(){
     $(this).parent().parent().parent('.log');
+    //return false;
+  });
+  
+  $('.log-favorite a').click(function() {
     return false;
   });
+  
   $('.log-comment a').click(function(){
     $(this).parent().parent().parent('.log');
     return false;
