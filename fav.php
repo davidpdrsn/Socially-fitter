@@ -14,6 +14,10 @@ $fav->user_id = $user_id;
 $fav->log_id = $log_id;
 $fav->create();
 $_SESSION["message"] = "Awesome! Spread the love! positive";
-redirect_to("profile.php?user_id={$_GET["user_id"]}");
+if($_GET["from_page"] == "search"){
+  redirect_to($_GET["from_page"] . ".php?query={$_GET["query"]}");
+  } else {
+  redirect_to($_GET["from_page"] . ".php?user_id={$_GET["user_id"]}");
+}
 
 ?>
