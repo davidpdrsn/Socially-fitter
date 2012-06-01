@@ -140,7 +140,7 @@ class User {
     $attributes = $this->attributes();
     $attribute_pairs = array();
     foreach($attributes as $key => $value){
-      $attribute_pairs[] = "{$key}={$value}";
+      $attribute_pairs[] = "{$key}='{$value}'";
     }
     $sql = "UPDATE " . self::$table_name . " SET ";
     $sql .= join(", ", $attribute_pairs);
@@ -171,6 +171,22 @@ class User {
     $result_set = $database->query("SELECT COUNT(following_id) FROM follow WHERE follower_id={$user_id}");
     $result_array = $database->fetch_array($result_set);
     return $result_array["COUNT(following_id)"];
+  }
+
+  public function has_followers(){
+    if($this->find_number_of_followers($this->user_id)){
+      return true;
+    } else {
+      return false;
+    }
+  }
+
+  public function has_following(){
+    if($this->find_number_of_following($this->user_id)){
+      return true;
+    } else {
+      return false;
+    }
   }
 
   public function find_number_of_logs($user_id){

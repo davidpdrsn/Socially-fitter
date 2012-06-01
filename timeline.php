@@ -5,22 +5,47 @@
   $followings = new User();
   $followings = $followings->find_by_sql("SELECT user_id FROM users, follow WHERE users.user_id = follow.following_id AND follow.follower_id = {$session->user_id}");
 
-  $logs = new Log();
-  $sql = "";
-  $sql .= "SELECT logs.user_id, users.username, users.profile_picture, log_id, title, body, notes, time ";
-  $sql .= "FROM users, follow, logs ";
-  $sql .= "WHERE users.user_id = follow.following_id ";
-  $sql .= "AND (";
-  foreach($followings as $following){
+
+  $user = new User();
+  $user = $user->find_by_id($session->user_id);
+  if(!$user->has_followers() && $user->has_following()){
+    $logs = new Log();
+    $sql = "";
+    $sql .= "SELECT logs.user_id, users.username, users.profile_picture, log_id, title, body, notes, time ";
+    $sql .= "FROM users, follow, logs ";
+    $sql .= "WHERE (users.user_id = follow.following_id OR users.user_id = follow.follower_id) ";
+    $sql .= "AND (";
+    foreach($followings as $following){
+      $sql .= "users.user_id = ";
+      $sql .= $following->user_id . " OR ";
+    }
     $sql .= "users.user_id = ";
-    $sql .= $following->user_id . " OR ";
+    $sql .= $session->user_id . " ";
+    $sql .= ") ";
+    $sql .= "AND users.user_id = logs.user_id ";
+    $sql .= "ORDER BY log_id DESC";
+    $logs = $logs->find_by_sql($sql);
+  } elseif($user->has_followers() && $user->has_following()){
+    $logs = new Log();
+    $sql = "";
+    $sql .= "SELECT logs.user_id, users.username, users.profile_picture, log_id, title, body, notes, time ";
+    $sql .= "FROM users, follow, logs ";
+    $sql .= "WHERE users.user_id = follow.following_id ";
+    $sql .= "AND (";
+    foreach($followings as $following){
+      $sql .= "users.user_id = ";
+      $sql .= $following->user_id . " OR ";
+    }
+    $sql .= "users.user_id = ";
+    $sql .= $session->user_id . " ";
+    $sql .= ") ";
+    $sql .= "AND users.user_id = logs.user_id ";
+    $sql .= "ORDER BY log_id DESC";
+    $logs = $logs->find_by_sql($sql);
+  } else {
+    $logs = new Log();
+    $logs = $logs->find_by_sql("SELECT log_id, title, body, notes, time, logs.user_id, users.username, users.profile_picture FROM logs, users WHERE users.user_id = {$session->user_id} AND logs.user_id = users.user_id");
   }
-  $sql .= "users.user_id = ";
-  $sql .= $session->user_id . " ";
-  $sql .= ") ";
-  $sql .= "AND users.user_id = logs.user_id ";
-  $sql .= "ORDER BY log_id DESC";
-  $logs = $logs->find_by_sql($sql);
 
 ?>
 
