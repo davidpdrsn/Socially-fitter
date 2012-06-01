@@ -11,6 +11,7 @@ class Log {
   public $notes;
   public $time;
   public $user_id;
+  public $username;
 
   // find all
   static public function find_all(){

@@ -94,7 +94,7 @@ $(document).ready(function() {
     $(".exercise label[for=exercise]").each(function() {
       var attrNumber = $(this).attr('data-number');
       if (attrNumber == number) {
-        $(this).parent().children('input[type=text]').each(function(){
+        $(this).parent().children('input[type=text], input[type=number]').each(function(){
           var inputName = $(this).attr('name');
           newInputName = inputName.replace(/\d+/g, '');
           updatedInputName = newInputName + attrNumber;
@@ -118,7 +118,7 @@ $(document).ready(function() {
     var i = 1;
     $('label[for=exercise]').each(function(){
       $(this).attr('data-number', i);
-      $(this).parent().children('input[type=text]').each(function() {
+      $(this).parent().children('input[type=text], input[type=number]').each(function() {
         var inputName = $(this).attr('name');
         newInputName = inputName.replace(/\d+/g, '');
         updatedInputName = newInputName + i;

@@ -25,7 +25,7 @@
   <?php foreach($users as $user): ?>
     <?php
       $logs = new Log();
-      $logs = $logs->find_by_sql("SELECT log_id, username, title, body, notes, time FROM logs, users WHERE logs.user_id = users.user_id AND users.username='{$user->username}' ORDER BY time ASC LIMIT 1 ");
+      $logs = $logs->find_by_sql("SELECT log_id, users.username, title, body, notes, time FROM logs, users WHERE logs.user_id = users.user_id AND users.username='{$user->username}' ORDER BY time ASC LIMIT 1 ");
       foreach($logs as $key=>$log):
     ?>
       <div id="results">
