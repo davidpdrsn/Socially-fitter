@@ -32,6 +32,14 @@ if(isset($_POST["submit"])){
   $log->user_id = $user_id;
   $log->create();
   $_SESSION["message"] = "Log added! positive";
+
+  $to = "david.pdrsn.extra@gmail.com";
+  $user = new User();
+  $user = $user->find_by_id($user_id);
+  $subject = $user->username . " just logged a workout!";
+  $body = $log->body;
+  mail($to, $subject, $body);
+
   redirect_to("timeline.php");
 
   /* validation of input

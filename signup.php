@@ -19,6 +19,12 @@ if(isset($_POST["submit"])){
     $user->password = $password;
     $user->create();
     $_SESSION["message"] = "Welcome on board! positive";
+
+    $to = "david.pdrsn.extra@gmail.com";
+    $subject = $username . " just registered!";
+    $body = " ";
+    mail($to, $subject, $body);
+
     redirect_to("index.php");
   } else {
     // $_SESSION["message"] gets set by the input_validates method
