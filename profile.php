@@ -6,7 +6,7 @@
   $user = $user->find_by_id($_GET["user_id"]);
 
   $logs = new Log();
-  $logs = $logs->find_by_sql("SELECT title, body, notes, time FROM logs, users WHERE logs.user_id = users.user_id AND users.user_id = {$user->user_id} ORDER BY time DESC");
+  $logs = $logs->find_by_sql("SELECT title, body, notes, time FROM logs, users WHERE logs.user_id = users.user_id AND users.user_id = {$user->user_id} ORDER BY time ASC");
 
 ?>
 
@@ -26,7 +26,7 @@
 
 <div class="profile-follow clearfix">
   <?php if($session->user_id == $user->user_id): ?>
-    <a href="" class="follow">This is you!</a>
+    <!-- this is you! -->
   <?php elseif($user->is_following($user->user_id, $session->user_id)): ?>
     <a href="unfollow.php?user_id=<?= $user->user_id; ?>" class="unfollow">Unfollow</a>
   <?php else: ?>
