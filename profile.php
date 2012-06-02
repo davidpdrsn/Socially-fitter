@@ -10,15 +10,13 @@
 ?>
 
 <div id="profile" class="clearfix">
-  <div class="profile-picture">
-    <?php if($user->user_id == $session->user_id): ?>
-      <a href="upload-picture.php">
-        <img src="<?php echo $user->profile_picture; ?>" alt="Profile Picture" />
-      </a>
-    <?php else: ?>
-      <img src="<?php echo $user->profile_picture; ?>" alt="Profile Picture" />
-    <?php endif; ?>
-  </div>
+  <?php if($user->user_id == $session->user_id): ?>
+    <a href="upload-picture.php">
+      <div class="profile-picture" style="background-image: url('<?php echo $user->profile_picture; ?>');"></div>
+    </a>
+  <?php else: ?>
+    <div class="profile-picture" style="background-image: url('<?php echo $user->profile_picture; ?>');"></div>
+  <?php endif; ?>
   <div class="profile-name">
     <h3><?php echo $user->username; ?></h3>
   </div>
@@ -49,8 +47,7 @@
           <div class="log-time">
             <p><?php echo $log->time; ?></p>
           </div> <!-- .log-time -->
-          <div class="profile-picture">
-            <img src="<?php echo $user->profile_picture; ?>" alt="Profile Picture" />
+          <div class="profile-picture" style="background-image: url('<?php echo $user->profile_picture; ?>');">
           </div> <!-- .profile-picture -->
           <div class="log-title">
             <p class="profile-name"><?php echo $user->username ?></p>
