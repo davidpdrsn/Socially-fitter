@@ -84,17 +84,21 @@
                 <input type="hidden" name="from_page" value="profile">
               </form>
               <div class="log-comments-list">
-                <h4>Comments</h4>
                 <?php
                   $comments = new Comment();
                   $comments = $comments->find_by_sql("SELECT comment.body, comment.time, comment.user_id, users.username FROM comment, users, logs WHERE logs.log_id = {$log->log_id} AND comment.log_id = logs.log_id AND users.user_id = comment.user_id");
-                  foreach($comments as $comment):
                 ?>
-                <div class="log-single-comment">
-                <span class="comment-time"><?php echo $comment->time; ?></span><a href="profile.php?user_id=<?php echo $comment->user_id; ?>"><a href="profile.php?user_id=<?php echo $comment->user_id; ?>"><?php echo $comment->username; ?></a></a>
-                <p><?php echo $comment->body; ?></p>
-                </div> <!-- .log-single-comment -->
-                <?php endforeach; ?>
+                <?php if(empty($comments)): ?>
+                  Nothing to see here.
+                <?php else: ?>
+                  <h4>Comments</h4>
+                  <?php foreach($comments as $comment): ?>
+                  <div class="log-single-comment">
+                  <span class="comment-time"><?php echo $comment->time; ?></span><a href="profile.php?user_id=<?php echo $comment->user_id; ?>"><a href="profile.php?user_id=<?php echo $comment->user_id; ?>"><?php echo $comment->username; ?></a></a>
+                  <p><?php echo $comment->body; ?></p>
+                  </div> <!-- .log-single-comment -->
+                  <?php endforeach; ?>
+                <?php endif; ?>
               </div> <!-- .log-comments-lits -->
             </div> <!-- .commenting-log -->
           </div> <!-- .expanded-log -->
