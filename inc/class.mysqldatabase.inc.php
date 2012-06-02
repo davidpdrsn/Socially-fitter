@@ -1,6 +1,6 @@
 <?php
 
-class MySQLDatabase {
+class Mysqldatabase {
 
   // in prodcution
   private $host = "localhost";
@@ -96,7 +96,7 @@ class MySQLDatabase {
 
 }
 
-$database = new MySQLDatabase();
+$database = new Mysqldatabase();
 $db =& $database;
 
 ?>

@@ -52,7 +52,7 @@
           <div class="profile-picture" style="background-image: url('<?php echo $user->profile_picture; ?>');">
           </div> <!-- .profile-picture -->
           <div class="log-title">
-            <p class="profile-name"><?php echo $user->username ?></p>
+            <p class="profile-name"><?php echo $user->username; ?></p>
             <p><?php echo $log->title; ?></p>
           </div> <!-- .log-title -->
         </div> <!-- .log-header -->
