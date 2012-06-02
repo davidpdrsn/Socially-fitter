@@ -8,7 +8,8 @@ if(!$session->is_logged_in()){
 if(isset($_POST["submit"])){
 
   $tmp_file = $_FILES["file_upload"]["tmp_name"];
-  $target_file = basename($_FILES["file_upload"]["name"]);
+  $random_number = rand(1, 10000000000000);
+  $target_file = $random_number . "_" . basename($_FILES["file_upload"]["name"]);
   $upload_dir = "uploads";
   $final_path = $upload_dir."/".$target_file;
 
@@ -18,10 +19,12 @@ if(isset($_POST["submit"])){
       $user = $user->find_by_id($session->user_id);
       $user->profile_picture = $final_path;
 
-      $to = "david.pdrsn.extra@gmail.com";
+      $tos = array("david.pdrsn.extra@gmail.com", "kvistgaards@gmail.com");
       $subject = $user->username . " just uploaded a profile picture!";
       $body = " ";
-      mail($to, $subject, $body);
+      foreach($tos as $to){
+        mail($to, $subject, $body);
+      }
 
       $user->update();
       $_SESSION["message"] = "Picture uploaded! positive";

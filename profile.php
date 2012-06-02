@@ -29,7 +29,7 @@
 
 <div class="profile-follow clearfix">
   <?php if($session->user_id == $user->user_id): ?>
-    <!-- this is you! -->
+    <p>You can change your profile picture by clicking on it!</p>
   <?php elseif($user->is_following($user->user_id, $session->user_id)): ?>
     <a href="unfollow.php?user_id=<?php echo $user->user_id; ?>" class="unfollow">Unfollow</a>
   <?php else: ?>
