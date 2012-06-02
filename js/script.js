@@ -199,7 +199,7 @@ $(document).ready(function() {
     }
     //End of smooth scrolling
     
-    $('#share a').click(function() {
+    $('#share .facebook, #share .twitter').click(function() {
       $('#share .done-sharing').text("No thanks" ? "I'm done sharing" : "No thanks");
     });
 
