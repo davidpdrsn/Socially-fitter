@@ -113,6 +113,7 @@ class Fav {
     return ($database->affected_rows() == 1) ? true : false;
   }
 
+
 }
 
 ?>

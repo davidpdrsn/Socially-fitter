@@ -11,7 +11,13 @@
 
 <div id="profile" class="clearfix">
   <div class="profile-picture">
-    <img src="images/profile-picture.jpg" alt="Profile Picture" />
+    <?php if($user->user_id == $session->user_id): ?>
+      <a href="upload-picture.php">
+        <img src="<?php echo $user->profile_picture; ?>" alt="Profile Picture" />
+      </a>
+    <?php else: ?>
+      <img src="<?php echo $user->profile_picture; ?>" alt="Profile Picture" />
+    <?php endif; ?>
   </div>
   <div class="profile-name">
     <h3><?php echo $user->username; ?></h3>
@@ -33,67 +39,73 @@
   <?php endif; ?>
 </div>
 
-<div id="profile-workouts">
-
-<?php foreach($logs as $log): ?>
-  <div class="log clearfix">
-    <div class="log-header clearfix">
-      <div class="log-time">
-        <p><?php echo $log->time; ?></p>
-      </div> <!-- .log-time -->
-      <div class="profile-picture">
-        <img src="http://placekitten.com/48/48/" alt="profile picture" class="picture" />
-      </div> <!-- .profile-picture -->
-      <div class="log-title">
-        <p class="profile-name"><a href="profile.php?user_id=<?php echo $user->user_id; ?>"><?php echo $user->username ?></a></p>
-        <p><?php echo $log->title; ?></p>
-      </div> <!-- .log-title -->
-    </div> <!-- .log-header -->
-    <div class="log-footer">
-      <span class="log-expand <?php if(isset($_GET["log_id_commented_on"]) && $_GET["log_id_commented_on"] == $log->log_id){ echo "open"; } ?>">Show more!</span>
-      <div class="expanded-log">
-        <div class="expanded-log-text clearfix">
-          <?php echo $log->body; ?>
-        </div> <!-- .expanded-log-text -->
-        <?php
-          $fav_url = "";
-          $fav_text = "";
-          if($log->is_faved()){
-            $fav_url = "unfav.php?log_id={$log->log_id}&user_id={$user->user_id}&from_page=profile";
-            $fav_text = "Unfavorite";
-          } else {
-            $fav_url = "fav.php?log_id={$log->log_id}&user_id={$user->user_id}&from_page=profile";
-            $fav_text = "Favorite";
-          }
-        ?>
-        <p class="log-favorite <?php if($log->is_faved()){ echo "faved"; } ?>"><a href="<?php echo $fav_url; ?>"><span class="glyph general">c</span> <?php echo $fav_text; ?></a></p>
-        <p class="log-comment"><a href=""><span class="glyph social">w</span> Comment</a></p>
-        <div class="commenting-log clearfix">
-          <form action="comment.php" method="post">
-            <input type="text" name="comment" placeholder="Wicked training bro!" id="writing-comment-log">
-            <input type="hidden" name="log_id" value="<?php echo $log->log_id; ?>">
-            <input type="hidden" name="user_id" value="<?php echo $user->user_id; ?>">
-            <input type="hidden" name="from_page" value="profile">
-          </form>
-          <div class="log-comments-list">
-            <h4>Comments</h4>
+<?php if(empty($logs)): ?>
+  This users hasn't logged anything yet.
+<?php else: ?>
+  <div id="profile-workouts">
+    <?php foreach($logs as $log): ?>
+      <div class="log clearfix">
+        <div class="log-header clearfix">
+          <div class="log-time">
+            <p><?php echo $log->time; ?></p>
+          </div> <!-- .log-time -->
+          <div class="profile-picture">
+            <img src="<?php echo $user->profile_picture; ?>" alt="Profile Picture" />
+          </div> <!-- .profile-picture -->
+          <div class="log-title">
+            <p class="profile-name"><?php echo $user->username ?></p>
+            <p><?php echo $log->title; ?></p>
+          </div> <!-- .log-title -->
+        </div> <!-- .log-header -->
+        <div class="log-footer">
+          <span class="log-expand <?php if(isset($_GET["log_id_commented_on"]) && $_GET["log_id_commented_on"] == $log->log_id){ echo "open"; } ?>">Show more!</span>
+          <div class="expanded-log">
+            <div class="expanded-log-text clearfix">
+              <?php echo $log->body; ?>
+            </div> <!-- .expanded-log-text -->
             <?php
-              $comments = new Comment();
-              $comments = $comments->find_by_sql("SELECT comment.body, comment.time, comment.user_id, users.username FROM comment, users, logs WHERE logs.log_id = {$log->log_id} AND comment.log_id = logs.log_id AND users.user_id = comment.user_id");
-              foreach($comments as $comment):
+              $fav_url = "";
+              $fav_text = "";
+              if($log->is_faved()){
+                $fav_url = "unfav.php?log_id={$log->log_id}&user_id={$user->user_id}&from_page=profile";
+                $fav_text = "Unfavorite";
+              } else {
+                $fav_url = "fav.php?log_id={$log->log_id}&user_id={$user->user_id}&from_page=profile";
+                $fav_text = "Favorite";
+              }
             ?>
-            <div class="log-single-comment">
-            <span class="comment-time"><?php echo $comment->time; ?></span><a href="profile.php?user_id=<?php echo $comment->user_id; ?>"><a href="profile.php?user_id=<?php echo $comment->user_id; ?>"><?php echo $comment->username; ?></a></a>
-            <p><?php echo $comment->body; ?></p>
-            </div> <!-- .log-single-comment -->
-            <?php endforeach; ?>
-          </div> <!-- .log-comments-lits -->
-        </div> <!-- .commenting-log -->
-      </div> <!-- .expanded-log -->
-    </div> <!-- .log-footer -->
-  </div> <!-- .log -->
-<?php endforeach; ?>
-
-</div> <!-- #profile-workouts -->
+            <p class="log-favorite <?php if($log->is_faved()){ echo "faved"; } ?>"><a href="<?php echo $fav_url; ?>"><span class="glyph general">c</span> <?php echo $fav_text; ?></a></p>
+            <p class="log-comment"><a href=""><span class="glyph social">w</span> Comment</a></p>
+            <div class="commenting-log clearfix">
+              <form action="comment.php" method="post">
+                <input type="text" name="comment" placeholder="Wicked training bro!" id="writing-comment-log">
+                <input type="hidden" name="log_id" value="<?php echo $log->log_id; ?>">
+                <input type="hidden" name="user_id" value="<?php echo $user->user_id; ?>">
+                <input type="hidden" name="from_page" value="profile">
+              </form>
+              <div class="log-comments-list">
+                <?php
+                  $comments = new Comment();
+                  $comments = $comments->find_by_sql("SELECT comment.body, comment.time, comment.user_id, users.username FROM comment, users, logs WHERE logs.log_id = {$log->log_id} AND comment.log_id = logs.log_id AND users.user_id = comment.user_id");
+                ?>
+                <?php if(empty($comments)): ?>
+                  Nothing to see here.
+                <?php else: ?>
+                  <h4>Comments</h4>
+                  <?php foreach($comments as $comment): ?>
+                  <div class="log-single-comment">
+                  <span class="comment-time"><?php echo $comment->time; ?></span><a href="profile.php?user_id=<?php echo $comment->user_id; ?>"><a href="profile.php?user_id=<?php echo $comment->user_id; ?>"><?php echo $comment->username; ?></a></a>
+                  <p><?php echo $comment->body; ?></p>
+                  </div> <!-- .log-single-comment -->
+                  <?php endforeach; ?>
+                <?php endif; ?>
+              </div> <!-- .log-comments-lits -->
+            </div> <!-- .commenting-log -->
+          </div> <!-- .expanded-log -->
+        </div> <!-- .log-footer -->
+      </div> <!-- .log -->
+    <?php endforeach; ?>
+  </div> <!-- #profile-workouts -->
+<?php endif; ?>
 
 <?php include "inc/footer.php"; ?>

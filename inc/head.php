@@ -31,6 +31,8 @@ include "inc/controller.php"
     <link rel="stylesheet" type="text/css" href="css/share.css">
   <?php elseif ($page_name == "timeline"): ?>
     <link rel="stylesheet" type="text/css" href="css/timeline.css">
+  <?php elseif ($page_name == "upload-picture"): ?>
+    <link rel="stylesheet" type="text/css" href="css/upload-picture.css">
   <?php endif; ?>
 
   <link href='http://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700|Lobster' rel='stylesheet' type='text/css'>

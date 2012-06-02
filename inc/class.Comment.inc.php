@@ -115,6 +115,7 @@ class Comment {
     $database->query($sql);
     return ($database->affected_rows() == 1) ? true : false;
   }
+
 }
 
 ?>
