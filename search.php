@@ -60,6 +60,14 @@
                 <div class="expanded-log-text clearfix">
                   <?php echo $log->body; ?>
                 </div> <!-- .expanded-log-text -->
+                <?php if(strlen($log->notes) > 1): ?>
+                  <div class="expanded-log-text clearfix">
+                    <strong>Notes</strong>
+                    <p>
+                      <?php echo $log->notes; ?>
+                    </p>
+                  </div> <!-- .expanded-log-text -->
+                <?php endif; ?>
                 <?php
                   $fav_url = "";
                   $fav_text = "";
