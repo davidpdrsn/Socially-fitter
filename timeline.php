@@ -44,7 +44,7 @@
     $logs = $logs->find_by_sql($sql);
   } else {
     $logs = new Log();
-    $logs = $logs->find_by_sql("SELECT log_id, title, body, notes, time, logs.user_id, users.username, users.profile_picture FROM logs, users WHERE users.user_id = {$session->user_id} AND logs.user_id = users.user_id");
+    $logs = $logs->find_by_sql("SELECT log_id, title, body, notes, time, logs.user_id, users.username, users.profile_picture FROM logs, users WHERE users.user_id = {$session->user_id} AND logs.user_id = users.user_id ORDER BY log_id DESC");
   }
 
 ?>
