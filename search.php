@@ -44,11 +44,9 @@
               <div class="log-time">
                 <p><?php echo $log->time; ?></p>
               </div> <!-- .log-time -->
-              <div class="profile-picture">
-                <a href="profile.php?user_id=<?php echo $user->user_id; ?>">
-                  <img src="<?php echo $user->profile_picture; ?>" alt="Profile Picture" />
-                </a>
-              </div> <!-- .profile-picture -->
+              <a href="profile.php?user_id=<?php echo $user->user_id; ?>">
+                <div class="profile-picture" style="background-image: url('<?php echo $user->profile_picture; ?>');"></div> <!-- .profile-picture -->
+              </a>
               <div class="log-title">
                 <p class="profile-name"><a href="profile.php?user_id=<?php echo $user->user_id; ?>"><?php echo $user->username; ?></a></p>
                 <p><?php echo $log->title; ?></p>
