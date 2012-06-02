@@ -50,11 +50,11 @@
 ?>
 
 <?php if(empty($logs)): ?>
-  
+
   <div id="empty-timeline">
-    
+
     <h2>Your timeline is empty</h2>
-    
+
     <p>You aren't following anyone.</p>
     <p>And you haven't logged any trainings!</h3>
     <p>Don't you think it's a good idea to get started!?</p>
@@ -63,11 +63,15 @@
     <br />
     <p>...</p>
     <p>Well, what are you waiting for?</p>
-    
+
   </div> <!-- #empty-timeline -->
 <?php else: ?>
   <div id="timeline">
     <?php foreach($logs as $log): ?>
+      <?php
+        $user = new User();
+        $user = $user->find_by_id($log->user_id);
+      ?>
       <div class="log clearfix">
         <div class="log-header clearfix">
           <div class="log-time">
