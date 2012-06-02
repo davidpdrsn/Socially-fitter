@@ -66,15 +66,15 @@
               $fav_url = "";
               $fav_text = "";
               if($log->is_faved()){
-                $fav_url = "unfav.php?log_id={$log->log_id}&user_id={$user->user_id}&from_page=profile";
+                $fav_url = "unfav.php?log_id={$log->log_id}&from_page=timeline";
                 $fav_text = "Unfavorite";
               } else {
-                $fav_url = "fav.php?log_id={$log->log_id}&user_id={$user->user_id}&from_page=profile";
+                $fav_url = "fav.php?log_id={$log->log_id}&from_page=timeline";
                 $fav_text = "Favorite";
               }
             ?>
-            <p class="log-favorite <?php if($log->is_faved()){ echo "faved"; } ?>"><a href="<?php echo $fav_url; ?>"><span class="glyph general">c</span> <?php echo $fav_text; ?></a></p>
-            <p class="log-comment"><a href=""><span class="glyph social">w</span> Comment</a></p>
+            <p class="log-favorite <?php if($log->is_faved()){ echo "faved"; } ?>"><a href="<?php echo $fav_url; ?>"><span class="glyph general">c</span> <?php echo $fav_text . " (" . $log->number_of_favs() . ")"; ?></a></p>
+            <p class="log-comment"><a href=""><span class="glyph social">w</span> Comment (<?php echo $log->number_of_comments(); ?>)</a></p>
             <div class="commenting-log clearfix">
               <form action="comment.php" method="post">
                 <input type="text" name="comment" placeholder="Wicked training bro!" id="writing-comment-log">
