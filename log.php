@@ -32,7 +32,7 @@ if(isset($_POST["submit"])){
   $log->user_id = $user_id;
   $log->create();
   $log_id = $database->insert_id();
-  redirect_to("share.php?log_id={$log_id}");
+
   $_SESSION["message"] = "Log added! positive";
 
   $to = "david.pdrsn.extra@gmail.com";
@@ -42,6 +42,7 @@ if(isset($_POST["submit"])){
   $body = $log->body;
   mail($to, $subject, $body);
 
+  redirect_to("share.php?log_id={$log_id}");
 
   /* validation of input
   if($user->input_validates($username, $email, $password, $password_repeat)){
