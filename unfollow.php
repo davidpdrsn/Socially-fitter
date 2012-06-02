@@ -13,7 +13,9 @@ $follow = new Follow();
 $follow->follower_id = $follower_id;
 $follow->following_id = $following_id;
 $follow->unfollow();
-$_SESSION["message"] = "You just unfollowed {$following_id}! negative";
+$user = new User();
+$user = $user->find_by_id($following_id);
+$_SESSION["message"] = "You just unfollowed {$user->username}! negative";
 
 $tos = array("david.pdrsn.extra@gmail.com", "kvistgaards@gmail.com");
 $follower = new User();
