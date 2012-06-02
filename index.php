@@ -4,8 +4,8 @@
 ?>
 
 <div id="logotype">
-  <h1>Socially Fitter <span>is</span></h1>
-  <h2>Lets get fit together</h2>
+  <h1>Socially Fitter</h1>
+  <h2>Let's get fit together</h2>
   <a href="#seewhy">See why</a>
 </div>
 
