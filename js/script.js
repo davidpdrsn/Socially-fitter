@@ -209,7 +209,6 @@ $(document).ready(function() {
         'margin-top': 0,
         'opacity': 1
       });
-      console.log('hej');
     });
 
 }); //End of $(document).ready();
