@@ -10,6 +10,7 @@ if(isset($_POST["submit"])){
   $email = $_POST["email"];
   $password = $_POST["password"];
   $password_repeat = $_POST["password_repeat"];
+  $profile_picture = "/uploads/default.png";
 
   $user = new User();
 
@@ -17,6 +18,7 @@ if(isset($_POST["submit"])){
     $user->username = $username;
     $user->email = $email;
     $user->password = $password;
+    $user->profile_picture = $profile_picture;
     $user->create();
     $_SESSION["message"] = "Welcome on board! positive";
 

@@ -1,0 +1,78 @@
+Find de logs from user_id 27 har lavet
+
+SELECT title, body, notes, time FROM logs, users WHERE logs.user_id = users.user_id AND users.user_id = 27
+
+----------------
+
+Find de antal logs user_id 27 har lavet
+
+SELECT COUNT(user_id) FROM logs WHERE user_id=27
+
+----------------
+
+Find de brugere som user_id 29 følger
+
+SELECT username
+FROM users, follow
+WHERE users.user_id = follow.following_id
+AND follow.follower_id = 29
+
+----------------
+
+Find de bruger som user_id 29 bliver fulgt af
+
+SELECT username
+FROM users, follow
+WHERE users.user_id = follow.follower_id
+AND follow.following_id = 29
+
+----------------
+
+Find det antal som user_id følger
+
+SELECT COUNT(following_id) FROM follow WHERE follower_id=27
+
+----------------
+
+Find det antal der følger user_id
+
+SELECT COUNT(follower_id) FROM follow WHERE following_id=27
+
+----------------
+
+Find de comment_id'er som user_id 27 har lavet
+
+SELECT comment_id FROM comment, users WHERE comment.user_id = users.user_id AND users.user_id = 27
+
+----------------
+
+Find de bruger der har commented på log_id 1
+
+SELECT user_id FROM comment, users WHERE comment.user_id = users.user_id AND comment.log_id = 1
+
+----------------
+
+Find ud af om bruger 27 følger bruger 28
+
+SELECT user_id FROM users, follow WHERE users.user_id = follow.follower_id AND follow.following_id = 28 AND follow.follower_id = 27
+
+----------------
+
+Find de bruger der har fav'et log_id 1
+
+SELECT username FROM fav, users WHERE fav.user_id = users.user_id AND fav.log_id = 1
+
+----------------
+
+Find de log_id'er user_id 27 har favoritted
+
+SELECT log_id FROM fav, users WHERE fav.user_id = users.user_id AND users.user_id = 27
+
+----------------
+
+Find titlerne på de logs user_id 27 har commented på
+
+SELECT title
+FROM fav, users, logs
+WHERE fav.user_id = users.user_id AND fav.log_id = logs.log_id
+AND users.user_id = 27
