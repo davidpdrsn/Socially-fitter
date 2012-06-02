@@ -5,4 +5,64 @@
 //////////////////////////////////////
 
 #share
-  padding: $generalpadding
+  padding: $generalpadding*2 $generalpadding
+  text-align: center
+  h2
+    margin: 20px 0 30px
+    text-align: center
+    font-family: lobster, cursive
+    font-size: 25px
+    font-weight: normal
+    text-shadow: 2px 2px 0 rgba(255,255,255,.4), 4px 4px 0 rgba(255,255,255,.4)
+  a
+    padding: 10px 5px
+    text-align: center
+    display: inline-block
+    width: 40%
+    margin: 0 auto
+    -moz-border-radius: 7px
+    border-radius: 7px
+    color: #fff
+    font-size: 12px
+    font-weight: bold
+    margin-bottom: 20px
+    background: -webkit-linear-gradient($green, $greendarken20)
+    background: -moz-linear-gradient($green, $greendarken20)
+    background: linear-gradient($green, $greendarken20)
+    border: 1px solid $greendarken25
+    -moz-text-shadow: 1px 1px 1px $greendarken25
+    text-shadow: 1px 1px 1px $greendarken25
+    &:hover, &:active
+      -moz-box-shadow: inset 2px 2px 5px rgba(0,0,0,.5)
+      box-shadow: inset 2px 2px 5px rgba(0,0,0,.5)
+      background: -webkit-linear-gradient(bottom, $green, $greendarken20)
+      background: -moz-linear-gradient(bottom, $green, $greendarken20)
+      background: linear-gradient(bottom, $green, $greendarken20)
+    &.twitter
+      background: -webkit-linear-gradient($bluedarken10, $bluedarken30)
+      background: -moz-linear-gradient($bluedarken10, $bluedarken30)
+      background: linear-gradient($bluedarken10, $bluedarken30)
+      border: 1px solid $bluedarken35
+      -moz-text-shadow: 1px 1px 1px $bluedarken25
+      text-shadow: 1px 1px 1px $bluedarken25
+      &:hover, &:active
+        -moz-box-shadow: inset 2px 2px 5px rgba(0,0,0,.5)
+        box-shadow: inset 2px 2px 5px rgba(0,0,0,.5)
+        background: -webkit-linear-gradient(bottom, $bluedarken15, $bluedarken35)
+        background: -moz-linear-gradient(bottom, $bluedarken15, $bluedarken35)
+        background: linear-gradient(bottom, $bluedarken15, $bluedarken35)
+    &.facebook
+      background: -webkit-linear-gradient($bluedarken10, $bluedarken30)
+      background: -moz-linear-gradient($bluedarken10, $bluedarken30)
+      background: linear-gradient($bluedarken10, $bluedarken30)
+      border: 1px solid $bluedarken35
+      -moz-text-shadow: 1px 1px 1px $bluedarken25
+      text-shadow: 1px 1px 1px $bluedarken25
+      &:hover, &:active
+        -moz-box-shadow: inset 2px 2px 5px rgba(0,0,0,.5)
+        box-shadow: inset 2px 2px 5px rgba(0,0,0,.5)
+        background: -webkit-linear-gradient(bottom, $bluedarken15, $bluedarken35)
+        background: -moz-linear-gradient(bottom, $bluedarken15, $bluedarken35)
+        background: linear-gradient(bottom, $bluedarken15, $bluedarken35)
+  #b
+    background: blue

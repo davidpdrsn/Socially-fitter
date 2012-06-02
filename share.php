@@ -16,18 +16,11 @@
 
 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 
-<div id="share">
-  <a rel="nofollow" href="http://www.facebook.com/share.php?u=<;url>" onclick="return fbs_click()" target="_blank">Share on Facebook</a>
-
-  <br>
-  <br>
-
-  <a href="https://twitter.com/share" class="twitter-share-button" data-url="<?php echo $url; ?>" data-text="I just logged a workout!" data-size="large" data-count="none" data-hashtags="sociallyfitter">Tweet</a>
-
-  <br>
-  <br>
-
-  <a href="timeline.php">I'm done sharing!</a>
+<div id="share" class="clearfix">
+  <h2>Share on...</h2>
+  <a rel="nofollow" href="http://www.facebook.com/share.php?u=<;url>" onclick="return fbs_click()" target="_blank" class="facebook">Facebook</a>  
+  <a href="javascript:(function(){window.twttr=window.twttr||{};var D=550,A=450,C=screen.height,B=screen.width,H=Math.round((B/2)-(D/2)),G=0,F=document,E;if(C>A){G=Math.round((C/2)-(A/2))}window.twttr.shareWin=window.open('http://twitter.com/share?text=I%20just%20logged%20a%20workout%20<?php echo $url; ?>%20&hashtags=SociallyFitter','','left='+H+',top='+G+',width='+D+',height='+A+',personalbar=0,toolbar=0,scrollbars=1,resizable=1');E=F.createElement('script');E.src='http://platform.twitter.com/widgets.js';F.getElementsByTagName('head')[0].appendChild(E)}());" class="twitter">Tweet</a>
+  <a href="timeline.php" class="done-sharing">No thanks</a>
 </div> <!-- #share -->
 
 <?php include "inc/footer.php"; ?>

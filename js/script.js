@@ -198,5 +198,9 @@ $(document).ready(function() {
       return [];
     }
     //End of smooth scrolling
+    
+    $('#share a').click(function() {
+      $('#share .done-sharing').text("No thanks" ? "I'm done sharing" : "No thanks");
+    });
 
 }); //End of $(document).ready();
