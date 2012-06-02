@@ -6,7 +6,7 @@
 <div id="logotype">
   <h1>Socially Fitter</h1>
   <h2>Let's get fit together</h2>
-  <a href="#seewhy">See why</a>
+  <a href="#seewhy">Learn more</a>
 </div>
 
 <?php if(!$session->is_logged_in()): ?>
