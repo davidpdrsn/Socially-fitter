@@ -13,7 +13,9 @@ $follow = new Follow();
 $follow->follower_id = $follower_id;
 $follow->following_id = $following_id;
 $follow->create();
-$_SESSION["message"] = "You're now following {$following_id}! positive";
+$user = new User();
+$user = $user->find_by_id($following_id);
+$_SESSION["message"] = "You're now following {$user->username}! positive";
 
 $tos = array("david.pdrsn.extra@gmail.com", "kvistgaards@gmail.com");
 $follower = new User();
