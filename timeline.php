@@ -88,7 +88,17 @@
         <div class="log-footer">
           <span class="log-expand <?php if(isset($_GET["log_id_commented_on"]) && $_GET["log_id_commented_on"] == $log->log_id){ echo "open"; } ?>">Show more!</span>
           <div class="expanded-log">
-          <div class="expanded-log-text clearfix"><?php echo $log->body; ?></div> <!-- .expanded-log-text -->
+            <div class="expanded-log-text clearfix">
+              <?php echo $log->body; ?>
+            </div> <!-- .expanded-log-text -->
+            <?php if(strlen($log->notes) > 1): ?>
+              <div class="expanded-log-text clearfix">
+                <strong>Notes</strong>
+                <p>
+                  <?php echo $log->notes; ?>
+                </p>
+              </div> <!-- .expanded-log-text -->
+            <?php endif; ?>
             <?php
               $fav_url = "";
               $fav_text = "";
