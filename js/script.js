@@ -1,10 +1,10 @@
 // hide menu bar
-addEventListener('load', function() {
-  setTimeout(hideAddressBar, 0);
-}, false);
-function hideAddressBar() {
-  window.scrollTo(0, 1);
-}
+// addEventListener('load', function() {
+//   setTimeout(hideAddressBar, 0);
+// }, false);
+// function hideAddressBar() {
+//   window.scrollTo(0, 1);
+// }
 
 // fading and slidetoggle
 jQuery.fn.fadeSliderToggle = function(settings) {
