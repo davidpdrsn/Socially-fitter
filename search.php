@@ -40,8 +40,15 @@
       <?php
         $logs = new Log();
         $logs = $logs->find_by_sql("SELECT log_id, users.username, title, body, notes, time FROM logs, users WHERE logs.user_id = users.user_id AND users.username='{$user->username}' ORDER BY time ASC LIMIT 1 ");
-        foreach($logs as $key=>$log):
       ?>
+        <?php if(empty($logs)): ?>
+          <div id="no-results">
+            <p>We found some users, but they haven't made any logs yet.</p>
+          </div><!-- #results -->
+        <?php endif; ?>
+        <?php
+          foreach($logs as $key=>$log):
+        ?>
         <div id="results">
           <div class="log clearfix">
             <div class="log-header clearfix">
