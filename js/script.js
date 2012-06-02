@@ -202,5 +202,14 @@ $(document).ready(function() {
     $('#share .facebook, #share .twitter').click(function() {
       $('#share .done-sharing').text("No thanks" ? "I'm done sharing" : "No thanks");
     });
+    
+    $('#main-menu input[type=submit]').one('click', function(e) {
+      e.preventDefault();
+      $('#main-menu input[type=text], #main-menu input[type=password]').css({
+        'margin-top': 0,
+        'opacity': 1
+      });
+      console.log('hej');
+    });
 
 }); //End of $(document).ready();
