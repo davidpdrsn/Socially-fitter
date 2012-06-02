@@ -30,7 +30,9 @@
 
 <?php if(isset($_GET["query"])): ?>
   <?php if(empty($users)): ?>
-    No active users found.
+    <div id="no-results">
+      <p>We coudn't find any users by that name.</p>
+    </div><!-- #results -->
   <?php else: ?>
     <?php foreach($users as $user): ?>
       <?php

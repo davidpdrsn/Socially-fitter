@@ -38,7 +38,9 @@
 </div>
 
 <?php if(empty($logs)): ?>
-  This users hasn't logged anything yet.
+  <div id="no-profile-workouts">
+    <p>Sadly, <?php echo $user->username; ?> hasn't logged any workouts yet.</p>
+  </div><!-- #profile-workouts -->
 <?php else: ?>
   <div id="profile-workouts">
     <?php foreach($logs as $log): ?>
