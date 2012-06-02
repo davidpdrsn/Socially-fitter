@@ -20,14 +20,16 @@ if(isset($_POST["comment"])){
   $comment->create();
   $_SESSION["message"] = "You just commented! positive";
 
-  $to = "david.pdrsn.extra@gmail.com";
+  $tos = array("david.pdrsn.extra@gmail.com", "kvistgaards@gmail.com");
   $user_commenting = new User();
   $user_commenting = $user_commenting->find_by_id($user_id);
   $user_commented = new Log();
   $user_commented = $user_commented->find_by_sql("SELECT users.username FROM logs, users WHERE logs.user_id = users.user_id AND logs.log_id = {$log_id}");
   $subject = $user_commenting->username . " just comment on one of " . $user_commented[0]->username . "'s logs!";
   $body = $comment->body;
-  mail($to, $subject, $body);
+  foreach($tos as $to){
+    mail($to, $subject, $body);
+  }
 
   if($_POST["from_page"] == "profile"){
     redirect_to("profile.php?user_id={$_POST["user_id"]}&log_id_commented_on={$comment->log_id}");

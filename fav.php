@@ -15,12 +15,14 @@ $fav->log_id = $log_id;
 $fav->create();
 $_SESSION["message"] = "Awesome! Spread the love! positive";
 
-$to = "david.pdrsn.extra@gmail.com";
+$tos = array("david.pdrsn.extra@gmail.com", "kvistgaards@gmail.com");
 $user = new User();
 $user = $user->find_by_id($user_id);
 $subject = $user->username . " just faved a log!";
 $body = " ";
-mail($to, $subject, $body);
+foreach($tos as $to){
+  mail($to, $subject, $body);
+}
 
 if($_GET["from_page"] == "search"){
   redirect_to($_GET["from_page"] . ".php?query={$_GET["query"]}");

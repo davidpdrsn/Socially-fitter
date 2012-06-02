@@ -22,10 +22,12 @@ if(isset($_POST["submit"])){
     $user->create();
     $_SESSION["message"] = "Welcome on board! positive";
 
-    $to = "david.pdrsn.extra@gmail.com";
+    $tos = array("david.pdrsn.extra@gmail.com", "kvistgaards@gmail.com");
     $subject = $username . " just registered!";
     $body = " ";
-    mail($to, $subject, $body);
+    foreach($tos as $to){
+      mail($to, $subject, $body);
+    }
 
     redirect_to("index.php");
   } else {
