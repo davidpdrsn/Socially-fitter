@@ -50,7 +50,21 @@
 ?>
 
 <?php if(empty($logs)): ?>
-  You're not following anyone. Search to find your friends and follow them!
+  
+  <div id="empty-timeline">
+    
+    <h2>Your timeline is empty</h2>
+    
+    <p>You aren't following anyone.</p>
+    <p>And you haven't logged any trainings!</h3>
+    <p>Don't you think it's a good idea to get started!?</p>
+    <br />
+    <p>To start using Socially Fitter, you can search for people to follow in the <span class="glyph general">=</span> menu. Or you can log a training in the <span class="glyph general">[</span> menu.</p>
+    <br />
+    <p>...</p>
+    <p>Well, what are you waiting for?</p>
+    
+  </div> <!-- #empty-timeline -->
 <?php else: ?>
   <div id="timeline">
     <?php foreach($logs as $log): ?>
