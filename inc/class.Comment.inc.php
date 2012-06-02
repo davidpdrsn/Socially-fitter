@@ -116,13 +116,6 @@ class Comment {
     return ($database->affected_rows() == 1) ? true : false;
   }
 
-  public function number_of_comments($log_id){
-    global $database;
-    $result_set = $database->query("SELECT COUNT(comment_id) FROM comment, logs WHERE logs.log_id = {$log_id} AND logs.log_id = comment.log_id");
-    $result_array = $database->fetch_array($result_set);
-    return $result_array["COUNT(comment_id)"];
-  }
-
 }
 
 ?>

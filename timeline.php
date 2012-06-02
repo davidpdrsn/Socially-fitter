@@ -84,9 +84,8 @@
                 $fav_text = "Favorite";
               }
             ?>
-            <p class="log-favorite <?php if($log->is_faved()){ echo "faved"; } ?>"><a href="<?php echo $fav_url; ?>"><span class="glyph general">c</span> <?php echo $fav_text; ?></a></p>
-              <?php $comments = new Comment(); ?>
-              <p class="log-comment"><a href=""><span class="glyph social">w</span> Comment (<?php echo $comments->number_of_comments($log->log_id); ?>)</a></p>
+            <p class="log-favorite <?php if($log->is_faved()){ echo "faved"; } ?>"><a href="<?php echo $fav_url; ?>"><span class="glyph general">c</span> <?php echo $fav_text . " (" . $log->number_of_favs() . ")"; ?></a></p>
+              <p class="log-comment"><a href=""><span class="glyph social">w</span> Comment (<?php echo $log->number_of_comments(); ?>)</a></p>
             <div class="commenting-log clearfix">
               <form action="comment.php" method="post">
                 <input type="text" name="comment" placeholder="Wicked training bro!" id="writing-comment-log">
@@ -96,6 +95,7 @@
               </form>
               <div class="log-comments-list">
                 <?php
+                  $comments = new Comment();
                   $comments = $comments->find_by_sql("SELECT comment.body, comment.time, comment.user_id, users.username FROM comment, users, logs WHERE logs.log_id = {$log->log_id} AND comment.log_id = logs.log_id AND users.user_id = comment.user_id");
                 ?>
                 <?php if(empty($comments)): ?>

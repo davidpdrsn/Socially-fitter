@@ -126,6 +126,20 @@ class Log {
     return $result;
   }
 
+  public function number_of_favs(){
+    global $database;
+    $result_set = $database->query("SELECT COUNT(fav.log_id) FROM fav, logs WHERE logs.log_id = {$this->log_id} AND logs.log_id = fav.log_id");
+    $result_array = $database->fetch_array($result_set);
+    return $result_array["COUNT(fav.log_id)"];
+  }
+
+  public function number_of_comments(){
+    global $database;
+    $result_set = $database->query("SELECT COUNT(comment_id) FROM comment, logs WHERE logs.log_id = {$this->log_id} AND logs.log_id = comment.log_id");
+    $result_array = $database->fetch_array($result_set);
+    return $result_array["COUNT(comment_id)"];
+  }
+
 }
 
 ?>
