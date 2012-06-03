@@ -45,7 +45,10 @@
           <div id="no-results">
             <p>We found some users, but they haven't made any logs yet.</p>
           </div><!-- #results -->
-        <?php endif; ?>
+        <?php
+          goto footer;
+          endif;
+        ?>
         <?php
           foreach($logs as $key=>$log):
           $log->title = str_replace("\\", "", $log->title);
@@ -131,4 +134,5 @@
   <?php endif; ?>
 <?php endif; ?>
 
+<?php footer: ?>
 <?php include "inc/footer.php"; ?>

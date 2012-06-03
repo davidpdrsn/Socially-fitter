@@ -29,7 +29,7 @@ if(isset($_POST["submit"])){
       mail($to, $subject, $body);
     }
 
-    //redirect_to("index.php");
+    redirect_to("index.php");
   } else {
     // $_SESSION["message"] gets set by the input_validates method
     // so no need to set here
