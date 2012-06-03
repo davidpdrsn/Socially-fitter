@@ -45,6 +45,8 @@ if($session->is_logged_in()){
     <link rel="stylesheet" type="text/css" href="css/upload-picture.css">
   <?php elseif($page_name == "single"): ?>
     <link rel="stylesheet" type="text/css" href="css/profile.css">
+  <?php elseif($page_name == "allusers"): ?>
+    <link rel="stylesheet" type="text/css" href="css/allusers.css">
   <?php endif; ?>
 
   <link href='http://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700|Lobster' rel='stylesheet' type='text/css'>

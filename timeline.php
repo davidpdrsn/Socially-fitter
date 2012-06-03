@@ -29,7 +29,8 @@
     <br />
     <p>To start using Socially Fitter, you can search for people to follow in the <span class="glyph general">=</span> menu. Or you can log a training in the <span class="glyph general">[</span> menu.</p>
     <br />
-    <p>...</p>
+    <p>You can also find <a href="all-users.php"><strong><u>all users</u></strong></a>.</p>
+    <br />
     <p>Well, what are you waiting for?</p>
 
   </div> <!-- #empty-timeline -->
