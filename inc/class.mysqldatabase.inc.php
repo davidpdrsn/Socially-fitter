@@ -7,8 +7,10 @@ class Mysqldatabase {
   private $username = "mmd4s12b12";
   private $password = "8rohyo4z";
   private $db_name = "mmd4s12b12";
-  private $connection = false;
+  private $connection;
   public $last_query;
+  private $magic_quotes_active;
+	private $real_escape_string_exists;
 
   private function in_development(){
     if($_SERVER["HTTP_HOST"] == "localhost:8888" || $_SERVER["HTTP_HOST"] == "sociallyfitter.dev"){
@@ -27,36 +29,28 @@ class Mysqldatabase {
       $this->password = "root";
       $this->db_name = "sociallyfitter";
     }
+    $this->open_connection();
 
-    if(!$this->connection) {
-      $connection = mysql_connect($this->host, $this->username, $this->password);
-      if($connection) {
-        $this->connection = $connection;
-        $select_db = mysql_select_db($this->db_name, $connection);
-        if($select_db) {
-          $this->con = true;
-          return true;
-        } else {
-          return false;
-        }
-      } else {
-        return false;
-      }
-    } else {
-      return true;
-    }
   }
 
-  public function disconnect(){
-    if($this->connection) {
-      if(mysql_close()) {
-        $this->connection = false;
-        return true;
-      } else {
-        return false;
-      }
-    }
-  }
+  public function open_connection() {
+		$this->connection = mysql_connect($this->host, $this->username, $this->password);
+		if (!$this->connection) {
+			die("Database connection failed: " . mysql_error());
+		} else {
+			$db_select = mysql_select_db($this->db_name, $this->connection);
+			if (!$db_select) {
+				die("Database selection failed: " . mysql_error());
+			}
+		}
+	}
+
+  public function close_connection() {
+		if(isset($this->connection)) {
+			mysql_close($this->connection);
+			unset($this->connection);
+		}
+	}
 
   public function query($sql){
     $this->last_query = $sql;
@@ -65,9 +59,18 @@ class Mysqldatabase {
     return $result;
   }
 
-  public function escape_value($value){
-    // escape $value for safe use in SQL
-  }
+  public function escape_value( $value ) {
+		if( $this->real_escape_string_exists ) { // PHP v4.3.0 or higher
+			// undo any magic quote effects so mysql_real_escape_string can do the work
+			if( $this->magic_quotes_active ) { $value = stripslashes( $value ); }
+			$value = mysql_real_escape_string( $value );
+		} else { // before PHP v4.3.0
+			// if magic quotes aren't already on then add slashes manually
+			if( !$this->magic_quotes_active ) { $value = addslashes( $value ); }
+			// if magic quotes are active, then the slashes already exist
+		}
+		return $value;
+	}
 
   public function fetch_array($result_set){
     return mysql_fetch_array($result_set);

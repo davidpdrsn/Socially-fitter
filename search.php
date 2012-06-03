@@ -48,6 +48,9 @@
         <?php endif; ?>
         <?php
           foreach($logs as $key=>$log):
+          $log->title = str_replace("\\", "", $log->title);
+          $log->body = str_replace("\\", "", $log->body);
+          $log->notes = str_replace("\\", "", $log->notes);
         ?>
         <div id="results">
           <div class="log clearfix">
@@ -107,7 +110,10 @@
                       Nothing to see here.
                     <?php else: ?>
                       <h4>Comments</h4>
-                      <?php foreach($comments as $comment): ?>
+                      <?php
+                        foreach($comments as $comment):
+                        $comment->body = str_replace("\\", "", $comment->body);
+                      ?>
                       <div class="log-single-comment">
                       <span class="comment-time"><?php echo $comment->time; ?></span><a href="profile.php?user_id=<?php echo $comment->user_id; ?>"><a href="profile.php?user_id=<?php echo $comment->user_id; ?>"><?php echo $comment->username; ?></a></a>
                       <p><?php echo $comment->body; ?></p>

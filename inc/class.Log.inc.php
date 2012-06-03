@@ -61,10 +61,10 @@ class Log {
   }
 
   // check if input validates and build error message
-  public function input_validates(/* INPUT */){
+  public function input_validates($title){
     $message = "";
-    if(false){
-      $message .= "Error message. ";
+    if(strlen($title) < 1){
+      $message .= "Please add a title. ";
     }
     $_SESSION["message"] = $message;
     if(strlen($message) > 0){
@@ -75,6 +75,17 @@ class Log {
     }
   }
 
+	protected function sanitized_attributes() {
+	  global $database;
+	  $clean_attributes = array();
+	  // sanitize the values before submitting
+	  // Note: does not alter the actual value of each attribute
+	  foreach($this->attributes() as $key => $value){
+	    $clean_attributes[$key] = $database->escape_value($value);
+	  }
+	  return $clean_attributes;
+	}
+
   public function save(){
     // a new record wont have an user_id yet
     return isset($this->user_id) ? $this->update() : $this->create();
@@ -82,7 +93,7 @@ class Log {
 
   public function create(){
     global $database;
-    $attributes = $this->attributes();
+		$attributes = $this->sanitized_attributes();
     $sql = "INSERT INTO " . self::$table_name . " (";
     $sql .= join(", ", array_keys($attributes));
     $sql .= ") VALUES ('";
@@ -98,7 +109,7 @@ class Log {
 
   public function update(){
     global $database;
-    $attributes = $this->attributes();
+		$attributes = $this->sanitized_attributes();
     $attribute_pairs = array();
     foreach($attributes as $key => $value){
       $attribute_pairs[] = "{$key}={$value}";
