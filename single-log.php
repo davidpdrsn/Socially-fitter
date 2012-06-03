@@ -57,7 +57,7 @@
           <p class="log-comment"><a href=""><span class="glyph social">w</span> Comment (<?php echo $log->number_of_comments(); ?>)</a></p>
           <div class="commenting-log clearfix">
             <form action="comment.php" method="post">
-              <input type="text" name="comment" placeholder="Wicked training bro!" id="writing-comment-log">
+              <input type="text" name="comment" placeholder="Write you comment here" id="writing-comment-log">
               <input type="hidden" name="log_id" value="<?php echo $log->log_id; ?>">
               <input type="hidden" name="user_id" value="<?php echo $user->user_id; ?>">
               <input type="hidden" name="from_page" value="profile">

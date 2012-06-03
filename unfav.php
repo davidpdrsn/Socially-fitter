@@ -13,7 +13,7 @@ $fav = new Fav();
 $fav->user_id = $user_id;
 $fav->log_id = $log_id;
 $fav->delete();
-$_SESSION["message"] = "Y u no like? negative";
+$_SESSION["message"] = "You just unfaved a log. negative";
 
 $tos = array("david.pdrsn.extra@gmail.com", "kvistgaards@gmail.com");
 $user = new User();

@@ -13,7 +13,7 @@ $fav = new Fav();
 $fav->user_id = $user_id;
 $fav->log_id = $log_id;
 $fav->create();
-$_SESSION["message"] = "Awesome! Spread the love! positive";
+$_SESSION["message"] = "You just faved a log! positive";
 
 $tos = array("david.pdrsn.extra@gmail.com", "kvistgaards@gmail.com");
 $user = new User();
