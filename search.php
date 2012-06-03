@@ -26,6 +26,7 @@
       <input type="text" name="query" placeholder="Search for a user">
     </div>
     <p>Search and find other friends on Socially Fitter</p>
+  <p>You can also look at the list of <a href="all-users.php"><u><strong>all users</strong></u></a>.</p>
     <input type="submit" value="GO!">
   </form>
 </div> <!-- #search -->
