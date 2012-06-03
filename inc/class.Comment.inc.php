@@ -72,6 +72,17 @@ class Comment {
     }
   }
 
+	protected function sanitized_attributes() {
+	  global $database;
+	  $clean_attributes = array();
+	  // sanitize the values before submitting
+	  // Note: does not alter the actual value of each attribute
+	  foreach($this->attributes() as $key => $value){
+	    $clean_attributes[$key] = $database->escape_value($value);
+	  }
+	  return $clean_attributes;
+	}
+
   public function save(){
     // a new record wont have an user_id yet
     return isset($this->user_id) ? $this->update() : $this->create();
@@ -79,7 +90,7 @@ class Comment {
 
   public function create(){
     global $database;
-    $attributes = $this->attributes();
+		$attributes = $this->sanitized_attributes();
     $sql = "INSERT INTO " . self::$table_name . " (";
     $sql .= join(", ", array_keys($attributes));
     $sql .= ") VALUES ('";
@@ -95,7 +106,7 @@ class Comment {
 
   public function update(){
     global $database;
-    $attributes = $this->attributes();
+		$attributes = $this->sanitized_attributes();
     $attribute_pairs = array();
     foreach($attributes as $key => $value){
       $attribute_pairs[] = "{$key}={$value}";

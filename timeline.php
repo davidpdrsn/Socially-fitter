@@ -1,10 +1,11 @@
 <?php
   $page_name = "timeline";
   include "inc/head.php";
+?>
+<?php
 
   $followings = new User();
   $followings = $followings->find_by_sql("SELECT user_id FROM users, follow WHERE users.user_id = follow.following_id AND follow.follower_id = {$session->user_id}");
-
 
   $user = new User();
   $user = $user->find_by_id($session->user_id);
@@ -49,6 +50,7 @@
 
 ?>
 
+
 <?php if(empty($logs)): ?>
 
   <div id="empty-timeline">
@@ -71,6 +73,9 @@
       <?php
         $user = new User();
         $user = $user->find_by_id($log->user_id);
+        $log->title = str_replace("\\", "", $log->title);
+        $log->body = str_replace("\\", "", $log->body);
+        $log->notes = str_replace("\\", "", $log->notes);
       ?>
       <div class="log clearfix">
         <div class="log-header clearfix">
@@ -128,7 +133,10 @@
                   Nothing to see here.
                 <?php else: ?>
                   <h4>Comments</h4>
-                  <?php foreach($comments as $comment): ?>
+                  <?php
+                    foreach($comments as $comment):
+                    $comment->body = str_replace("\\", "", $comment->body);
+                  ?>
                   <div class="log-single-comment">
                   <span class="comment-time"><?php echo $comment->time; ?></span><a href="profile.php?user_id=<?php echo $comment->user_id; ?>"><a href="profile.php?user_id=<?php echo $comment->user_id; ?>"><?php echo $comment->username; ?></a></a>
                   <p><?php echo $comment->body; ?></p>
