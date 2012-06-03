@@ -1,10 +1,10 @@
 // hide menu bar
-addEventListener('load', function() {
-  setTimeout(hideAddressBar, 0);
-}, false);
-function hideAddressBar() {
-  window.scrollTo(0, 1);
-}
+// addEventListener('load', function() {
+//   setTimeout(hideAddressBar, 0);
+// }, false);
+// function hideAddressBar() {
+//   window.scrollTo(0, 1);
+// }
 
 // fading and slidetoggle
 jQuery.fn.fadeSliderToggle = function(settings) {
@@ -157,11 +157,13 @@ $(document).ready(function() {
       .replace(/^\//,'')
       .replace(/(index|default).[a-zA-Z]{3,4}$/,'')
       .replace(/\/$/,'');
-    }
-    var locationPath = filterPath(location.pathname);
-    var scrollElem = scrollableElement('html', 'body');
+  }
+  var locationPath = filterPath(location.pathname);
+  
 
-    $('a[href*=#]').each(function() {
+  $('a[href*=#]').each(function() {
+    $(this).click(function() {
+      var scrollElem = scrollableElement('html', 'body');
       var thisPath = filterPath(this.pathname) || locationPath;
       if (  locationPath == thisPath
       && (location.hostname == this.hostname || !this.hostname)
@@ -179,28 +181,37 @@ $(document).ready(function() {
         }
       }
     });
-    // use the first element that is "scrollable"
-    function scrollableElement(els) {
-      for (var i = 0, argLength = arguments.length; i <argLength; i++) {
-        var el = arguments[i],
-            $scrollElement = $(el);
-        if ($scrollElement.scrollTop()> 0) {
+  });
+  // use the first element that is "scrollable"
+  function scrollableElement(els) {
+    for (var i = 0, argLength = arguments.length; i <argLength; i++) {
+      var el = arguments[i],
+          $scrollElement = $(el);
+      if ($scrollElement.scrollTop()> 0) {
+        return el;
+      } else {
+        $scrollElement.scrollTop(1);
+        var isScrollable = $scrollElement.scrollTop()> 0;
+        $scrollElement.scrollTop(0);
+        if (isScrollable) {
           return el;
-        } else {
-          $scrollElement.scrollTop(1);
-          var isScrollable = $scrollElement.scrollTop()> 0;
-          $scrollElement.scrollTop(0);
-          if (isScrollable) {
-            return el;
-          }
         }
       }
-      return [];
     }
-    //End of smooth scrolling
-    
-    $('#share .facebook, #share .twitter').click(function() {
-      $('#share .done-sharing').text("No thanks" ? "I'm done sharing" : "No thanks");
+    return [];
+  }
+  //End of smooth scrolling
+
+  $('#share .facebook, #share .twitter').click(function() {
+    $('#share .done-sharing').text("No thanks" ? "I'm done sharing" : "No thanks");
+  });
+
+  $('#main-menu input[type=submit]').one('click', function(e) {
+    e.preventDefault();
+    $('#main-menu input[type=text], #main-menu input[type=password]').css({
+      'margin-top': 0,
+      'opacity': 1
     });
+  });
 
 }); //End of $(document).ready();

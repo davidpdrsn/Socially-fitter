@@ -21,9 +21,9 @@
     <h3><?php echo $user->username; ?></h3>
   </div>
   <div class="social-activity">
-    <a href=""><span class="workouts"><?php echo $user->find_number_of_logs($user->user_id); ?></span>Workouts</a>
-    <a href=""><span class="followers"><?php echo $user->find_number_of_followers($user->user_id); ?></span>Followers</a>
-    <a href=""><span class="following"><?php echo $user->find_number_of_following($user->user_id); ?></span>Following</a>
+    <p><span class="workouts"><?php echo $user->find_number_of_logs($user->user_id); ?></span>Workouts</p>
+    <p><span class="followers"><?php echo $user->find_number_of_followers($user->user_id); ?></span>Followers</p>
+    <p><span class="following"><?php echo $user->find_number_of_following($user->user_id); ?></span>Following</p>
   </div>
 </div>
 
@@ -45,7 +45,12 @@
   </div><!-- #profile-workouts -->
 <?php else: ?>
   <div id="profile-workouts">
-    <?php foreach($logs as $log): ?>
+    <?php
+      foreach($logs as $log):
+      $log->title = str_replace("\\", "", $log->title);
+      $log->body = str_replace("\\", "", $log->body);
+      $log->notes = str_replace("\\", "", $log->notes);
+    ?>
       <div class="log clearfix">
         <div class="log-header clearfix">
           <div class="log-time">
@@ -101,7 +106,10 @@
                   Nothing to see here.
                 <?php else: ?>
                   <h4>Comments</h4>
-                  <?php foreach($comments as $comment): ?>
+                  <?php
+                    foreach($comments as $comment):
+                    $comment->body = str_replace("\\", "", $comment->body);
+                  ?>
                   <div class="log-single-comment">
                   <span class="comment-time"><?php echo $comment->time; ?></span><a href="profile.php?user_id=<?php echo $comment->user_id; ?>"><a href="profile.php?user_id=<?php echo $comment->user_id; ?>"><?php echo $comment->username; ?></a></a>
                   <p><?php echo $comment->body; ?></p>

@@ -14,53 +14,48 @@ if(isset($_POST["submit"])){
   $body = "";
   foreach($_POST as $key=>$value){
     if(strpos($key,"exercise") !== false) {
+      // if the $_POST key contains exercise
       $body .= "<strong>" . $value . "</strong>\n";
-    } elseif(strpos($key,"reps") !== false) {
+    } elseif(strpos($key,"reps") !== false && preg_match('#[0-9]#',$value)) {
       $body .= "<p>" . $value . " reps, ";
-    } elseif(strpos($key,"weight") !== false) {
+    } elseif(strpos($key,"weight") !== false && preg_match('#[0-9]#',$value)) {
       $body .= $value . " kg, ";
-    } elseif(strpos($key,"sets") !== false) {
+    } elseif(strpos($key,"sets") !== false && preg_match('#[0-9]#',$value)) {
       $body .= $value . " sets</p>\n";
     }
   }
 
   $log = new Log();
 
-  $log->title = $title;
-  $log->body = $body;
-  $log->notes = $notes;
-  $log->time = $time;
-  $log->user_id = $user_id;
-  $log->create();
-  $log_id = $database->insert_id();
+  if($log->input_validates($title)){
 
-  $_SESSION["message"] = "Log added! positive";
+    $log->title = $title;
+    $log->body = $body;
+    $log->notes = $notes;
+    $log->time = $time;
+    $log->user_id = $user_id;
+    $log->create();
+    $log_id = $database->insert_id();
 
-  $tos = array("david.pdrsn.extra@gmail.com", "kvistgaards@gmail.com");
-  $user = new User();
-  $user = $user->find_by_id($user_id);
-  $subject = $user->username . " just logged a workout!";
-  $body = $log->body;
-  foreach($tos as $to){
-    mail($to, $subject, $body);
-  }
+    $_SESSION["message"] = "Log added! positive";
 
-  redirect_to("share.php?log_id={$log_id}");
+    $tos = array("david.pdrsn.extra@gmail.com", "kvistgaards@gmail.com");
+    $user = new User();
+    $user = $user->find_by_id($user_id);
+    $subject = $user->username . " just logged a workout!";
+    $body = $log->body;
+    foreach($tos as $to){
+      mail($to, $subject, $body);
+    }
 
-  /* validation of input
-  if($user->input_validates($username, $email, $password, $password_repeat)){
-    $user->username = $username;
-    $user->email = $email;
-    $user->password = $password;
-    $user->create();
-    $_SESSION["message"] = "Welcome on board! positive";
-    redirect_to("index.php");
+    redirect_to("share.php?log_id={$log_id}");
+
   } else {
     // $_SESSION["message"] gets set by the input_validates method
     // so no need to set here
-    redirect_to("index.php");
+    redirect_to("logging.php");
   }
-  */
+
 } else { // form has not been submitted
   $_SESSION["message"] = "Something went wrong! negative";
   redirect_to("index.php");

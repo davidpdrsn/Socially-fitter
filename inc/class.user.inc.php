@@ -111,6 +111,17 @@ class User {
     }
   }
 
+	protected function sanitized_attributes() {
+	  global $database;
+	  $clean_attributes = array();
+	  // sanitize the values before submitting
+	  // Note: does not alter the actual value of each attribute
+	  foreach($this->attributes() as $key => $value){
+	    $clean_attributes[$key] = $database->escape_value($value);
+	  }
+	  return $clean_attributes;
+	}
+
   // create the user in the database if it doesn't exist otherwise update it
   public function save(){
     // a new record wont have an user_id yet
@@ -120,24 +131,24 @@ class User {
   // create the user in the database
   public function create(){
     global $database;
-    $attributes = $this->attributes();
-    $sql = "INSERT INTO " . self::$table_name . " (";
-    $sql .= join(", ", array_keys($attributes));
-    $sql .= ") VALUES ('";
-    $sql .= join("', '", array_values($attributes));
-    $sql .= "')";
-    if ($database->query($sql)){
-      $this->user_id = $database->insert_id();
-      return true;
-    } else {
-      return false;
-    }
+		$attributes = $this->sanitized_attributes();
+	  $sql = "INSERT INTO ".self::$table_name." (";
+		$sql .= join(", ", array_keys($attributes));
+	  $sql .= ") VALUES ('";
+		$sql .= join("', '", array_values($attributes));
+		$sql .= "')";
+	  if($database->query($sql)) {
+	    $this->id = $database->insert_id();
+	    return true;
+	  } else {
+	    return false;
+	  }
   }
 
   // update the user in the database
   public function update(){
     global $database;
-    $attributes = $this->attributes();
+		$attributes = $this->sanitized_attributes();
     $attribute_pairs = array();
     foreach($attributes as $key => $value){
       $attribute_pairs[] = "{$key}='{$value}'";
