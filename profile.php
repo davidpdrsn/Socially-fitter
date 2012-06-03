@@ -21,9 +21,9 @@
     <h3><?php echo $user->username; ?></h3>
   </div>
   <div class="social-activity">
-    <a href=""><span class="workouts"><?php echo $user->find_number_of_logs($user->user_id); ?></span>Workouts</a>
-    <a href=""><span class="followers"><?php echo $user->find_number_of_followers($user->user_id); ?></span>Followers</a>
-    <a href=""><span class="following"><?php echo $user->find_number_of_following($user->user_id); ?></span>Following</a>
+    <p><span class="workouts"><?php echo $user->find_number_of_logs($user->user_id); ?></span>Workouts</p>
+    <p><span class="followers"><?php echo $user->find_number_of_followers($user->user_id); ?></span>Followers</p>
+    <p><span class="following"><?php echo $user->find_number_of_following($user->user_id); ?></span>Following</p>
   </div>
 </div>
 
