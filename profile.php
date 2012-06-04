@@ -22,8 +22,8 @@
   </div>
   <div class="social-activity">
     <p><span class="workouts"><?php echo $user->find_number_of_logs($user->user_id); ?></span>Workouts</p>
-    <p><span class="followers"><?php echo $user->find_number_of_followers($user->user_id); ?></span>Followers</p>
-    <p><span class="following"><?php echo $user->find_number_of_following($user->user_id); ?></span>Following</p>
+    <a href="followers.php?user_id=<?php echo $user->user_id; ?>"><span class="followers"><?php echo $user->find_number_of_followers($user->user_id); ?></span>Followers</a>
+    <a href="following.php?user_id=<?php echo $user->user_id; ?>"><span class="following"><?php echo $user->find_number_of_following($user->user_id); ?></span>Following</a>
   </div>
 </div>
 
