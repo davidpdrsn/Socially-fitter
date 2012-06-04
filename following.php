@@ -14,9 +14,9 @@
 
 <div id="all-users" class="clearfix">
   <?php if(empty($followings)): ?>
-    <h2>No one follows <?php echo $current_user->username; ?></h2>
+    <h2><?php echo $current_user->username; ?> isn't following anyone</h2>
   <?php else: ?>
-    <h2>People following <?php echo $current_user->username; ?></h2>
+    <h2>People <?php echo $current_user->username; ?> is following</h2>
     <?php foreach($followings as $following): ?>
       <div class="user">
         <a href="profile.php?user_id=<?php echo $following->user_id; ?>">
