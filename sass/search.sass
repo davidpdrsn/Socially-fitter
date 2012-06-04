@@ -62,134 +62,45 @@
         background: linear-gradient(bottom, $green, $greendarken20)
 
 #results
-  border-top: 1px solid $darkgray
-  .log
-    padding: $generalpadding 0px 0px 0px
-    border-bottom: 2px solid $darkgray
-    &:nth-child(odd)
-      background: darken($lightgray, 5%)
-  .log-header
-    padding: 0px $generalpadding
-    position: relative
-    .log-time
-      position: absolute
-      right: $generalpadding
-      top: 0
-      font-size: 12px
-      color: $darkgray
-    .profile-picture
-      width: 48px
-      height: 48px
-      -moz-border-radius: 4px
-      border-radius: 4px
-      border: 1px solid $darkgray
-      overflow: hidden
-      float: left
-      margin-right: $generalpadding
-      background-repeat: no-repeat
-      background-position: center
-      -webkit-background-size: cover
-      -moz-background-size: cover
-      -o-background-size: cover
-      background-size: cover
-    div.log-title
-      p.profile-name
-        font-weight: bold
-  .log-footer
+  padding-top: 5px
+  h2, p
+    text-shadow: 2px 2px 0 rgba(255,255,255,.4), 4px 4px 0 rgba(255,255,255,.4)
+  h2
+    margin-top: 20px
+    margin-bottom: 30px
     text-align: center
-    font-size: 12px
-    .log-expand
-      cursor: pointer
-      user-select: none
-      color: $darkgray
-      display: inline-block
-      margin-bottom: $generalpadding
-    .expanded-log
-      display: none
-      float: left
-      width: 100%
-      background: darken($lightgray, 20%)
-      padding: $generalpadding
-      //box-shadow: inset 0px 2px 1px $darkgray, inset 0px -2px 1px $darkgray
-      text-align: left
-      box-shadow: inset 0px 1px 1px $darkgraydarken25
-      -moz-box-sizing: border-box
-      box-sizing: border-box
-      .expanded-log-text
-        margin-bottom: $generalpadding
-        text-indent: $generalpadding
-        float: left
-        width: 100%
-      .glyph
-        font-size: 12px
-      strong
-        font-size: 13px
-        margin-top: $generalpadding
-        display: block
-      p
-        font-size: 13px
-        text-indent: $generalpadding + $generalpadding/2
-      a
-        color: $darkgraydarken25
-        font-size: 13px
-      .log-favorite, .log-comment
-        font-size: 12px
-        float: left
-        margin-left: 0
-        margin-right: 15px
-        text-indent: 0
-      .log-favorite a:hover, .log-favorite.faved a
-        color: rgb(240,210,0)
-      .log-comment a:hover, .log-comment.clicked a
-        color: $bluedarken25
-      .commenting-log
-        float: left
-        width: 96%
-        padding: $generalpadding
-        position: relative
-        background: $lightgray
-        border-radius: 10px
-        margin-top: $generalpadding
-        display: none
-        &:before
-          content: ""
-          width: 0
-          height: 0
-          border-left: 10px solid  transparent
-          border-right: 10px solid transparent
-          border-bottom: 10px solid $lightgray
-          position: absolute
-          top: -5px
-          left: 110px
-        input[type=text]
-          display: block
-          box-shadow: inset 2px 2px 7px rgba(0,0,0,.3), inset 0 0 0 1px $lightgraydarken10
-          border-radius: 4px
-          font-size: 15px
-          width: 100%
-          padding: 6px
-          -moz-box-sizing: border-box
-          box-sizing: border-box
-          border: none
-          margin-bottom: $generalpadding
-          -webkit-appearance: none
-          //border: 1px solid $darkgraydarken20
-          &:focus
-            outline: none
-        .log-comments-list
-          margin-top: $generalpadding*2
-          h4
-            font-size: 14px
-          .log-single-comment
-            margin: 0px $generalpadding $generalpadding $generalpadding
-            position: relative
-            span
-              float: left
-              color: $darkgray
-              position: absolute
-              top: 0
-              right: 0
-              
+    font-family: lobster, cursive
+    font-size: 30px
+    font-weight: normal
+  .user
+    border-bottom: 2px solid $darkgray
+    float: left
+    width: 100%
+    margin-bottom: 20px
+    padding-bottom: 20px
+    line-height: 50px
+    &:first-of-type
+      border-top: 2px solid $darkgray
+      padding-top: 20px
+    &:last-of-type
+      margin-bottom: 0
+  .profile-picture
+    width: 48px
+    height: 48px
+    -moz-border-radius: 4px
+    border-radius: 4px
+    border: 1px solid $darkgray
+    overflow: hidden
+    float: left
+    margin: 0 $generalpadding
+    margin-right: 20px
+    background-repeat: no-repeat
+    background-position: center
+    -webkit-background-size: cover
+    -moz-background-size: cover
+    -o-background-size: cover
+    background-size: cover
+
 #no-results
   border-top: 1px solid $darkgray
   padding: $generalpadding*2 $generalpadding

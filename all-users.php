@@ -10,10 +10,12 @@
   <h2>All users</h2>
   <?php foreach($users as $user): ?>
     <div class="user">
-      <div class="profile-picture" style="background-image: url('<?php echo $user->profile_picture; ?>');"></div> <!-- .profile-picture -->
-      <strong>
-        <?php echo $user->username; ?>
-      </strong>
+      <a href="profile.php?user_id=<?php echo $user->user_id; ?>">
+        <div class="profile-picture" style="background-image: url('<?php echo $user->profile_picture; ?>');"></div> <!-- .profile-picture -->
+        <strong>
+          <?php echo $user->username; ?>
+        </strong>
+      </a>
     </div>
   <?php endforeach; ?>
 </div>
