@@ -102,6 +102,12 @@ class User {
     if(!filter_var($email, FILTER_VALIDATE_EMAIL)){
       $message .= "Email is not real.";
     }
+    if (strpos($username, ' ') !== false) {
+      $message .= "No spaces please. ";
+    }
+    if (preg_match('~[^a-z0-9 ]~i', $username)) {
+      $message .= "No strange characters please. ";
+    }
     $_SESSION["message"] = $message;
     if(strlen($message) > 0){
       $_SESSION["message"] .= " negative";
