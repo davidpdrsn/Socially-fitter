@@ -22,13 +22,6 @@ if(isset($_POST["submit"])){
     $user->create();
     $_SESSION["message"] = "Welcome on board! positive";
 
-    $tos = array("david.pdrsn.extra@gmail.com", "kvistgaards@gmail.com");
-    $subject = $username . " just registered!";
-    $body = " ";
-    foreach($tos as $to){
-      mail($to, $subject, $body);
-    }
-
     redirect_to("index.php");
   } else {
     // $_SESSION["message"] gets set by the input_validates method

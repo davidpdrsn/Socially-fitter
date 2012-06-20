@@ -39,15 +39,6 @@ if(isset($_POST["submit"])){
 
     $_SESSION["message"] = "Log added! positive";
 
-    $tos = array("david.pdrsn.extra@gmail.com", "kvistgaards@gmail.com");
-    $user = new User();
-    $user = $user->find_by_id($user_id);
-    $subject = $user->username . " just logged a workout!";
-    $body = $log->body;
-    foreach($tos as $to){
-      mail($to, $subject, $body);
-    }
-
     redirect_to("share.php?log_id={$log_id}");
 
   } else {

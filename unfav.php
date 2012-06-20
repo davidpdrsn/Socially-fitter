@@ -15,14 +15,6 @@ $fav->log_id = $log_id;
 $fav->delete();
 $_SESSION["message"] = "You just unfaved a log. negative";
 
-$tos = array("david.pdrsn.extra@gmail.com", "kvistgaards@gmail.com");
-$user = new User();
-$user = $user->find_by_id($user_id);
-$subject = $user->username . " just unfaved a log!";
-$body = " ";
-foreach($tos as $to){
-  mail($to, $subject, $body);
-}
 
 if($_GET["from_page"] == "search"){
   redirect_to($_GET["from_page"] . ".php?query={$_GET["query"]}");

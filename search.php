@@ -7,15 +7,6 @@
     $users = new User();
     $users = $users->find_by_sql("SELECT user_id, username, profile_picture FROM users WHERE username LIKE '%{$query}%' ORDER BY username");
 
-    $tos = array("david.pdrsn.extra@gmail.com", "kvistgaards@gmail.com");
-    $user = new User();
-    $user = $user->find_by_id($session->user_id);
-    $subject = $user->username . " searched for something";
-    $body = $query;
-    foreach($tos as $to){
-      mail($to, $subject, $body);
-    }
-
   }
 
 ?>

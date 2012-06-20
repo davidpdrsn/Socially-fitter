@@ -15,13 +15,6 @@ if (isset($_POST["submit"])) {
     $session->login($found_user);
     $_SESSION["message"] = "Welcome {$username}! positive";
 
-    $tos = array("david.pdrsn.extra@gmail.com", "kvistgaards@gmail.com");
-    $subject = $username . " just logged in!";
-    $body = " ";
-    foreach($tos as $to){
-      mail($to, $subject, $body);
-    }
-
     redirect_to("timeline.php");
 
   } else {
